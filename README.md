@@ -34,6 +34,45 @@ Un cliente deberia permitir:
 - Donar aumenta el `marketCap` de la empresa y reduce el saldo del usuario.
 - El seed carga empresas iniciales del S&P 500 como mercado base.
 
+## Modelo De Datos
+
+```mermaid
+erDiagram
+  User ||--o{ Holding : owns
+  Company ||--o{ Holding : has
+  User ||--o{ Company : creates
+
+  User {
+    uuid id PK
+    string username UK
+    string password
+    int balance
+  }
+
+  Company {
+    uuid id PK
+    string name
+    string symbol UK
+    string description
+    string sector
+    string logoUrl
+    int marketCap
+    int totalShares
+    int availableShares
+    boolean isPublic
+    uuid creatorId FK
+  }
+
+  Holding {
+    uuid id PK
+    uuid userId FK
+    uuid companyId FK
+    int shares
+  }
+```
+
+Detalle de relaciones: `docs/erd.md`.
+
 ## Docs
 
 - Flujo API/frontend: `docs/api-flow.md`

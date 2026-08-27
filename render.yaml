@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: t1-back-2026-2
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: t1-back-2026-2-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 24h
+      - key: NODE_ENV
+        value: production
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 60000
+      - key: RATE_LIMIT_MAX
+        value: 120
+      - key: RATE_LIMIT_TOKEN_MAX
+        value: 120
+      - key: RATE_LIMIT_DISABLED
+        value: false
+
+databases:
+  - name: t1-back-2026-2-db
+    plan: free
+    databaseName: t1_back_2026_2
+    user: t1_back_2026_2_user

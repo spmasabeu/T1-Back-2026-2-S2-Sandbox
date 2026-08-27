@@ -21,7 +21,7 @@ app.use(
   '/api-docs',
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec, {
-    customSiteTitle: 'T1 2026-2 API Docs',
+    customSiteTitle: 'DDCapital API Docs',
     swaggerOptions: {
       persistAuthorization: true,
     },

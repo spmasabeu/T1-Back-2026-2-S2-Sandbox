@@ -1,10 +1,10 @@
-# T1 Back 2026-2
+# DDCapital
 
-Backend MVP en TypeScript, Express, Sequelize y PostgreSQL para una aplicacion de mercado financiero ficticio.
+Backend MVP para la T1 2026-2 en TypeScript, Express, Sequelize y PostgreSQL. DDCapital es una aplicacion de mercado financiero ficticio.
 
 ## Concepto
 
-La tarea propone construir un frontend para un juego de inversion simple: cada usuario entra con un saldo inicial, puede crear empresas privadas, publicarlas en el mercado y operar acciones de empresas publicas. La API modela el backend de ese mercado: usuarios, empresas, holdings, compras, ventas, donaciones, portfolio y rankings.
+La tarea propone construir un frontend para DDCapital, un juego de inversion simple: cada usuario entra con un saldo inicial, puede crear empresas privadas, publicarlas en el mercado y operar acciones de empresas publicas. La API modela el backend de ese mercado: usuarios, empresas, holdings, compras, ventas, donaciones, portfolio y rankings.
 
 La tematica busca que el frontend no sea solo un CRUD. El flujo esperado es una experiencia tipo dashboard/marketplace donde el usuario puede revisar el mercado, filtrar empresas, ver precios, crear su propia empresa, abrir acciones al publico, invertir en otras empresas y revisar como cambia su patrimonio.
 

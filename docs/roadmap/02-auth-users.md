@@ -9,7 +9,7 @@ Implementar autenticacion igual a la tarea anterior: login con auto-registro, JW
 - `id`: UUID
 - `username`: string unico, requerido
 - `password`: string requerido, hasheado
-- `balance`: integer requerido, default `10000`
+- `balance`: integer requerido, default `100000`
 
 ## Endpoints
 

@@ -203,7 +203,7 @@ router.post('/:id/publish', authMiddleware, publishCompany);
  *                 sharePrice: 50
  *               shares: 5
  *               totalPrice: 250
- *               balance: 9750
+ *               balance: 99750
  *       400:
  *         description: Saldo o acciones insuficientes
  *       404:
@@ -252,7 +252,7 @@ router.post('/:id/buy', authMiddleware, buyShares);
  *                 sharePrice: 50
  *               shares: 5
  *               totalPrice: 250
- *               balance: 10000
+ *               balance: 100000
  *       400:
  *         description: Acciones insuficientes
  *       404:
@@ -301,7 +301,7 @@ router.post('/:id/sell', authMiddleware, sellShares);
  *                   example: 1000
  *                 balance:
  *                   type: integer
- *                   example: 9000
+ *                   example: 99000
  *             example:
  *               company:
  *                 id: 11111111-1111-4111-8111-111111111111
@@ -310,7 +310,7 @@ router.post('/:id/sell', authMiddleware, sellShares);
  *                 marketCap: 6000
  *                 sharePrice: 60
  *               amount: 1000
- *               balance: 9000
+ *               balance: 99000
  *       400:
  *         description: Saldo insuficiente
  *       404:

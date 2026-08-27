@@ -1,5 +1,17 @@
 import assert from 'node:assert/strict';
 import { rankUsersByNetWorth, sharePrice } from '../src/controllers/rankingController';
+import { buildSeedCompanies } from '../src/seeders/seedCompanies';
+
+const seededCompanies = buildSeedCompanies();
+const seededSymbols = new Set(seededCompanies.map((company) => company.symbol));
+
+assert.equal(seededCompanies.length, 503);
+assert.equal(seededSymbols.size, seededCompanies.length);
+assert.ok(seededSymbols.has('AAPL'));
+assert.ok(seededSymbols.has('BRK.B'));
+assert.ok(seededSymbols.has('BF.B'));
+assert.ok(seededCompanies.every((company) => company.marketCap > 0 && company.marketCap < 2147483647));
+assert.ok(seededCompanies.every((company) => company.totalShares > 0));
 
 const ranked = rankUsersByNetWorth([
   {

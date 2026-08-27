@@ -12,7 +12,7 @@ const options = {
       title: 'T1 2026-2 API',
       version: '1.0.0',
       description:
-        'Backend base en TypeScript para el proyecto de la T1 2026-2.',
+        'Backend base en TypeScript para el proyecto de la T1 2026-2. Todas las rutas de la API usan el prefijo /api; por ejemplo, /login se consume como /api/login.',
     },
     servers: [
       {

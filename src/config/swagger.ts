@@ -12,7 +12,11 @@ const options = {
       title: 'T1 2026-2 API',
       version: '1.0.0',
       description:
-        'Backend base en TypeScript para el proyecto de la T1 2026-2. Todas las rutas de la API usan el prefijo /api; por ejemplo, /login se consume como /api/login.',
+        'Backend base en TypeScript para el proyecto de la T1 2026-2. Todas las rutas de la API usan el prefijo /api; por ejemplo, /login se consume como /api/login. ERD: https://github.com/spmasabeu/T1-Back-2026-2-S2-Sandbox/blob/main/docs/erd.md',
+    },
+    externalDocs: {
+      description: 'ERD base de datos',
+      url: 'https://github.com/spmasabeu/T1-Back-2026-2-S2-Sandbox/blob/main/docs/erd.md',
     },
     servers: [
       {

@@ -5,6 +5,7 @@ Backend MVP en TypeScript, Express, Sequelize y PostgreSQL.
 ## Docs
 
 - Flujo API/frontend: `docs/api-flow.md`
+- ERD base de datos: `docs/erd.md`
 - Deploy Render: `docs/deploy-render.md`
 - Performance local: `docs/performance.md`
 - Auditoria final: `docs/auditoria-final.md`

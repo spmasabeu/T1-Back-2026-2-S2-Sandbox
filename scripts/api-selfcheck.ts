@@ -4,6 +4,7 @@ import { Server } from 'node:http';
 import { AddressInfo } from 'node:net';
 import app from '../src/app';
 import { Company, Holding, sequelize, User } from '../src/models';
+import { INITIAL_BALANCE } from '../src/models/User';
 
 type Json = Record<string, any>;
 
@@ -48,7 +49,7 @@ const users = new Map<string, MockUser>();
 const companies = new Map<string, MockCompany>();
 const holdings = new Map<string, MockHolding>();
 
-function makeUser(username: string, password: string, balance = 10000): MockUser {
+function makeUser(username: string, password: string, balance = INITIAL_BALANCE): MockUser {
   const user: MockUser = {
     id: randomUUID(),
     username,
@@ -66,14 +67,14 @@ function makeUser(username: string, password: string, balance = 10000): MockUser
 function makeCompany(overrides: Partial<MockCompany> = {}): MockCompany {
   const company: MockCompany = {
     id: randomUUID(),
-    name: 'Andes Solar Labs',
-    symbol: 'ASL',
-    description: 'Empresa educativa del sector Energia.',
-    sector: 'Energia',
+    name: 'Apple Inc.',
+    symbol: 'AAPL',
+    description: 'Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$313.45.',
+    sector: 'Technology Hardware, Storage & Peripherals',
     logoUrl: null,
-    marketCap: 900000,
-    totalShares: 900,
-    availableShares: 900,
+    marketCap: 45745460,
+    totalShares: 145942,
+    availableShares: 145942,
     isPublic: true,
     creatorId: null,
     save: async () => {},
@@ -202,7 +203,7 @@ async function main() {
 
     const listed = await request(baseUrl, 'GET', '/api/companies?isPublic=true');
     assert.equal(listed.status, 200);
-    assert.equal(listed.body.data[0].sharePrice, 1000);
+    assert.equal(listed.body.data[0].sharePrice, 313);
 
     const created = await request(
       baseUrl,
@@ -222,7 +223,7 @@ async function main() {
     assert.equal(created.body.company.symbol, 'DCCR');
     assert.equal(created.body.company.isPublic, false);
     assert.equal(created.body.company.sharePrice, 50);
-    assert.equal(created.body.balance, 5000);
+    assert.equal(created.body.balance, 95000);
 
     const companyId = created.body.company.id as string;
     const published = await request(baseUrl, 'POST', `/api/companies/${companyId}/publish`, undefined, tokenA);
@@ -233,7 +234,7 @@ async function main() {
     const bought = await request(baseUrl, 'POST', `/api/companies/${companyId}/buy`, { shares: 5 }, tokenB);
     assert.equal(bought.status, 200);
     assert.equal(bought.body.totalPrice, 250);
-    assert.equal(bought.body.balance, 9750);
+    assert.equal(bought.body.balance, 99750);
     assert.equal(bought.body.company.availableShares, 44);
 
     const donated = await request(baseUrl, 'POST', `/api/companies/${companyId}/donate`, { amount: 1000 }, tokenB);
@@ -250,7 +251,7 @@ async function main() {
     assert.equal(portfolioB.status, 200);
     assert.equal(portfolioB.body.holdings[0].shares, 5);
     assert.equal(portfolioB.body.holdings[0].value, 300);
-    assert.equal(portfolioB.body.netWorth, 9050);
+    assert.equal(portfolioB.body.netWorth, 99050);
 
     const userRankings = await request(baseUrl, 'GET', '/api/rankings/users');
     assert.equal(userRankings.status, 200);
@@ -261,7 +262,7 @@ async function main() {
 
     const companyRankings = await request(baseUrl, 'GET', '/api/rankings/companies');
     assert.equal(companyRankings.status, 200);
-    assert.equal(companyRankings.body.data[0].symbol, 'ASL');
+    assert.equal(companyRankings.body.data[0].symbol, 'AAPL');
 
     const unauthorized = await request(baseUrl, 'POST', `/api/companies/${companyId}/buy`, { shares: 1 });
     assert.equal(unauthorized.status, 401);

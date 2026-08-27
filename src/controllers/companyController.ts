@@ -1,4 +1,4 @@
-import { RequestHandler } from 'express';
+import { RequestHandler, Response } from 'express';
 import { Op, Transaction, WhereOptions } from 'sequelize';
 import { Company, CompanyAttributes } from '../models/Company';
 import { Holding, sequelize, User } from '../models';
@@ -18,7 +18,7 @@ function httpError(status: number, message: string): Error & { status: number } 
   return Object.assign(new Error(message), { status });
 }
 
-function authUser(res: Parameters<RequestHandler>[1]): User {
+function authUser(res: Response): User {
   const user = res.locals.user as User | undefined;
   if (!user) {
     throw httpError(401, 'Token inválido.');

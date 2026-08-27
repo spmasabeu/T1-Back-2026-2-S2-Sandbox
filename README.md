@@ -52,7 +52,7 @@ npm run start
 
 En Render puedes usar el Blueprint `render.yaml`. Detalle: `docs/deploy-render.md`.
 
-El seed inicial carga 503 constituyentes del S&P 500. `marketCap` usa datos financieros escalados para calzar con el schema actual y `totalShares` conserva un precio referencial cercano al dato fuente.
+Usuarios nuevos parten con `100000` de balance inicial. El seed carga 503 constituyentes del S&P 500; `marketCap` usa datos financieros escalados para calzar con el schema actual y mantener el juego accesible.
 
 ## Performance local
 

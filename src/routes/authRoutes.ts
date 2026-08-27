@@ -1,0 +1,67 @@
+import { Router } from 'express';
+import { getMe, login } from '../controllers/authController';
+import authMiddleware from '../middlewares/authMiddleware';
+
+const router = Router();
+
+/**
+ * @openapi
+ * /login:
+ *   post:
+ *     summary: Login con auto-registro
+ *     tags:
+ *       - Auth
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/LoginInput'
+ *     responses:
+ *       200:
+ *         description: Usuario autenticado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/AuthResponse'
+ *       400:
+ *         description: Faltan username o password
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       401:
+ *         description: Password incorrecta
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.post('/login', login);
+
+/**
+ * @openapi
+ * /me:
+ *   get:
+ *     summary: Usuario autenticado
+ *     tags:
+ *       - Auth
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Usuario autenticado sin password
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       401:
+ *         description: Token ausente, inválido o expirado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.get('/me', authMiddleware, getMe);
+
+export default router;

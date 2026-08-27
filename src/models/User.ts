@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt';
 import { DataTypes, Model, Optional, Sequelize } from 'sequelize';
 
 const SALT_ROUNDS = 10;
+export const INITIAL_BALANCE = 100000;
 
 export interface UserAttributes {
   id: string;
@@ -54,7 +55,7 @@ export class User extends Model<UserAttributes, UserCreationAttributes> implemen
         balance: {
           type: DataTypes.INTEGER,
           allowNull: false,
-          defaultValue: 10000,
+          defaultValue: INITIAL_BALANCE,
         },
       },
       {

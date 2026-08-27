@@ -10,295 +10,295 @@ interface SeedCompany {
 }
 
 // S&P 500 financial snapshot sourced from https://datahub.io/core/s-and-p-500-companies-financials/_r/-/data/constituents-financials.csv on 2026-08-27.
-// marketCap is scaled by 10000 so values fit the INTEGER schema while preserving price ratios and ranking.
+// marketCap is scaled by 100000, with a 100000 floor, to keep rankings realistic and gameplay affordable.
 export const companies: SeedCompany[] = [
   {
     "name": "3M",
     "symbol": "MMM",
     "description": "Constituyente del S&P 500. Sector: Industrial Conglomerates. Precio referencial: US$180.00.",
     "sector": "Industrial Conglomerates",
-    "marketCap": 9283004,
-    "totalShares": 51572
+    "marketCap": 928300,
+    "totalShares": 5157
   },
   {
     "name": "A. O. Smith",
     "symbol": "AOS",
     "description": "Constituyente del S&P 500. Sector: Building Products. Precio referencial: US$62.48.",
     "sector": "Building Products",
-    "marketCap": 849157,
-    "totalShares": 13591
+    "marketCap": 100000,
+    "totalShares": 1601
   },
   {
     "name": "Abbott Laboratories",
     "symbol": "ABT",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$114.10.",
     "sector": "Health Care Equipment",
-    "marketCap": 19743674,
-    "totalShares": 173038
+    "marketCap": 1974367,
+    "totalShares": 17304
   },
   {
     "name": "AbbVie",
     "symbol": "ABBV",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$262.90.",
     "sector": "Biotechnology",
-    "marketCap": 46457514,
-    "totalShares": 176712
+    "marketCap": 4645751,
+    "totalShares": 17671
   },
   {
     "name": "Accenture",
     "symbol": "ACN",
     "description": "Constituyente del S&P 500. Sector: IT Consulting & Other Services. Precio referencial: US$181.38.",
     "sector": "IT Consulting & Other Services",
-    "marketCap": 11099406,
-    "totalShares": 61194
+    "marketCap": 1109941,
+    "totalShares": 6119
   },
   {
     "name": "Adobe Inc.",
     "symbol": "ADBE",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$273.47.",
     "sector": "Application Software",
-    "marketCap": 10870433,
-    "totalShares": 39750
+    "marketCap": 1087043,
+    "totalShares": 3975
   },
   {
     "name": "Advanced Micro Devices",
     "symbol": "AMD",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$480.93.",
     "sector": "Semiconductors",
-    "marketCap": 78510621,
-    "totalShares": 163248
+    "marketCap": 7851062,
+    "totalShares": 16325
   },
   {
     "name": "AES Corporation",
     "symbol": "AES",
     "description": "Constituyente del S&P 500. Sector: Independent Power Producers & Energy Traders. Precio referencial: US$14.73.",
     "sector": "Independent Power Producers & Energy Traders",
-    "marketCap": 1050895,
-    "totalShares": 71344
+    "marketCap": 105090,
+    "totalShares": 7134
   },
   {
     "name": "Aflac",
     "symbol": "AFL",
     "description": "Constituyente del S&P 500. Sector: Life & Health Insurance. Precio referencial: US$117.45.",
     "sector": "Life & Health Insurance",
-    "marketCap": 5888277,
-    "totalShares": 50134
+    "marketCap": 588828,
+    "totalShares": 5013
   },
   {
     "name": "Agilent Technologies",
     "symbol": "A",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$155.08.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 4379954,
-    "totalShares": 28243
+    "marketCap": 437995,
+    "totalShares": 2824
   },
   {
     "name": "Air Products",
     "symbol": "APD",
     "description": "Constituyente del S&P 500. Sector: Industrial Gases. Precio referencial: US$306.66.",
     "sector": "Industrial Gases",
-    "marketCap": 6828875,
-    "totalShares": 22269
+    "marketCap": 682887,
+    "totalShares": 2227
   },
   {
     "name": "Airbnb",
     "symbol": "ABNB",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$188.07.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 11261362,
-    "totalShares": 59879
+    "marketCap": 1126136,
+    "totalShares": 5988
   },
   {
     "name": "Akamai Technologies",
     "symbol": "AKAM",
     "description": "Constituyente del S&P 500. Sector: Internet Services & Infrastructure. Precio referencial: US$108.06.",
     "sector": "Internet Services & Infrastructure",
-    "marketCap": 1553002,
-    "totalShares": 14372
+    "marketCap": 155300,
+    "totalShares": 1437
   },
   {
     "name": "Albemarle Corporation",
     "symbol": "ALB",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$134.51.",
     "sector": "Specialty Chemicals",
-    "marketCap": 1587286,
-    "totalShares": 11801
+    "marketCap": 158729,
+    "totalShares": 1180
   },
   {
     "name": "Alexandria Real Estate Equities",
     "symbol": "ARE",
     "description": "Constituyente del S&P 500. Sector: Office REITs. Precio referencial: US$52.97.",
     "sector": "Office REITs",
-    "marketCap": 911589,
-    "totalShares": 17210
+    "marketCap": 100000,
+    "totalShares": 1888
   },
   {
     "name": "Align Technology",
     "symbol": "ALGN",
     "description": "Constituyente del S&P 500. Sector: Health Care Supplies. Precio referencial: US$159.14.",
     "sector": "Health Care Supplies",
-    "marketCap": 1130528,
-    "totalShares": 7104
+    "marketCap": 113053,
+    "totalShares": 710
   },
   {
     "name": "Allegion",
     "symbol": "ALLE",
     "description": "Constituyente del S&P 500. Sector: Building Products. Precio referencial: US$160.28.",
     "sector": "Building Products",
-    "marketCap": 1362970,
-    "totalShares": 8504
+    "marketCap": 136297,
+    "totalShares": 850
   },
   {
     "name": "Alliant Energy",
     "symbol": "LNT",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$68.92.",
     "sector": "Electric Utilities",
-    "marketCap": 1786990,
-    "totalShares": 25928
+    "marketCap": 178699,
+    "totalShares": 2593
   },
   {
     "name": "Allstate",
     "symbol": "ALL",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$261.81.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 6620074,
-    "totalShares": 25286
+    "marketCap": 662007,
+    "totalShares": 2529
   },
   {
     "name": "Alphabet Inc. (Class A)",
     "symbol": "GOOGL",
     "description": "Constituyente del S&P 500. Sector: Interactive Media & Services. Precio referencial: US$342.00.",
     "sector": "Interactive Media & Services",
-    "marketCap": 418263781,
-    "totalShares": 1222994
+    "marketCap": 41826378,
+    "totalShares": 122299
   },
   {
     "name": "Alphabet Inc. (Class C)",
     "symbol": "GOOG",
     "description": "Constituyente del S&P 500. Sector: Interactive Media & Services. Precio referencial: US$339.10.",
     "sector": "Interactive Media & Services",
-    "marketCap": 414717103,
-    "totalShares": 1222994
+    "marketCap": 41471710,
+    "totalShares": 122299
   },
   {
     "name": "Altria",
     "symbol": "MO",
     "description": "Constituyente del S&P 500. Sector: Tobacco. Precio referencial: US$69.12.",
     "sector": "Tobacco",
-    "marketCap": 11541270,
-    "totalShares": 166974
+    "marketCap": 1154127,
+    "totalShares": 16697
   },
   {
     "name": "Amazon",
     "symbol": "AMZN",
     "description": "Constituyente del S&P 500. Sector: Broadline Retail. Precio referencial: US$260.28.",
     "sector": "Broadline Retail",
-    "marketCap": 280746158,
-    "totalShares": 1078631
+    "marketCap": 28074616,
+    "totalShares": 107863
   },
   {
     "name": "Amcor",
     "symbol": "AMCR",
     "description": "Constituyente del S&P 500. Sector: Paper & Plastic Packaging Products & Materials. Precio referencial: US$47.15.",
     "sector": "Paper & Plastic Packaging Products & Materials",
-    "marketCap": 2179960,
-    "totalShares": 46235
+    "marketCap": 217996,
+    "totalShares": 4623
   },
   {
     "name": "Amentum",
     "symbol": "AMTM",
     "description": "Constituyente del S&P 500. Sector: Diversified Support Services. Precio referencial: US$20.61.",
     "sector": "Diversified Support Services",
-    "marketCap": 503928,
-    "totalShares": 24451
+    "marketCap": 100000,
+    "totalShares": 4852
   },
   {
     "name": "Ameren",
     "symbol": "AEE",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$107.75.",
     "sector": "Multi-Utilities",
-    "marketCap": 2982986,
-    "totalShares": 27684
+    "marketCap": 298299,
+    "totalShares": 2768
   },
   {
     "name": "American Electric Power",
     "symbol": "AEP",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$123.36.",
     "sector": "Electric Utilities",
-    "marketCap": 6715686,
-    "totalShares": 54440
+    "marketCap": 671569,
+    "totalShares": 5444
   },
   {
     "name": "American Express",
     "symbol": "AXP",
     "description": "Constituyente del S&P 500. Sector: Consumer Finance. Precio referencial: US$336.15.",
     "sector": "Consumer Finance",
-    "marketCap": 22700540,
-    "totalShares": 67531
+    "marketCap": 2270054,
+    "totalShares": 6753
   },
   {
     "name": "American International Group",
     "symbol": "AIG",
     "description": "Constituyente del S&P 500. Sector: Multi-line Insurance. Precio referencial: US$76.97.",
     "sector": "Multi-line Insurance",
-    "marketCap": 4024709,
-    "totalShares": 52289
+    "marketCap": 402471,
+    "totalShares": 5229
   },
   {
     "name": "American Tower",
     "symbol": "AMT",
     "description": "Constituyente del S&P 500. Sector: Telecom Tower REITs. Precio referencial: US$175.73.",
     "sector": "Telecom Tower REITs",
-    "marketCap": 8188316,
-    "totalShares": 46596
+    "marketCap": 818832,
+    "totalShares": 4660
   },
   {
     "name": "American Water Works",
     "symbol": "AWK",
     "description": "Constituyente del S&P 500. Sector: Water Utilities. Precio referencial: US$137.49.",
     "sector": "Water Utilities",
-    "marketCap": 2732325,
-    "totalShares": 19873
+    "marketCap": 273233,
+    "totalShares": 1987
   },
   {
     "name": "Ameriprise Financial",
     "symbol": "AMP",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$560.28.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 4949134,
-    "totalShares": 8833
+    "marketCap": 494913,
+    "totalShares": 883
   },
   {
     "name": "Ametek",
     "symbol": "AME",
     "description": "Constituyente del S&P 500. Sector: Electrical Components & Equipment. Precio referencial: US$245.20.",
     "sector": "Electrical Components & Equipment",
-    "marketCap": 5621486,
-    "totalShares": 22926
+    "marketCap": 562149,
+    "totalShares": 2293
   },
   {
     "name": "Amgen",
     "symbol": "AMGN",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$440.34.",
     "sector": "Biotechnology",
-    "marketCap": 23806190,
-    "totalShares": 54063
+    "marketCap": 2380619,
+    "totalShares": 5406
   },
   {
     "name": "Amphenol",
     "symbol": "APH",
     "description": "Constituyente del S&P 500. Sector: Electronic Components. Precio referencial: US$161.34.",
     "sector": "Electronic Components",
-    "marketCap": 19892955,
-    "totalShares": 123298
+    "marketCap": 1989295,
+    "totalShares": 12330
   },
   {
     "name": "Analog Devices",
     "symbol": "ADI",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$371.80.",
     "sector": "Semiconductors",
-    "marketCap": 18016143,
-    "totalShares": 48457
+    "marketCap": 1801614,
+    "totalShares": 4846
   },
   {
     "name": "Ansys",
@@ -313,112 +313,112 @@ export const companies: SeedCompany[] = [
     "symbol": "AON",
     "description": "Constituyente del S&P 500. Sector: Insurance Brokers. Precio referencial: US$353.98.",
     "sector": "Insurance Brokers",
-    "marketCap": 7508817,
-    "totalShares": 21213
+    "marketCap": 750882,
+    "totalShares": 2121
   },
   {
     "name": "APA Corporation",
     "symbol": "APA",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Exploration & Production. Precio referencial: US$41.19.",
     "sector": "Oil & Gas Exploration & Production",
-    "marketCap": 1443098,
-    "totalShares": 35035
+    "marketCap": 144310,
+    "totalShares": 3504
   },
   {
     "name": "Apple Inc.",
     "symbol": "AAPL",
     "description": "Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$313.45.",
     "sector": "Technology Hardware, Storage & Peripherals",
-    "marketCap": 457454597,
-    "totalShares": 1459418
+    "marketCap": 45745460,
+    "totalShares": 145942
   },
   {
     "name": "Applied Materials",
     "symbol": "AMAT",
     "description": "Constituyente del S&P 500. Sector: Semiconductor Materials & Equipment. Precio referencial: US$479.76.",
     "sector": "Semiconductor Materials & Equipment",
-    "marketCap": 38073631,
-    "totalShares": 79360
+    "marketCap": 3807363,
+    "totalShares": 7936
   },
   {
     "name": "Aptiv",
     "symbol": "APTV",
     "description": "Constituyente del S&P 500. Sector: Automotive Parts & Equipment. Precio referencial: US$46.27.",
     "sector": "Automotive Parts & Equipment",
-    "marketCap": 960719,
-    "totalShares": 20763
+    "marketCap": 100000,
+    "totalShares": 2161
   },
   {
     "name": "Arch Capital Group",
     "symbol": "ACGL",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$100.72.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 3436860,
-    "totalShares": 34123
+    "marketCap": 343686,
+    "totalShares": 3412
   },
   {
     "name": "Archer Daniels Midland",
     "symbol": "ADM",
     "description": "Constituyente del S&P 500. Sector: Agricultural Products & Services. Precio referencial: US$80.09.",
     "sector": "Agricultural Products & Services",
-    "marketCap": 3860014,
-    "totalShares": 48196
+    "marketCap": 386001,
+    "totalShares": 4820
   },
   {
     "name": "Arista Networks",
     "symbol": "ANET",
     "description": "Constituyente del S&P 500. Sector: Communications Equipment. Precio referencial: US$202.25.",
     "sector": "Communications Equipment",
-    "marketCap": 25508269,
-    "totalShares": 126122
+    "marketCap": 2550827,
+    "totalShares": 12612
   },
   {
     "name": "Arthur J. Gallagher & Co.",
     "symbol": "AJG",
     "description": "Constituyente del S&P 500. Sector: Insurance Brokers. Precio referencial: US$265.03.",
     "sector": "Insurance Brokers",
-    "marketCap": 6793805,
-    "totalShares": 25634
+    "marketCap": 679381,
+    "totalShares": 2563
   },
   {
     "name": "Assurant",
     "symbol": "AIZ",
     "description": "Constituyente del S&P 500. Sector: Multi-line Insurance. Precio referencial: US$288.51.",
     "sector": "Multi-line Insurance",
-    "marketCap": 1423040,
-    "totalShares": 4932
+    "marketCap": 142304,
+    "totalShares": 493
   },
   {
     "name": "AT&T",
     "symbol": "T",
     "description": "Constituyente del S&P 500. Sector: Integrated Telecommunication Services. Precio referencial: US$25.87.",
     "sector": "Integrated Telecommunication Services",
-    "marketCap": 17727123,
-    "totalShares": 685239
+    "marketCap": 1772712,
+    "totalShares": 68524
   },
   {
     "name": "Atmos Energy",
     "symbol": "ATO",
     "description": "Constituyente del S&P 500. Sector: Gas Utilities. Precio referencial: US$169.46.",
     "sector": "Gas Utilities",
-    "marketCap": 2863680,
-    "totalShares": 16899
+    "marketCap": 286368,
+    "totalShares": 1690
   },
   {
     "name": "Autodesk",
     "symbol": "ADSK",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$254.77.",
     "sector": "Application Software",
-    "marketCap": 5379348,
-    "totalShares": 21115
+    "marketCap": 537935,
+    "totalShares": 2111
   },
   {
     "name": "Automatic Data Processing",
     "symbol": "ADP",
     "description": "Constituyente del S&P 500. Sector: Human Resource & Employment Services. Precio referencial: US$281.39.",
     "sector": "Human Resource & Employment Services",
-    "marketCap": 11178577,
-    "totalShares": 39726
+    "marketCap": 1117858,
+    "totalShares": 3973
   },
   {
     "name": "AutoZone",
@@ -433,64 +433,64 @@ export const companies: SeedCompany[] = [
     "symbol": "AVB",
     "description": "Constituyente del S&P 500. Sector: Multi-Family Residential REITs. Precio referencial: US$184.06.",
     "sector": "Multi-Family Residential REITs",
-    "marketCap": 2628339,
-    "totalShares": 14280
+    "marketCap": 262834,
+    "totalShares": 1428
   },
   {
     "name": "Avery Dennison",
     "symbol": "AVY",
     "description": "Constituyente del S&P 500. Sector: Paper & Plastic Packaging Products & Materials. Precio referencial: US$182.33.",
     "sector": "Paper & Plastic Packaging Products & Materials",
-    "marketCap": 1381845,
-    "totalShares": 7579
+    "marketCap": 138185,
+    "totalShares": 758
   },
   {
     "name": "Axon Enterprise",
     "symbol": "AXON",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$607.48.",
     "sector": "Aerospace & Defense",
-    "marketCap": 4935010,
-    "totalShares": 8124
+    "marketCap": 493501,
+    "totalShares": 812
   },
   {
     "name": "Baker Hughes",
     "symbol": "BKR",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Equipment & Services. Precio referencial: US$62.00.",
     "sector": "Oil & Gas Equipment & Services",
-    "marketCap": 6154579,
-    "totalShares": 99267
+    "marketCap": 615458,
+    "totalShares": 9927
   },
   {
     "name": "Ball Corporation",
     "symbol": "BALL",
     "description": "Constituyente del S&P 500. Sector: Metal, Glass & Plastic Containers. Precio referencial: US$64.05.",
     "sector": "Metal, Glass & Plastic Containers",
-    "marketCap": 1695425,
-    "totalShares": 26470
+    "marketCap": 169543,
+    "totalShares": 2647
   },
   {
     "name": "Bank of America",
     "symbol": "BAC",
     "description": "Constituyente del S&P 500. Sector: Diversified Banks. Precio referencial: US$62.23.",
     "sector": "Diversified Banks",
-    "marketCap": 43515875,
-    "totalShares": 699275
+    "marketCap": 4351587,
+    "totalShares": 69927
   },
   {
     "name": "Baxter International",
     "symbol": "BAX",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$26.50.",
     "sector": "Health Care Equipment",
-    "marketCap": 1370039,
-    "totalShares": 51700
+    "marketCap": 137004,
+    "totalShares": 5170
   },
   {
     "name": "Becton Dickinson",
     "symbol": "BDX",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$190.21.",
     "sector": "Health Care Equipment",
-    "marketCap": 5181070,
-    "totalShares": 27239
+    "marketCap": 518107,
+    "totalShares": 2724
   },
   {
     "name": "Berkshire Hathaway",
@@ -513,32 +513,32 @@ export const companies: SeedCompany[] = [
     "symbol": "TECH",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$72.38.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 1135050,
-    "totalShares": 15682
+    "marketCap": 113505,
+    "totalShares": 1568
   },
   {
     "name": "Biogen",
     "symbol": "BIIB",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$221.07.",
     "sector": "Biotechnology",
-    "marketCap": 3266398,
-    "totalShares": 14775
+    "marketCap": 326640,
+    "totalShares": 1478
   },
   {
     "name": "BlackRock",
     "symbol": "BLK",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$1173.21.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 19061868,
-    "totalShares": 16248
+    "marketCap": 1906187,
+    "totalShares": 1625
   },
   {
     "name": "Blackstone Inc.",
     "symbol": "BX",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$143.20.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 17116665,
-    "totalShares": 119530
+    "marketCap": 1711666,
+    "totalShares": 11953
   },
   {
     "name": "BNY Mellon",
@@ -553,64 +553,64 @@ export const companies: SeedCompany[] = [
     "symbol": "BA",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$212.09.",
     "sector": "Aerospace & Defense",
-    "marketCap": 16762959,
-    "totalShares": 79037
+    "marketCap": 1676296,
+    "totalShares": 7904
   },
   {
     "name": "Booking Holdings",
     "symbol": "BKNG",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$208.89.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 15695587,
-    "totalShares": 75138
+    "marketCap": 1569559,
+    "totalShares": 7514
   },
   {
     "name": "BorgWarner",
     "symbol": "BWA",
     "description": "Constituyente del S&P 500. Sector: Automotive Parts & Equipment. Precio referencial: US$64.69.",
     "sector": "Automotive Parts & Equipment",
-    "marketCap": 1317518,
-    "totalShares": 20367
+    "marketCap": 131752,
+    "totalShares": 2037
   },
   {
     "name": "Boston Scientific",
     "symbol": "BSX",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$48.17.",
     "sector": "Health Care Equipment",
-    "marketCap": 6980939,
-    "totalShares": 144923
+    "marketCap": 698094,
+    "totalShares": 14492
   },
   {
     "name": "Bristol Myers Squibb",
     "symbol": "BMY",
     "description": "Constituyente del S&P 500. Sector: Pharmaceuticals. Precio referencial: US$67.57.",
     "sector": "Pharmaceuticals",
-    "marketCap": 13802622,
-    "totalShares": 204271
+    "marketCap": 1380262,
+    "totalShares": 20427
   },
   {
     "name": "Broadcom",
     "symbol": "AVGO",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$355.59.",
     "sector": "Semiconductors",
-    "marketCap": 169174801,
-    "totalShares": 475758
+    "marketCap": 16917480,
+    "totalShares": 47576
   },
   {
     "name": "Broadridge Financial Solutions",
     "symbol": "BR",
     "description": "Constituyente del S&P 500. Sector: Data Processing & Outsourced Services. Precio referencial: US$181.60.",
     "sector": "Data Processing & Outsourced Services",
-    "marketCap": 2070636,
-    "totalShares": 11402
+    "marketCap": 207064,
+    "totalShares": 1140
   },
   {
     "name": "Brown & Brown",
     "symbol": "BRO",
     "description": "Constituyente del S&P 500. Sector: Insurance Brokers. Precio referencial: US$72.78.",
     "sector": "Insurance Brokers",
-    "marketCap": 2435294,
-    "totalShares": 33461
+    "marketCap": 243529,
+    "totalShares": 3346
   },
   {
     "name": "Brown-Forman",
@@ -625,56 +625,56 @@ export const companies: SeedCompany[] = [
     "symbol": "BLDR",
     "description": "Constituyente del S&P 500. Sector: Building Products. Precio referencial: US$68.67.",
     "sector": "Building Products",
-    "marketCap": 738865,
-    "totalShares": 10760
+    "marketCap": 100000,
+    "totalShares": 1456
   },
   {
     "name": "Bunge Global",
     "symbol": "BG",
     "description": "Constituyente del S&P 500. Sector: Agricultural Products & Services. Precio referencial: US$113.25.",
     "sector": "Agricultural Products & Services",
-    "marketCap": 2175749,
-    "totalShares": 19212
+    "marketCap": 217575,
+    "totalShares": 1921
   },
   {
     "name": "BXP, Inc.",
     "symbol": "BXP",
     "description": "Constituyente del S&P 500. Sector: Office REITs. Precio referencial: US$70.30.",
     "sector": "Office REITs",
-    "marketCap": 1271568,
-    "totalShares": 18088
+    "marketCap": 127157,
+    "totalShares": 1809
   },
   {
     "name": "C.H. Robinson",
     "symbol": "CHRW",
     "description": "Constituyente del S&P 500. Sector: Air Freight & Logistics. Precio referencial: US$151.73.",
     "sector": "Air Freight & Logistics",
-    "marketCap": 1772984,
-    "totalShares": 11685
+    "marketCap": 177298,
+    "totalShares": 1169
   },
   {
     "name": "Cadence Design Systems",
     "symbol": "CDNS",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$334.68.",
     "sector": "Application Software",
-    "marketCap": 9216853,
-    "totalShares": 27539
+    "marketCap": 921685,
+    "totalShares": 2754
   },
   {
     "name": "Caesars Entertainment",
     "symbol": "CZR",
     "description": "Constituyente del S&P 500. Sector: Casinos & Gaming. Precio referencial: US$29.66.",
     "sector": "Casinos & Gaming",
-    "marketCap": 604404,
-    "totalShares": 20378
+    "marketCap": 100000,
+    "totalShares": 3372
   },
   {
     "name": "Camden Property Trust",
     "symbol": "CPT",
     "description": "Constituyente del S&P 500. Sector: Multi-Family Residential REITs. Precio referencial: US$107.61.",
     "sector": "Multi-Family Residential REITs",
-    "marketCap": 1245398,
-    "totalShares": 11573
+    "marketCap": 124540,
+    "totalShares": 1157
   },
   {
     "name": "Campbell Soup Company",
@@ -689,16 +689,16 @@ export const companies: SeedCompany[] = [
     "symbol": "COF",
     "description": "Constituyente del S&P 500. Sector: Consumer Finance. Precio referencial: US$217.21.",
     "sector": "Consumer Finance",
-    "marketCap": 13325505,
-    "totalShares": 61348
+    "marketCap": 1332551,
+    "totalShares": 6135
   },
   {
     "name": "Cardinal Health",
     "symbol": "CAH",
     "description": "Constituyente del S&P 500. Sector: Health Care Distributors. Precio referencial: US$238.40.",
     "sector": "Health Care Distributors",
-    "marketCap": 5544605,
-    "totalShares": 23258
+    "marketCap": 554461,
+    "totalShares": 2326
   },
   {
     "name": "CarMax",
@@ -713,16 +713,16 @@ export const companies: SeedCompany[] = [
     "symbol": "CCL",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$25.59.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 3504932,
-    "totalShares": 136965
+    "marketCap": 350493,
+    "totalShares": 13696
   },
   {
     "name": "Carrier Global",
     "symbol": "CARR",
     "description": "Constituyente del S&P 500. Sector: Building Products. Precio referencial: US$58.74.",
     "sector": "Building Products",
-    "marketCap": 4842086,
-    "totalShares": 82433
+    "marketCap": 484209,
+    "totalShares": 8243
   },
   {
     "name": "Catalent",
@@ -737,272 +737,272 @@ export const companies: SeedCompany[] = [
     "symbol": "CAT",
     "description": "Constituyente del S&P 500. Sector: Construction Machinery & Heavy Transportation Equipment. Precio referencial: US$821.93.",
     "sector": "Construction Machinery & Heavy Transportation Equipment",
-    "marketCap": 37782058,
-    "totalShares": 45967
+    "marketCap": 3778206,
+    "totalShares": 4597
   },
   {
     "name": "Cboe Global Markets",
     "symbol": "CBOE",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$312.19.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 3260232,
-    "totalShares": 10443
+    "marketCap": 326023,
+    "totalShares": 1044
   },
   {
     "name": "CBRE Group",
     "symbol": "CBRE",
     "description": "Constituyente del S&P 500. Sector: Real Estate Services. Precio referencial: US$150.36.",
     "sector": "Real Estate Services",
-    "marketCap": 4354054,
-    "totalShares": 28958
+    "marketCap": 435405,
+    "totalShares": 2896
   },
   {
     "name": "CDW",
     "symbol": "CDW",
     "description": "Constituyente del S&P 500. Sector: Technology Distributors. Precio referencial: US$141.46.",
     "sector": "Technology Distributors",
-    "marketCap": 1768497,
-    "totalShares": 12502
+    "marketCap": 176850,
+    "totalShares": 1250
   },
   {
     "name": "Celanese",
     "symbol": "CE",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$44.70.",
     "sector": "Specialty Chemicals",
-    "marketCap": 490578,
-    "totalShares": 10975
+    "marketCap": 100000,
+    "totalShares": 2237
   },
   {
     "name": "Cencora",
     "symbol": "COR",
     "description": "Constituyente del S&P 500. Sector: Health Care Distributors. Precio referencial: US$327.79.",
     "sector": "Health Care Distributors",
-    "marketCap": 6255124,
-    "totalShares": 19083
+    "marketCap": 625512,
+    "totalShares": 1908
   },
   {
     "name": "Centene Corporation",
     "symbol": "CNC",
     "description": "Constituyente del S&P 500. Sector: Managed Health Care. Precio referencial: US$65.47.",
     "sector": "Managed Health Care",
-    "marketCap": 3234185,
-    "totalShares": 49399
+    "marketCap": 323419,
+    "totalShares": 4940
   },
   {
     "name": "CenterPoint Energy",
     "symbol": "CNP",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$39.59.",
     "sector": "Multi-Utilities",
-    "marketCap": 2607873,
-    "totalShares": 65872
+    "marketCap": 260787,
+    "totalShares": 6587
   },
   {
     "name": "CF Industries",
     "symbol": "CF",
     "description": "Constituyente del S&P 500. Sector: Fertilizers & Agricultural Chemicals. Precio referencial: US$125.70.",
     "sector": "Fertilizers & Agricultural Chemicals",
-    "marketCap": 1902320,
-    "totalShares": 15134
+    "marketCap": 190232,
+    "totalShares": 1513
   },
   {
     "name": "Charles River Laboratories",
     "symbol": "CRL",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$295.10.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 1421430,
-    "totalShares": 4817
+    "marketCap": 142143,
+    "totalShares": 482
   },
   {
     "name": "Charles Schwab Corporation",
     "symbol": "SCHW",
     "description": "Constituyente del S&P 500. Sector: Investment Banking & Brokerage. Precio referencial: US$109.39.",
     "sector": "Investment Banking & Brokerage",
-    "marketCap": 18917202,
-    "totalShares": 172934
+    "marketCap": 1891720,
+    "totalShares": 17293
   },
   {
     "name": "Charter Communications",
     "symbol": "CHTR",
     "description": "Constituyente del S&P 500. Sector: Cable & Satellite. Precio referencial: US$153.89.",
     "sector": "Cable & Satellite",
-    "marketCap": 2074091,
-    "totalShares": 13478
+    "marketCap": 207409,
+    "totalShares": 1348
   },
   {
     "name": "Chevron Corporation",
     "symbol": "CVX",
     "description": "Constituyente del S&P 500. Sector: Integrated Oil & Gas. Precio referencial: US$200.21.",
     "sector": "Integrated Oil & Gas",
-    "marketCap": 39273261,
-    "totalShares": 196160
+    "marketCap": 3927326,
+    "totalShares": 19616
   },
   {
     "name": "Chipotle Mexican Grill",
     "symbol": "CMG",
     "description": "Constituyente del S&P 500. Sector: Restaurants. Precio referencial: US$37.34.",
     "sector": "Restaurants",
-    "marketCap": 4725071,
-    "totalShares": 126542
+    "marketCap": 472507,
+    "totalShares": 12654
   },
   {
     "name": "Chubb Limited",
     "symbol": "CB",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$343.77.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 13262642,
-    "totalShares": 38580
+    "marketCap": 1326264,
+    "totalShares": 3858
   },
   {
     "name": "Church & Dwight",
     "symbol": "CHD",
     "description": "Constituyente del S&P 500. Sector: Household Products. Precio referencial: US$102.86.",
     "sector": "Household Products",
-    "marketCap": 2439879,
-    "totalShares": 23720
+    "marketCap": 243988,
+    "totalShares": 2372
   },
   {
     "name": "Cigna",
     "symbol": "CI",
     "description": "Constituyente del S&P 500. Sector: Health Care Services. Precio referencial: US$280.87.",
     "sector": "Health Care Services",
-    "marketCap": 7421723,
-    "totalShares": 26424
+    "marketCap": 742172,
+    "totalShares": 2642
   },
   {
     "name": "Cincinnati Financial",
     "symbol": "CINF",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$172.38.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 2645655,
-    "totalShares": 15348
+    "marketCap": 264565,
+    "totalShares": 1535
   },
   {
     "name": "Cintas",
     "symbol": "CTAS",
     "description": "Constituyente del S&P 500. Sector: Diversified Support Services. Precio referencial: US$205.78.",
     "sector": "Diversified Support Services",
-    "marketCap": 8234689,
-    "totalShares": 40017
+    "marketCap": 823469,
+    "totalShares": 4002
   },
   {
     "name": "Cisco",
     "symbol": "CSCO",
     "description": "Constituyente del S&P 500. Sector: Communications Equipment. Precio referencial: US$112.36.",
     "sector": "Communications Equipment",
-    "marketCap": 44285959,
-    "totalShares": 394143
+    "marketCap": 4428596,
+    "totalShares": 39414
   },
   {
     "name": "Citigroup",
     "symbol": "C",
     "description": "Constituyente del S&P 500. Sector: Diversified Banks. Precio referencial: US$133.56.",
     "sector": "Diversified Banks",
-    "marketCap": 22403845,
-    "totalShares": 167744
+    "marketCap": 2240385,
+    "totalShares": 16774
   },
   {
     "name": "Citizens Financial Group",
     "symbol": "CFG",
     "description": "Constituyente del S&P 500. Sector: Regional Banks. Precio referencial: US$70.49.",
     "sector": "Regional Banks",
-    "marketCap": 2968875,
-    "totalShares": 42118
+    "marketCap": 296888,
+    "totalShares": 4212
   },
   {
     "name": "Clorox",
     "symbol": "CLX",
     "description": "Constituyente del S&P 500. Sector: Household Products. Precio referencial: US$104.23.",
     "sector": "Household Products",
-    "marketCap": 1260464,
-    "totalShares": 12093
+    "marketCap": 126046,
+    "totalShares": 1209
   },
   {
     "name": "CME Group",
     "symbol": "CME",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$280.98.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 10103458,
-    "totalShares": 35958
+    "marketCap": 1010346,
+    "totalShares": 3596
   },
   {
     "name": "CMS Energy",
     "symbol": "CMS",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$69.23.",
     "sector": "Multi-Utilities",
-    "marketCap": 2170895,
-    "totalShares": 31358
+    "marketCap": 217089,
+    "totalShares": 3136
   },
   {
     "name": "Coca-Cola Company (The)",
     "symbol": "KO",
     "description": "Constituyente del S&P 500. Sector: Soft Drinks & Non-alcoholic Beverages. Precio referencial: US$90.08.",
     "sector": "Soft Drinks & Non-alcoholic Beverages",
-    "marketCap": 38757361,
-    "totalShares": 430255
+    "marketCap": 3875736,
+    "totalShares": 43025
   },
   {
     "name": "Cognizant",
     "symbol": "CTSH",
     "description": "Constituyente del S&P 500. Sector: IT Consulting & Other Services. Precio referencial: US$62.09.",
     "sector": "IT Consulting & Other Services",
-    "marketCap": 2796808,
-    "totalShares": 45044
+    "marketCap": 279681,
+    "totalShares": 4504
   },
   {
     "name": "Colgate-Palmolive",
     "symbol": "CL",
     "description": "Constituyente del S&P 500. Sector: Household Products. Precio referencial: US$92.06.",
     "sector": "Household Products",
-    "marketCap": 7338773,
-    "totalShares": 79717
+    "marketCap": 733877,
+    "totalShares": 7972
   },
   {
     "name": "Comcast",
     "symbol": "CMCSA",
     "description": "Constituyente del S&P 500. Sector: Cable & Satellite. Precio referencial: US$27.20.",
     "sector": "Cable & Satellite",
-    "marketCap": 9652292,
-    "totalShares": 354864
+    "marketCap": 965229,
+    "totalShares": 35486
   },
   {
     "name": "Conagra Brands",
     "symbol": "CAG",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$16.19.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 774798,
-    "totalShares": 47857
+    "marketCap": 100000,
+    "totalShares": 6177
   },
   {
     "name": "ConocoPhillips",
     "symbol": "COP",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Exploration & Production. Precio referencial: US$130.61.",
     "sector": "Oil & Gas Exploration & Production",
-    "marketCap": 15690668,
-    "totalShares": 120134
+    "marketCap": 1569067,
+    "totalShares": 12013
   },
   {
     "name": "Consolidated Edison",
     "symbol": "ED",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$108.05.",
     "sector": "Multi-Utilities",
-    "marketCap": 3995999,
-    "totalShares": 36983
+    "marketCap": 399600,
+    "totalShares": 3698
   },
   {
     "name": "Constellation Brands",
     "symbol": "STZ",
     "description": "Constituyente del S&P 500. Sector: Distillers & Vintners. Precio referencial: US$134.45.",
     "sector": "Distillers & Vintners",
-    "marketCap": 2296464,
-    "totalShares": 17080
+    "marketCap": 229646,
+    "totalShares": 1708
   },
   {
     "name": "Constellation Energy",
     "symbol": "CEG",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$279.52.",
     "sector": "Electric Utilities",
-    "marketCap": 9903600,
-    "totalShares": 35431
+    "marketCap": 990360,
+    "totalShares": 3543
   },
   {
     "name": "Cooper Companies (The)",
@@ -1017,48 +1017,48 @@ export const companies: SeedCompany[] = [
     "symbol": "CPRT",
     "description": "Constituyente del S&P 500. Sector: Diversified Support Services. Precio referencial: US$32.67.",
     "sector": "Diversified Support Services",
-    "marketCap": 3024626,
-    "totalShares": 92581
+    "marketCap": 302463,
+    "totalShares": 9258
   },
   {
     "name": "Corning Inc.",
     "symbol": "GLW",
     "description": "Constituyente del S&P 500. Sector: Electronic Components. Precio referencial: US$152.78.",
     "sector": "Electronic Components",
-    "marketCap": 13160292,
-    "totalShares": 86139
+    "marketCap": 1316029,
+    "totalShares": 8614
   },
   {
     "name": "Corpay",
     "symbol": "CPAY",
     "description": "Constituyente del S&P 500. Sector: Transaction & Payment Processing Services. Precio referencial: US$406.93.",
     "sector": "Transaction & Payment Processing Services",
-    "marketCap": 2671886,
-    "totalShares": 6566
+    "marketCap": 267189,
+    "totalShares": 657
   },
   {
     "name": "Corteva",
     "symbol": "CTVA",
     "description": "Constituyente del S&P 500. Sector: Fertilizers & Agricultural Chemicals. Precio referencial: US$82.88.",
     "sector": "Fertilizers & Agricultural Chemicals",
-    "marketCap": 5529720,
-    "totalShares": 66720
+    "marketCap": 552972,
+    "totalShares": 6672
   },
   {
     "name": "CoStar Group",
     "symbol": "CSGP",
     "description": "Constituyente del S&P 500. Sector: Real Estate Services. Precio referencial: US$32.14.",
     "sector": "Real Estate Services",
-    "marketCap": 1302305,
-    "totalShares": 40520
+    "marketCap": 130231,
+    "totalShares": 4052
   },
   {
     "name": "Costco",
     "symbol": "COST",
     "description": "Constituyente del S&P 500. Sector: Consumer Staples Merchandise Retail. Precio referencial: US$956.12.",
     "sector": "Consumer Staples Merchandise Retail",
-    "marketCap": 42401897,
-    "totalShares": 44348
+    "marketCap": 4240190,
+    "totalShares": 4435
   },
   {
     "name": "Coterra",
@@ -1073,72 +1073,72 @@ export const companies: SeedCompany[] = [
     "symbol": "CRWD",
     "description": "Constituyente del S&P 500. Sector: Systems Software. Precio referencial: US$189.18.",
     "sector": "Systems Software",
-    "marketCap": 19263427,
-    "totalShares": 101826
+    "marketCap": 1926343,
+    "totalShares": 10183
   },
   {
     "name": "Crown Castle",
     "symbol": "CCI",
     "description": "Constituyente del S&P 500. Sector: Telecom Tower REITs. Precio referencial: US$75.54.",
     "sector": "Telecom Tower REITs",
-    "marketCap": 3301098,
-    "totalShares": 43700
+    "marketCap": 330110,
+    "totalShares": 4370
   },
   {
     "name": "CSX Corporation",
     "symbol": "CSX",
     "description": "Constituyente del S&P 500. Sector: Rail Transportation. Precio referencial: US$51.76.",
     "sector": "Rail Transportation",
-    "marketCap": 9588410,
-    "totalShares": 185247
+    "marketCap": 958841,
+    "totalShares": 18525
   },
   {
     "name": "Cummins",
     "symbol": "CMI",
     "description": "Constituyente del S&P 500. Sector: Construction Machinery & Heavy Transportation Equipment. Precio referencial: US$578.14.",
     "sector": "Construction Machinery & Heavy Transportation Equipment",
-    "marketCap": 7958934,
-    "totalShares": 13766
+    "marketCap": 795893,
+    "totalShares": 1377
   },
   {
     "name": "CVS Health",
     "symbol": "CVS",
     "description": "Constituyente del S&P 500. Sector: Health Care Services. Precio referencial: US$94.32.",
     "sector": "Health Care Services",
-    "marketCap": 12063248,
-    "totalShares": 127897
+    "marketCap": 1206325,
+    "totalShares": 12790
   },
   {
     "name": "D. R. Horton",
     "symbol": "DHI",
     "description": "Constituyente del S&P 500. Sector: Homebuilding. Precio referencial: US$149.25.",
     "sector": "Homebuilding",
-    "marketCap": 4174542,
-    "totalShares": 27970
+    "marketCap": 417454,
+    "totalShares": 2797
   },
   {
     "name": "Danaher Corporation",
     "symbol": "DHR",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$215.36.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 15139507,
-    "totalShares": 70299
+    "marketCap": 1513951,
+    "totalShares": 7030
   },
   {
     "name": "Darden Restaurants",
     "symbol": "DRI",
     "description": "Constituyente del S&P 500. Sector: Restaurants. Precio referencial: US$218.81.",
     "sector": "Restaurants",
-    "marketCap": 2484407,
-    "totalShares": 11354
+    "marketCap": 248441,
+    "totalShares": 1135
   },
   {
     "name": "DaVita",
     "symbol": "DVA",
     "description": "Constituyente del S&P 500. Sector: Health Care Services. Precio referencial: US$180.05.",
     "sector": "Health Care Services",
-    "marketCap": 1148719,
-    "totalShares": 6380
+    "marketCap": 114872,
+    "totalShares": 638
   },
   {
     "name": "Dayforce",
@@ -1153,24 +1153,24 @@ export const companies: SeedCompany[] = [
     "symbol": "DECK",
     "description": "Constituyente del S&P 500. Sector: Footwear. Precio referencial: US$89.47.",
     "sector": "Footwear",
-    "marketCap": 1218419,
-    "totalShares": 13618
+    "marketCap": 121842,
+    "totalShares": 1362
   },
   {
     "name": "Deere & Company",
     "symbol": "DE",
     "description": "Constituyente del S&P 500. Sector: Agricultural & Farm Machinery. Precio referencial: US$634.54.",
     "sector": "Agricultural & Farm Machinery",
-    "marketCap": 17128610,
-    "totalShares": 26994
+    "marketCap": 1712861,
+    "totalShares": 2699
   },
   {
     "name": "Dell Technologies",
     "symbol": "DELL",
     "description": "Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$463.82.",
     "sector": "Technology Hardware, Storage & Peripherals",
-    "marketCap": 29969377,
-    "totalShares": 64614
+    "marketCap": 2996938,
+    "totalShares": 6461
   },
   {
     "name": "Delta Air Lines",
@@ -1185,32 +1185,32 @@ export const companies: SeedCompany[] = [
     "symbol": "DVN",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Exploration & Production. Precio referencial: US$46.83.",
     "sector": "Oil & Gas Exploration & Production",
-    "marketCap": 5151300,
-    "totalShares": 110000
+    "marketCap": 515130,
+    "totalShares": 11000
   },
   {
     "name": "Dexcom",
     "symbol": "DXCM",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$88.96.",
     "sector": "Health Care Equipment",
-    "marketCap": 3357001,
-    "totalShares": 37736
+    "marketCap": 335700,
+    "totalShares": 3774
   },
   {
     "name": "Diamondback Energy",
     "symbol": "FANG",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Exploration & Production. Precio referencial: US$199.84.",
     "sector": "Oil & Gas Exploration & Production",
-    "marketCap": 5595915,
-    "totalShares": 28002
+    "marketCap": 559592,
+    "totalShares": 2800
   },
   {
     "name": "Digital Realty",
     "symbol": "DLR",
     "description": "Constituyente del S&P 500. Sector: Data Center REITs. Precio referencial: US$193.43.",
     "sector": "Data Center REITs",
-    "marketCap": 7305149,
-    "totalShares": 37766
+    "marketCap": 730515,
+    "totalShares": 3777
   },
   {
     "name": "Discover Financial",
@@ -1225,376 +1225,376 @@ export const companies: SeedCompany[] = [
     "symbol": "DG",
     "description": "Constituyente del S&P 500. Sector: Consumer Staples Merchandise Retail. Precio referencial: US$122.78.",
     "sector": "Consumer Staples Merchandise Retail",
-    "marketCap": 2708363,
-    "totalShares": 22059
+    "marketCap": 270836,
+    "totalShares": 2206
   },
   {
     "name": "Dollar Tree",
     "symbol": "DLTR",
     "description": "Constituyente del S&P 500. Sector: Consumer Staples Merchandise Retail. Precio referencial: US$132.18.",
     "sector": "Consumer Staples Merchandise Retail",
-    "marketCap": 2540164,
-    "totalShares": 19217
+    "marketCap": 254016,
+    "totalShares": 1922
   },
   {
     "name": "Dominion Energy",
     "symbol": "D",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$66.91.",
     "sector": "Multi-Utilities",
-    "marketCap": 5884908,
-    "totalShares": 87953
+    "marketCap": 588491,
+    "totalShares": 8795
   },
   {
     "name": "Domino's",
     "symbol": "DPZ",
     "description": "Constituyente del S&P 500. Sector: Restaurants. Precio referencial: US$344.56.",
     "sector": "Restaurants",
-    "marketCap": 1139864,
-    "totalShares": 3308
+    "marketCap": 113986,
+    "totalShares": 331
   },
   {
     "name": "Dover Corporation",
     "symbol": "DOV",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$204.66.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 2756366,
-    "totalShares": 13468
+    "marketCap": 275637,
+    "totalShares": 1347
   },
   {
     "name": "Dow Inc.",
     "symbol": "DOW",
     "description": "Constituyente del S&P 500. Sector: Commodity Chemicals. Precio referencial: US$30.33.",
     "sector": "Commodity Chemicals",
-    "marketCap": 2190859,
-    "totalShares": 72234
+    "marketCap": 219086,
+    "totalShares": 7223
   },
   {
     "name": "DTE Energy",
     "symbol": "DTE",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$137.71.",
     "sector": "Multi-Utilities",
-    "marketCap": 2865581,
-    "totalShares": 20809
+    "marketCap": 286558,
+    "totalShares": 2081
   },
   {
     "name": "Duke Energy",
     "symbol": "DUK",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$121.89.",
     "sector": "Electric Utilities",
-    "marketCap": 9503790,
-    "totalShares": 77970
+    "marketCap": 950379,
+    "totalShares": 7797
   },
   {
     "name": "DuPont",
     "symbol": "DD",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$137.98.",
     "sector": "Specialty Chemicals",
-    "marketCap": 1863323,
-    "totalShares": 13504
+    "marketCap": 186332,
+    "totalShares": 1350
   },
   {
     "name": "Eastman Chemical Company",
     "symbol": "EMN",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$72.93.",
     "sector": "Specialty Chemicals",
-    "marketCap": 833784,
-    "totalShares": 11433
+    "marketCap": 100000,
+    "totalShares": 1371
   },
   {
     "name": "Eaton Corporation",
     "symbol": "ETN",
     "description": "Constituyente del S&P 500. Sector: Electrical Components & Equipment. Precio referencial: US$419.44.",
     "sector": "Electrical Components & Equipment",
-    "marketCap": 16291050,
-    "totalShares": 38840
+    "marketCap": 1629105,
+    "totalShares": 3884
   },
   {
     "name": "eBay",
     "symbol": "EBAY",
     "description": "Constituyente del S&P 500. Sector: Broadline Retail. Precio referencial: US$104.20.",
     "sector": "Broadline Retail",
-    "marketCap": 4636900,
-    "totalShares": 44500
+    "marketCap": 463690,
+    "totalShares": 4450
   },
   {
     "name": "Ecolab",
     "symbol": "ECL",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$290.60.",
     "sector": "Specialty Chemicals",
-    "marketCap": 8146349,
-    "totalShares": 28033
+    "marketCap": 814635,
+    "totalShares": 2803
   },
   {
     "name": "Edison International",
     "symbol": "EIX",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$74.51.",
     "sector": "Electric Utilities",
-    "marketCap": 2867249,
-    "totalShares": 38481
+    "marketCap": 286725,
+    "totalShares": 3848
   },
   {
     "name": "Edwards Lifesciences",
     "symbol": "EW",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$90.78.",
     "sector": "Health Care Equipment",
-    "marketCap": 5232559,
-    "totalShares": 57640
+    "marketCap": 523256,
+    "totalShares": 5764
   },
   {
     "name": "Electronic Arts",
     "symbol": "EA",
     "description": "Constituyente del S&P 500. Sector: Interactive Home Entertainment. Precio referencial: US$209.70.",
     "sector": "Interactive Home Entertainment",
-    "marketCap": 5292564,
-    "totalShares": 25239
+    "marketCap": 529256,
+    "totalShares": 2524
   },
   {
     "name": "Elevance Health",
     "symbol": "ELV",
     "description": "Constituyente del S&P 500. Sector: Managed Health Care. Precio referencial: US$402.54.",
     "sector": "Managed Health Care",
-    "marketCap": 8729857,
-    "totalShares": 21687
+    "marketCap": 872986,
+    "totalShares": 2169
   },
   {
     "name": "Emerson Electric",
     "symbol": "EMR",
     "description": "Constituyente del S&P 500. Sector: Electrical Components & Equipment. Precio referencial: US$158.29.",
     "sector": "Electrical Components & Equipment",
-    "marketCap": 8829415,
-    "totalShares": 55780
+    "marketCap": 882942,
+    "totalShares": 5578
   },
   {
     "name": "Enphase Energy",
     "symbol": "ENPH",
     "description": "Constituyente del S&P 500. Sector: Semiconductor Materials & Equipment. Precio referencial: US$38.41.",
     "sector": "Semiconductor Materials & Equipment",
-    "marketCap": 507634,
-    "totalShares": 13214
+    "marketCap": 100000,
+    "totalShares": 2603
   },
   {
     "name": "Entergy",
     "symbol": "ETR",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$107.23.",
     "sector": "Electric Utilities",
-    "marketCap": 5003690,
-    "totalShares": 46663
+    "marketCap": 500369,
+    "totalShares": 4666
   },
   {
     "name": "EOG Resources",
     "symbol": "EOG",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Exploration & Production. Precio referencial: US$144.84.",
     "sector": "Oil & Gas Exploration & Production",
-    "marketCap": 7597280,
-    "totalShares": 52453
+    "marketCap": 759728,
+    "totalShares": 5245
   },
   {
     "name": "EPAM Systems",
     "symbol": "EPAM",
     "description": "Constituyente del S&P 500. Sector: IT Consulting & Other Services. Precio referencial: US$109.36.",
     "sector": "IT Consulting & Other Services",
-    "marketCap": 564155,
-    "totalShares": 5159
+    "marketCap": 100000,
+    "totalShares": 914
   },
   {
     "name": "EQT Corporation",
     "symbol": "EQT",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Exploration & Production. Precio referencial: US$54.79.",
     "sector": "Oil & Gas Exploration & Production",
-    "marketCap": 3427202,
-    "totalShares": 62552
+    "marketCap": 342720,
+    "totalShares": 6255
   },
   {
     "name": "Equifax",
     "symbol": "EFX",
     "description": "Constituyente del S&P 500. Sector: Research & Consulting Services. Precio referencial: US$190.56.",
     "sector": "Research & Consulting Services",
-    "marketCap": 2238792,
-    "totalShares": 11748
+    "marketCap": 223879,
+    "totalShares": 1175
   },
   {
     "name": "Equinix",
     "symbol": "EQIX",
     "description": "Constituyente del S&P 500. Sector: Data Center REITs. Precio referencial: US$1079.61.",
     "sector": "Data Center REITs",
-    "marketCap": 10652694,
-    "totalShares": 9867
+    "marketCap": 1065269,
+    "totalShares": 987
   },
   {
     "name": "Equity Residential",
     "symbol": "EQR",
     "description": "Constituyente del S&P 500. Sector: Multi-Family Residential REITs. Precio referencial: US$63.66.",
     "sector": "Multi-Family Residential REITs",
-    "marketCap": 2461148,
-    "totalShares": 38661
+    "marketCap": 246115,
+    "totalShares": 3866
   },
   {
     "name": "Erie Indemnity",
     "symbol": "ERIE",
     "description": "Constituyente del S&P 500. Sector: Insurance Brokers. Precio referencial: US$257.27.",
     "sector": "Insurance Brokers",
-    "marketCap": 1345261,
-    "totalShares": 5229
+    "marketCap": 134526,
+    "totalShares": 523
   },
   {
     "name": "Essex Property Trust",
     "symbol": "ESS",
     "description": "Constituyente del S&P 500. Sector: Multi-Family Residential REITs. Precio referencial: US$288.17.",
     "sector": "Multi-Family Residential REITs",
-    "marketCap": 1986439,
-    "totalShares": 6893
+    "marketCap": 198644,
+    "totalShares": 689
   },
   {
     "name": "Estee Lauder Companies (The)",
     "symbol": "EL",
     "description": "Constituyente del S&P 500. Sector: Personal Care Products. Precio referencial: US$105.06.",
     "sector": "Personal Care Products",
-    "marketCap": 3801056,
-    "totalShares": 36180
+    "marketCap": 380106,
+    "totalShares": 3618
   },
   {
     "name": "Everest Group",
     "symbol": "EG",
     "description": "Constituyente del S&P 500. Sector: Reinsurance. Precio referencial: US$379.78.",
     "sector": "Reinsurance",
-    "marketCap": 1456180,
-    "totalShares": 3834
+    "marketCap": 145618,
+    "totalShares": 383
   },
   {
     "name": "Evergy",
     "symbol": "EVRG",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$82.23.",
     "sector": "Electric Utilities",
-    "marketCap": 1895954,
-    "totalShares": 23057
+    "marketCap": 189595,
+    "totalShares": 2306
   },
   {
     "name": "Eversource Energy",
     "symbol": "ES",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$71.67.",
     "sector": "Electric Utilities",
-    "marketCap": 2699628,
-    "totalShares": 37667
+    "marketCap": 269963,
+    "totalShares": 3767
   },
   {
     "name": "Exelon",
     "symbol": "EXC",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$44.44.",
     "sector": "Electric Utilities",
-    "marketCap": 4578449,
-    "totalShares": 103025
+    "marketCap": 457845,
+    "totalShares": 10303
   },
   {
     "name": "Expedia Group",
     "symbol": "EXPE",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$333.44.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 4002016,
-    "totalShares": 12002
+    "marketCap": 400202,
+    "totalShares": 1200
   },
   {
     "name": "Expeditors International",
     "symbol": "EXPD",
     "description": "Constituyente del S&P 500. Sector: Air Freight & Logistics. Precio referencial: US$190.18.",
     "sector": "Air Freight & Logistics",
-    "marketCap": 2472162,
-    "totalShares": 12999
+    "marketCap": 247216,
+    "totalShares": 1300
   },
   {
     "name": "Extra Space Storage",
     "symbol": "EXR",
     "description": "Constituyente del S&P 500. Sector: Self-Storage REITs. Precio referencial: US$144.09.",
     "sector": "Self-Storage REITs",
-    "marketCap": 3180103,
-    "totalShares": 22070
+    "marketCap": 318010,
+    "totalShares": 2207
   },
   {
     "name": "ExxonMobil",
     "symbol": "XOM",
     "description": "Constituyente del S&P 500. Sector: Integrated Oil & Gas. Precio referencial: US$158.19.",
     "sector": "Integrated Oil & Gas",
-    "marketCap": 65046335,
-    "totalShares": 411191
+    "marketCap": 6504633,
+    "totalShares": 41119
   },
   {
     "name": "F5, Inc.",
     "symbol": "FFIV",
     "description": "Constituyente del S&P 500. Sector: Communications Equipment. Precio referencial: US$399.59.",
     "sector": "Communications Equipment",
-    "marketCap": 2262766,
-    "totalShares": 5663
+    "marketCap": 226277,
+    "totalShares": 566
   },
   {
     "name": "FactSet",
     "symbol": "FDS",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$295.45.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 1050784,
-    "totalShares": 3557
+    "marketCap": 105078,
+    "totalShares": 356
   },
   {
     "name": "Fair Isaac",
     "symbol": "FICO",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$1133.70.",
     "sector": "Application Software",
-    "marketCap": 2448524,
-    "totalShares": 2160
+    "marketCap": 244852,
+    "totalShares": 216
   },
   {
     "name": "Fastenal",
     "symbol": "FAST",
     "description": "Constituyente del S&P 500. Sector: Trading Companies & Distributors. Precio referencial: US$51.15.",
     "sector": "Trading Companies & Distributors",
-    "marketCap": 5869450,
-    "totalShares": 114750
+    "marketCap": 586945,
+    "totalShares": 11475
   },
   {
     "name": "Federal Realty Investment Trust",
     "symbol": "FRT",
     "description": "Constituyente del S&P 500. Sector: Retail REITs. Precio referencial: US$117.58.",
     "sector": "Retail REITs",
-    "marketCap": 1027865,
-    "totalShares": 8742
+    "marketCap": 102786,
+    "totalShares": 874
   },
   {
     "name": "FedEx",
     "symbol": "FDX",
     "description": "Constituyente del S&P 500. Sector: Air Freight & Logistics. Precio referencial: US$335.99.",
     "sector": "Air Freight & Logistics",
-    "marketCap": 7951890,
-    "totalShares": 23667
+    "marketCap": 795189,
+    "totalShares": 2367
   },
   {
     "name": "Fidelity National Information Services",
     "symbol": "FIS",
     "description": "Constituyente del S&P 500. Sector: Transaction & Payment Processing Services. Precio referencial: US$40.64.",
     "sector": "Transaction & Payment Processing Services",
-    "marketCap": 2095829,
-    "totalShares": 51571
+    "marketCap": 209583,
+    "totalShares": 5157
   },
   {
     "name": "Fifth Third Bancorp",
     "symbol": "FITB",
     "description": "Constituyente del S&P 500. Sector: Regional Banks. Precio referencial: US$55.10.",
     "sector": "Regional Banks",
-    "marketCap": 4996978,
-    "totalShares": 90689
+    "marketCap": 499698,
+    "totalShares": 9069
   },
   {
     "name": "First Solar",
     "symbol": "FSLR",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$205.93.",
     "sector": "Semiconductors",
-    "marketCap": 2213125,
-    "totalShares": 10747
+    "marketCap": 221313,
+    "totalShares": 1075
   },
   {
     "name": "FirstEnergy",
     "symbol": "FE",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$46.73.",
     "sector": "Electric Utilities",
-    "marketCap": 2703984,
-    "totalShares": 57864
+    "marketCap": 270398,
+    "totalShares": 5786
   },
   {
     "name": "Fiserv",
@@ -1609,248 +1609,248 @@ export const companies: SeedCompany[] = [
     "symbol": "FMC",
     "description": "Constituyente del S&P 500. Sector: Fertilizers & Agricultural Chemicals. Precio referencial: US$11.08.",
     "sector": "Fertilizers & Agricultural Chemicals",
-    "marketCap": 138751,
-    "totalShares": 12523
+    "marketCap": 100000,
+    "totalShares": 9025
   },
   {
     "name": "Ford Motor Company",
     "symbol": "F",
     "description": "Constituyente del S&P 500. Sector: Automobile Manufacturers. Precio referencial: US$13.90.",
     "sector": "Automobile Manufacturers",
-    "marketCap": 5542758,
-    "totalShares": 398760
+    "marketCap": 554276,
+    "totalShares": 39876
   },
   {
     "name": "Fortinet",
     "symbol": "FTNT",
     "description": "Constituyente del S&P 500. Sector: Systems Software. Precio referencial: US$157.54.",
     "sector": "Systems Software",
-    "marketCap": 11558924,
-    "totalShares": 73371
+    "marketCap": 1155892,
+    "totalShares": 7337
   },
   {
     "name": "Fortive",
     "symbol": "FTV",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$60.25.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 1819653,
-    "totalShares": 30202
+    "marketCap": 181965,
+    "totalShares": 3020
   },
   {
     "name": "Fox Corporation (Class A)",
     "symbol": "FOXA",
     "description": "Constituyente del S&P 500. Sector: Broadcasting. Precio referencial: US$69.60.",
     "sector": "Broadcasting",
-    "marketCap": 2926245,
-    "totalShares": 42044
+    "marketCap": 292624,
+    "totalShares": 4204
   },
   {
     "name": "Fox Corporation (Class B)",
     "symbol": "FOX",
     "description": "Constituyente del S&P 500. Sector: Broadcasting. Precio referencial: US$62.23.",
     "sector": "Broadcasting",
-    "marketCap": 2616382,
-    "totalShares": 42044
+    "marketCap": 261638,
+    "totalShares": 4204
   },
   {
     "name": "Franklin Resources",
     "symbol": "BEN",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$35.01.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 1778777,
-    "totalShares": 50808
+    "marketCap": 177878,
+    "totalShares": 5081
   },
   {
     "name": "Freeport-McMoRan",
     "symbol": "FCX",
     "description": "Constituyente del S&P 500. Sector: Copper. Precio referencial: US$79.00.",
     "sector": "Copper",
-    "marketCap": 11344539,
-    "totalShares": 143602
+    "marketCap": 1134454,
+    "totalShares": 14360
   },
   {
     "name": "Garmin",
     "symbol": "GRMN",
     "description": "Constituyente del S&P 500. Sector: Consumer Electronics. Precio referencial: US$289.02.",
     "sector": "Consumer Electronics",
-    "marketCap": 5573824,
-    "totalShares": 19285
+    "marketCap": 557382,
+    "totalShares": 1929
   },
   {
     "name": "Gartner",
     "symbol": "IT",
     "description": "Constituyente del S&P 500. Sector: IT Consulting & Other Services. Precio referencial: US$192.96.",
     "sector": "IT Consulting & Other Services",
-    "marketCap": 1218523,
-    "totalShares": 6315
+    "marketCap": 121852,
+    "totalShares": 631
   },
   {
     "name": "GE Aerospace",
     "symbol": "GE",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$354.39.",
     "sector": "Aerospace & Defense",
-    "marketCap": 36770179,
-    "totalShares": 103756
+    "marketCap": 3677018,
+    "totalShares": 10376
   },
   {
     "name": "GE HealthCare",
     "symbol": "GEHC",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$73.31.",
     "sector": "Health Care Equipment",
-    "marketCap": 3311312,
-    "totalShares": 45169
+    "marketCap": 331131,
+    "totalShares": 4517
   },
   {
     "name": "GE Vernova",
     "symbol": "GEV",
     "description": "Constituyente del S&P 500. Sector: Heavy Electrical Equipment. Precio referencial: US$953.09.",
     "sector": "Heavy Electrical Equipment",
-    "marketCap": 25383988,
-    "totalShares": 26633
+    "marketCap": 2538399,
+    "totalShares": 2663
   },
   {
     "name": "Gen Digital",
     "symbol": "GEN",
     "description": "Constituyente del S&P 500. Sector: Systems Software. Precio referencial: US$29.64.",
     "sector": "Systems Software",
-    "marketCap": 1774212,
-    "totalShares": 59859
+    "marketCap": 177421,
+    "totalShares": 5986
   },
   {
     "name": "Generac",
     "symbol": "GNRC",
     "description": "Constituyente del S&P 500. Sector: Electrical Components & Equipment. Precio referencial: US$206.62.",
     "sector": "Electrical Components & Equipment",
-    "marketCap": 1219189,
-    "totalShares": 5901
+    "marketCap": 121919,
+    "totalShares": 590
   },
   {
     "name": "General Dynamics",
     "symbol": "GD",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$382.02.",
     "sector": "Aerospace & Defense",
-    "marketCap": 10335825,
-    "totalShares": 27056
+    "marketCap": 1033583,
+    "totalShares": 2706
   },
   {
     "name": "General Mills",
     "symbol": "GIS",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$40.08.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 2142795,
-    "totalShares": 53463
+    "marketCap": 214279,
+    "totalShares": 5346
   },
   {
     "name": "General Motors",
     "symbol": "GM",
     "description": "Constituyente del S&P 500. Sector: Automobile Manufacturers. Precio referencial: US$86.33.",
     "sector": "Automobile Manufacturers",
-    "marketCap": 7808130,
-    "totalShares": 90445
+    "marketCap": 780813,
+    "totalShares": 9045
   },
   {
     "name": "Genuine Parts Company",
     "symbol": "GPC",
     "description": "Constituyente del S&P 500. Sector: Distributors. Precio referencial: US$139.49.",
     "sector": "Distributors",
-    "marketCap": 1923006,
-    "totalShares": 13786
+    "marketCap": 192301,
+    "totalShares": 1379
   },
   {
     "name": "Gilead Sciences",
     "symbol": "GILD",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$148.09.",
     "sector": "Biotechnology",
-    "marketCap": 18362496,
-    "totalShares": 123996
+    "marketCap": 1836250,
+    "totalShares": 12400
   },
   {
     "name": "Global Payments",
     "symbol": "GPN",
     "description": "Constituyente del S&P 500. Sector: Transaction & Payment Processing Services. Precio referencial: US$92.96.",
     "sector": "Transaction & Payment Processing Services",
-    "marketCap": 2459893,
-    "totalShares": 26462
+    "marketCap": 245989,
+    "totalShares": 2646
   },
   {
     "name": "Globe Life",
     "symbol": "GL",
     "description": "Constituyente del S&P 500. Sector: Life & Health Insurance. Precio referencial: US$175.55.",
     "sector": "Life & Health Insurance",
-    "marketCap": 1349092,
-    "totalShares": 7685
+    "marketCap": 134909,
+    "totalShares": 768
   },
   {
     "name": "GoDaddy",
     "symbol": "GDDY",
     "description": "Constituyente del S&P 500. Sector: Internet Services & Infrastructure. Precio referencial: US$95.54.",
     "sector": "Internet Services & Infrastructure",
-    "marketCap": 1209992,
-    "totalShares": 12665
+    "marketCap": 120999,
+    "totalShares": 1266
   },
   {
     "name": "Goldman Sachs",
     "symbol": "GS",
     "description": "Constituyente del S&P 500. Sector: Investment Banking & Brokerage. Precio referencial: US$1040.46.",
     "sector": "Investment Banking & Brokerage",
-    "marketCap": 30295219,
-    "totalShares": 29117
+    "marketCap": 3029522,
+    "totalShares": 2912
   },
   {
     "name": "Halliburton",
     "symbol": "HAL",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Equipment & Services. Precio referencial: US$34.44.",
     "sector": "Oil & Gas Equipment & Services",
-    "marketCap": 2869301,
-    "totalShares": 83313
+    "marketCap": 286930,
+    "totalShares": 8331
   },
   {
     "name": "Hartford (The)",
     "symbol": "HIG",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$139.86.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 3788416,
-    "totalShares": 27087
+    "marketCap": 378842,
+    "totalShares": 2709
   },
   {
     "name": "Hasbro",
     "symbol": "HAS",
     "description": "Constituyente del S&P 500. Sector: Leisure Products. Precio referencial: US$96.29.",
     "sector": "Leisure Products",
-    "marketCap": 1358117,
-    "totalShares": 14104
+    "marketCap": 135812,
+    "totalShares": 1410
   },
   {
     "name": "HCA Healthcare",
     "symbol": "HCA",
     "description": "Constituyente del S&P 500. Sector: Health Care Facilities. Precio referencial: US$427.16.",
     "sector": "Health Care Facilities",
-    "marketCap": 9248078,
-    "totalShares": 21650
+    "marketCap": 924808,
+    "totalShares": 2165
   },
   {
     "name": "Healthpeak Properties",
     "symbol": "DOC",
     "description": "Constituyente del S&P 500. Sector: Health Care REITs. Precio referencial: US$21.58.",
     "sector": "Health Care REITs",
-    "marketCap": 1529908,
-    "totalShares": 70895
+    "marketCap": 152991,
+    "totalShares": 7089
   },
   {
     "name": "Henry Schein",
     "symbol": "HSIC",
     "description": "Constituyente del S&P 500. Sector: Health Care Distributors. Precio referencial: US$90.38.",
     "sector": "Health Care Distributors",
-    "marketCap": 1007254,
-    "totalShares": 11145
+    "marketCap": 100725,
+    "totalShares": 1114
   },
   {
     "name": "Hershey Company (The)",
     "symbol": "HSY",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$185.35.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 3724157,
-    "totalShares": 20093
+    "marketCap": 372416,
+    "totalShares": 2009
   },
   {
     "name": "Hess Corporation",
@@ -1865,16 +1865,16 @@ export const companies: SeedCompany[] = [
     "symbol": "HPE",
     "description": "Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$55.23.",
     "sector": "Technology Hardware, Storage & Peripherals",
-    "marketCap": 7313576,
-    "totalShares": 132420
+    "marketCap": 731358,
+    "totalShares": 13242
   },
   {
     "name": "Hilton Worldwide",
     "symbol": "HLT",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$332.56.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 7484758,
-    "totalShares": 22506
+    "marketCap": 748476,
+    "totalShares": 2251
   },
   {
     "name": "Hologic",
@@ -1889,16 +1889,16 @@ export const companies: SeedCompany[] = [
     "symbol": "HD",
     "description": "Constituyente del S&P 500. Sector: Home Improvement Retail. Precio referencial: US$334.85.",
     "sector": "Home Improvement Retail",
-    "marketCap": 33407638,
-    "totalShares": 99769
+    "marketCap": 3340764,
+    "totalShares": 9977
   },
   {
     "name": "Honeywell",
     "symbol": "HON",
     "description": "Constituyente del S&P 500. Sector: Industrial Conglomerates. Precio referencial: US$220.67.",
     "sector": "Industrial Conglomerates",
-    "marketCap": 6993915,
-    "totalShares": 31694
+    "marketCap": 699392,
+    "totalShares": 3169
   },
   {
     "name": "Hormel Foods",
@@ -1913,16 +1913,16 @@ export const companies: SeedCompany[] = [
     "symbol": "HST",
     "description": "Constituyente del S&P 500. Sector: Hotel & Resort REITs. Precio referencial: US$22.43.",
     "sector": "Hotel & Resort REITs",
-    "marketCap": 1558271,
-    "totalShares": 69473
+    "marketCap": 155827,
+    "totalShares": 6947
   },
   {
     "name": "Howmet Aerospace",
     "symbol": "HWM",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$269.34.",
     "sector": "Aerospace & Defense",
-    "marketCap": 10741317,
-    "totalShares": 39880
+    "marketCap": 1074132,
+    "totalShares": 3988
   },
   {
     "name": "HP Inc.",
@@ -1937,120 +1937,120 @@ export const companies: SeedCompany[] = [
     "symbol": "HUBB",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$472.46.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 2496128,
-    "totalShares": 5283
+    "marketCap": 249613,
+    "totalShares": 528
   },
   {
     "name": "Humana",
     "symbol": "HUM",
     "description": "Constituyente del S&P 500. Sector: Managed Health Care. Precio referencial: US$391.06.",
     "sector": "Managed Health Care",
-    "marketCap": 4695860,
-    "totalShares": 12008
+    "marketCap": 469586,
+    "totalShares": 1201
   },
   {
     "name": "Huntington Bancshares",
     "symbol": "HBAN",
     "description": "Constituyente del S&P 500. Sector: Regional Banks. Precio referencial: US$17.04.",
     "sector": "Regional Banks",
-    "marketCap": 3442787,
-    "totalShares": 202041
+    "marketCap": 344279,
+    "totalShares": 20204
   },
   {
     "name": "Huntington Ingalls Industries",
     "symbol": "HII",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$296.40.",
     "sector": "Aerospace & Defense",
-    "marketCap": 1167952,
-    "totalShares": 3940
+    "marketCap": 116795,
+    "totalShares": 394
   },
   {
     "name": "IBM",
     "symbol": "IBM",
     "description": "Constituyente del S&P 500. Sector: IT Consulting & Other Services. Precio referencial: US$229.87.",
     "sector": "IT Consulting & Other Services",
-    "marketCap": 21656843,
-    "totalShares": 94213
+    "marketCap": 2165684,
+    "totalShares": 9421
   },
   {
     "name": "IDEX Corporation",
     "symbol": "IEX",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$234.89.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 1731607,
-    "totalShares": 7372
+    "marketCap": 173161,
+    "totalShares": 737
   },
   {
     "name": "Idexx Laboratories",
     "symbol": "IDXX",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$553.44.",
     "sector": "Health Care Equipment",
-    "marketCap": 4360062,
-    "totalShares": 7878
+    "marketCap": 436006,
+    "totalShares": 788
   },
   {
     "name": "Illinois Tool Works",
     "symbol": "ITW",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$285.51.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 8131325,
-    "totalShares": 28480
+    "marketCap": 813133,
+    "totalShares": 2848
   },
   {
     "name": "Incyte",
     "symbol": "INCY",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$128.12.",
     "sector": "Biotechnology",
-    "marketCap": 2596963,
-    "totalShares": 20270
+    "marketCap": 259696,
+    "totalShares": 2027
   },
   {
     "name": "Ingersoll Rand",
     "symbol": "IR",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$79.97.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 3102831,
-    "totalShares": 38800
+    "marketCap": 310283,
+    "totalShares": 3880
   },
   {
     "name": "Insulet Corporation",
     "symbol": "PODD",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$143.38.",
     "sector": "Health Care Equipment",
-    "marketCap": 994401,
-    "totalShares": 6935
+    "marketCap": 100000,
+    "totalShares": 697
   },
   {
     "name": "Intel",
     "symbol": "INTC",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$88.24.",
     "sector": "Semiconductors",
-    "marketCap": 46644589,
-    "totalShares": 528610
+    "marketCap": 4664459,
+    "totalShares": 52861
   },
   {
     "name": "Intercontinental Exchange",
     "symbol": "ICE",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$161.92.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 9090100,
-    "totalShares": 56139
+    "marketCap": 909010,
+    "totalShares": 5614
   },
   {
     "name": "International Flavors & Fragrances",
     "symbol": "IFF",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$87.12.",
     "sector": "Specialty Chemicals",
-    "marketCap": 2222867,
-    "totalShares": 25515
+    "marketCap": 222287,
+    "totalShares": 2552
   },
   {
     "name": "International Paper",
     "symbol": "IP",
     "description": "Constituyente del S&P 500. Sector: Paper & Plastic Packaging Products & Materials. Precio referencial: US$41.39.",
     "sector": "Paper & Plastic Packaging Products & Materials",
-    "marketCap": 2191890,
-    "totalShares": 52957
+    "marketCap": 219189,
+    "totalShares": 5296
   },
   {
     "name": "Interpublic Group of Companies (The)",
@@ -2065,112 +2065,112 @@ export const companies: SeedCompany[] = [
     "symbol": "INTU",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$345.88.",
     "sector": "Application Software",
-    "marketCap": 9461097,
-    "totalShares": 27354
+    "marketCap": 946110,
+    "totalShares": 2735
   },
   {
     "name": "Intuitive Surgical",
     "symbol": "ISRG",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$370.42.",
     "sector": "Health Care Equipment",
-    "marketCap": 13271336,
-    "totalShares": 35828
+    "marketCap": 1327134,
+    "totalShares": 3583
   },
   {
     "name": "Invesco",
     "symbol": "IVZ",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$32.98.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 1456066,
-    "totalShares": 44150
+    "marketCap": 145607,
+    "totalShares": 4415
   },
   {
     "name": "Invitation Homes",
     "symbol": "INVH",
     "description": "Constituyente del S&P 500. Sector: Single-Family Residential REITs. Precio referencial: US$29.89.",
     "sector": "Single-Family Residential REITs",
-    "marketCap": 1775591,
-    "totalShares": 59404
+    "marketCap": 177559,
+    "totalShares": 5940
   },
   {
     "name": "IQVIA",
     "symbol": "IQV",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$261.51.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 4304455,
-    "totalShares": 16460
+    "marketCap": 430445,
+    "totalShares": 1646
   },
   {
     "name": "Iron Mountain",
     "symbol": "IRM",
     "description": "Constituyente del S&P 500. Sector: Other Specialized REITs. Precio referencial: US$121.43.",
     "sector": "Other Specialized REITs",
-    "marketCap": 3615005,
-    "totalShares": 29770
+    "marketCap": 361501,
+    "totalShares": 2977
   },
   {
     "name": "J.B. Hunt",
     "symbol": "JBHT",
     "description": "Constituyente del S&P 500. Sector: Cargo Ground Transportation. Precio referencial: US$263.64.",
     "sector": "Cargo Ground Transportation",
-    "marketCap": 2475973,
-    "totalShares": 9391
+    "marketCap": 247597,
+    "totalShares": 939
   },
   {
     "name": "J.M. Smucker Company (The)",
     "symbol": "SJM",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$130.90.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 1399068,
-    "totalShares": 10688
+    "marketCap": 139907,
+    "totalShares": 1069
   },
   {
     "name": "Jabil",
     "symbol": "JBL",
     "description": "Constituyente del S&P 500. Sector: Electronic Manufacturing Services. Precio referencial: US$310.91.",
     "sector": "Electronic Manufacturing Services",
-    "marketCap": 3257935,
-    "totalShares": 10479
+    "marketCap": 325794,
+    "totalShares": 1048
   },
   {
     "name": "Jack Henry & Associates",
     "symbol": "JKHY",
     "description": "Constituyente del S&P 500. Sector: Transaction & Payment Processing Services. Precio referencial: US$172.39.",
     "sector": "Transaction & Payment Processing Services",
-    "marketCap": 1224844,
-    "totalShares": 7105
+    "marketCap": 122484,
+    "totalShares": 711
   },
   {
     "name": "Jacobs Solutions",
     "symbol": "J",
     "description": "Constituyente del S&P 500. Sector: Construction & Engineering. Precio referencial: US$151.52.",
     "sector": "Construction & Engineering",
-    "marketCap": 1773369,
-    "totalShares": 11704
+    "marketCap": 177337,
+    "totalShares": 1170
   },
   {
     "name": "Johnson & Johnson",
     "symbol": "JNJ",
     "description": "Constituyente del S&P 500. Sector: Pharmaceuticals. Precio referencial: US$270.00.",
     "sector": "Pharmaceuticals",
-    "marketCap": 65067260,
-    "totalShares": 240990
+    "marketCap": 6506726,
+    "totalShares": 24099
   },
   {
     "name": "Johnson Controls",
     "symbol": "JCI",
     "description": "Constituyente del S&P 500. Sector: Building Products. Precio referencial: US$144.33.",
     "sector": "Building Products",
-    "marketCap": 8742666,
-    "totalShares": 60574
+    "marketCap": 874267,
+    "totalShares": 6057
   },
   {
     "name": "JPMorgan Chase",
     "symbol": "JPM",
     "description": "Constituyente del S&P 500. Sector: Diversified Banks. Precio referencial: US$356.50.",
     "sector": "Diversified Banks",
-    "marketCap": 94764342,
-    "totalShares": 265819
+    "marketCap": 9476434,
+    "totalShares": 26582
   },
   {
     "name": "Juniper Networks",
@@ -2193,80 +2193,80 @@ export const companies: SeedCompany[] = [
     "symbol": "KVUE",
     "description": "Constituyente del S&P 500. Sector: Personal Care Products. Precio referencial: US$19.22.",
     "sector": "Personal Care Products",
-    "marketCap": 3691726,
-    "totalShares": 192077
+    "marketCap": 369173,
+    "totalShares": 19208
   },
   {
     "name": "Keurig Dr Pepper",
     "symbol": "KDP",
     "description": "Constituyente del S&P 500. Sector: Soft Drinks & Non-alcoholic Beverages. Precio referencial: US$32.20.",
     "sector": "Soft Drinks & Non-alcoholic Beverages",
-    "marketCap": 4382540,
-    "totalShares": 136083
+    "marketCap": 438254,
+    "totalShares": 13608
   },
   {
     "name": "KeyCorp",
     "symbol": "KEY",
     "description": "Constituyente del S&P 500. Sector: Regional Banks. Precio referencial: US$22.09.",
     "sector": "Regional Banks",
-    "marketCap": 2357287,
-    "totalShares": 106713
+    "marketCap": 235729,
+    "totalShares": 10671
   },
   {
     "name": "Keysight Technologies",
     "symbol": "KEYS",
     "description": "Constituyente del S&P 500. Sector: Electronic Equipment & Instruments. Precio referencial: US$321.87.",
     "sector": "Electronic Equipment & Instruments",
-    "marketCap": 5481446,
-    "totalShares": 17030
+    "marketCap": 548145,
+    "totalShares": 1703
   },
   {
     "name": "Kimberly-Clark",
     "symbol": "KMB",
     "description": "Constituyente del S&P 500. Sector: Household Products. Precio referencial: US$110.34.",
     "sector": "Household Products",
-    "marketCap": 3669677,
-    "totalShares": 33258
+    "marketCap": 366968,
+    "totalShares": 3326
   },
   {
     "name": "Kimco Realty",
     "symbol": "KIM",
     "description": "Constituyente del S&P 500. Sector: Retail REITs. Precio referencial: US$24.03.",
     "sector": "Retail REITs",
-    "marketCap": 1611907,
-    "totalShares": 67079
+    "marketCap": 161191,
+    "totalShares": 6708
   },
   {
     "name": "Kinder Morgan",
     "symbol": "KMI",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Storage & Transportation. Precio referencial: US$32.02.",
     "sector": "Oil & Gas Storage & Transportation",
-    "marketCap": 7130221,
-    "totalShares": 222680
+    "marketCap": 713022,
+    "totalShares": 22268
   },
   {
     "name": "KKR",
     "symbol": "KKR",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$108.50.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 10020957,
-    "totalShares": 92359
+    "marketCap": 1002096,
+    "totalShares": 9236
   },
   {
     "name": "KLA Corporation",
     "symbol": "KLAC",
     "description": "Constituyente del S&P 500. Sector: Semiconductor Materials & Equipment. Precio referencial: US$183.83.",
     "sector": "Semiconductor Materials & Equipment",
-    "marketCap": 24018251,
-    "totalShares": 130655
+    "marketCap": 2401825,
+    "totalShares": 13065
   },
   {
     "name": "Kraft Heinz",
     "symbol": "KHC",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$24.79.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 2939657,
-    "totalShares": 118582
+    "marketCap": 293966,
+    "totalShares": 11858
   },
   {
     "name": "Kroger",
@@ -2281,104 +2281,104 @@ export const companies: SeedCompany[] = [
     "symbol": "LHX",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$262.96.",
     "sector": "Aerospace & Defense",
-    "marketCap": 4896700,
-    "totalShares": 18621
+    "marketCap": 489670,
+    "totalShares": 1862
   },
   {
     "name": "LabCorp",
     "symbol": "LH",
     "description": "Constituyente del S&P 500. Sector: Health Care Services. Precio referencial: US$335.72.",
     "sector": "Health Care Services",
-    "marketCap": 2722689,
-    "totalShares": 8110
+    "marketCap": 272269,
+    "totalShares": 811
   },
   {
     "name": "Lam Research",
     "symbol": "LRCX",
     "description": "Constituyente del S&P 500. Sector: Semiconductor Materials & Equipment. Precio referencial: US$312.88.",
     "sector": "Semiconductor Materials & Equipment",
-    "marketCap": 39151331,
-    "totalShares": 125132
+    "marketCap": 3915133,
+    "totalShares": 12513
   },
   {
     "name": "Lamb Weston",
     "symbol": "LW",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$55.26.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 759732,
-    "totalShares": 13748
+    "marketCap": 100000,
+    "totalShares": 1810
   },
   {
     "name": "Las Vegas Sands",
     "symbol": "LVS",
     "description": "Constituyente del S&P 500. Sector: Casinos & Gaming. Precio referencial: US$46.23.",
     "sector": "Casinos & Gaming",
-    "marketCap": 2994323,
-    "totalShares": 64770
+    "marketCap": 299432,
+    "totalShares": 6477
   },
   {
     "name": "Leidos",
     "symbol": "LDOS",
     "description": "Constituyente del S&P 500. Sector: Diversified Support Services. Precio referencial: US$137.43.",
     "sector": "Diversified Support Services",
-    "marketCap": 1724639,
-    "totalShares": 12549
+    "marketCap": 172464,
+    "totalShares": 1255
   },
   {
     "name": "Lennar",
     "symbol": "LEN",
     "description": "Constituyente del S&P 500. Sector: Homebuilding. Precio referencial: US$87.15.",
     "sector": "Homebuilding",
-    "marketCap": 2099401,
-    "totalShares": 24090
+    "marketCap": 209940,
+    "totalShares": 2409
   },
   {
     "name": "Lilly (Eli)",
     "symbol": "LLY",
     "description": "Constituyente del S&P 500. Sector: Pharmaceuticals. Precio referencial: US$1189.41.",
     "sector": "Pharmaceuticals",
-    "marketCap": 106064616,
-    "totalShares": 89174
+    "marketCap": 10606462,
+    "totalShares": 8917
   },
   {
     "name": "Linde plc",
     "symbol": "LIN",
     "description": "Constituyente del S&P 500. Sector: Industrial Gases. Precio referencial: US$490.33.",
     "sector": "Industrial Gases",
-    "marketCap": 22603240,
-    "totalShares": 46098
+    "marketCap": 2260324,
+    "totalShares": 4610
   },
   {
     "name": "Live Nation Entertainment",
     "symbol": "LYV",
     "description": "Constituyente del S&P 500. Sector: Movies & Entertainment. Precio referencial: US$182.64.",
     "sector": "Movies & Entertainment",
-    "marketCap": 4254772,
-    "totalShares": 23296
+    "marketCap": 425477,
+    "totalShares": 2330
   },
   {
     "name": "LKQ Corporation",
     "symbol": "LKQ",
     "description": "Constituyente del S&P 500. Sector: Distributors. Precio referencial: US$25.75.",
     "sector": "Distributors",
-    "marketCap": 651480,
-    "totalShares": 25300
+    "marketCap": 100000,
+    "totalShares": 3883
   },
   {
     "name": "Lockheed Martin",
     "symbol": "LMT",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$565.62.",
     "sector": "Aerospace & Defense",
-    "marketCap": 13053986,
-    "totalShares": 23079
+    "marketCap": 1305399,
+    "totalShares": 2308
   },
   {
     "name": "Loews Corporation",
     "symbol": "L",
     "description": "Constituyente del S&P 500. Sector: Multi-line Insurance. Precio referencial: US$110.96.",
     "sector": "Multi-line Insurance",
-    "marketCap": 2268330,
-    "totalShares": 20443
+    "marketCap": 226833,
+    "totalShares": 2044
   },
   {
     "name": "Lowe's",
@@ -2393,24 +2393,24 @@ export const companies: SeedCompany[] = [
     "symbol": "LULU",
     "description": "Constituyente del S&P 500. Sector: Apparel, Accessories & Luxury Goods. Precio referencial: US$116.35.",
     "sector": "Apparel, Accessories & Luxury Goods",
-    "marketCap": 1321200,
-    "totalShares": 11355
+    "marketCap": 132120,
+    "totalShares": 1136
   },
   {
     "name": "LyondellBasell",
     "symbol": "LYB",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$62.62.",
     "sector": "Specialty Chemicals",
-    "marketCap": 2022864,
-    "totalShares": 32304
+    "marketCap": 202286,
+    "totalShares": 3230
   },
   {
     "name": "M&T Bank",
     "symbol": "MTB",
     "description": "Constituyente del S&P 500. Sector: Regional Banks. Precio referencial: US$241.54.",
     "sector": "Regional Banks",
-    "marketCap": 3488230,
-    "totalShares": 14442
+    "marketCap": 348823,
+    "totalShares": 1444
   },
   {
     "name": "Marathon Oil",
@@ -2425,24 +2425,24 @@ export const companies: SeedCompany[] = [
     "symbol": "MPC",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Refining & Marketing. Precio referencial: US$362.27.",
     "sector": "Oil & Gas Refining & Marketing",
-    "marketCap": 10173438,
-    "totalShares": 28082
+    "marketCap": 1017344,
+    "totalShares": 2808
   },
   {
     "name": "MarketAxess",
     "symbol": "MKTX",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$162.52.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 571955,
-    "totalShares": 3519
+    "marketCap": 100000,
+    "totalShares": 615
   },
   {
     "name": "Marriott International",
     "symbol": "MAR",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$358.67.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 9352905,
-    "totalShares": 26077
+    "marketCap": 935290,
+    "totalShares": 2608
   },
   {
     "name": "Marsh McLennan",
@@ -2457,112 +2457,112 @@ export const companies: SeedCompany[] = [
     "symbol": "MLM",
     "description": "Constituyente del S&P 500. Sector: Construction Materials. Precio referencial: US$532.18.",
     "sector": "Construction Materials",
-    "marketCap": 3779509,
-    "totalShares": 7102
+    "marketCap": 377951,
+    "totalShares": 710
   },
   {
     "name": "Masco",
     "symbol": "MAS",
     "description": "Constituyente del S&P 500. Sector: Building Products. Precio referencial: US$73.60.",
     "sector": "Building Products",
-    "marketCap": 1451299,
-    "totalShares": 19719
+    "marketCap": 145130,
+    "totalShares": 1972
   },
   {
     "name": "Mastercard",
     "symbol": "MA",
     "description": "Constituyente del S&P 500. Sector: Transaction & Payment Processing Services. Precio referencial: US$598.47.",
     "sector": "Transaction & Payment Processing Services",
-    "marketCap": 52426562,
-    "totalShares": 87601
+    "marketCap": 5242656,
+    "totalShares": 8760
   },
   {
     "name": "Match Group",
     "symbol": "MTCH",
     "description": "Constituyente del S&P 500. Sector: Interactive Media & Services. Precio referencial: US$42.07.",
     "sector": "Interactive Media & Services",
-    "marketCap": 981352,
-    "totalShares": 23327
+    "marketCap": 100000,
+    "totalShares": 2377
   },
   {
     "name": "McCormick & Company",
     "symbol": "MKC",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$55.10.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 1481372,
-    "totalShares": 26885
+    "marketCap": 148137,
+    "totalShares": 2689
   },
   {
     "name": "McDonald's",
     "symbol": "MCD",
     "description": "Constituyente del S&P 500. Sector: Restaurants. Precio referencial: US$266.93.",
     "sector": "Restaurants",
-    "marketCap": 18889074,
-    "totalShares": 70764
+    "marketCap": 1888907,
+    "totalShares": 7076
   },
   {
     "name": "McKesson Corporation",
     "symbol": "MCK",
     "description": "Constituyente del S&P 500. Sector: Health Care Distributors. Precio referencial: US$896.65.",
     "sector": "Health Care Distributors",
-    "marketCap": 10454075,
-    "totalShares": 11659
+    "marketCap": 1045407,
+    "totalShares": 1166
   },
   {
     "name": "Medtronic",
     "symbol": "MDT",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$92.02.",
     "sector": "Health Care Equipment",
-    "marketCap": 11778383,
-    "totalShares": 127998
+    "marketCap": 1177838,
+    "totalShares": 12800
   },
   {
     "name": "Merck & Co.",
     "symbol": "MRK",
     "description": "Constituyente del S&P 500. Sector: Pharmaceuticals. Precio referencial: US$153.10.",
     "sector": "Pharmaceuticals",
-    "marketCap": 37772398,
-    "totalShares": 246717
+    "marketCap": 3777240,
+    "totalShares": 24672
   },
   {
     "name": "Meta Platforms",
     "symbol": "META",
     "description": "Constituyente del S&P 500. Sector: Interactive Media & Services. Precio referencial: US$576.14.",
     "sector": "Interactive Media & Services",
-    "marketCap": 146772027,
-    "totalShares": 254751
+    "marketCap": 14677203,
+    "totalShares": 25475
   },
   {
     "name": "MetLife",
     "symbol": "MET",
     "description": "Constituyente del S&P 500. Sector: Life & Health Insurance. Precio referencial: US$96.52.",
     "sector": "Life & Health Insurance",
-    "marketCap": 6133623,
-    "totalShares": 63548
+    "marketCap": 613362,
+    "totalShares": 6355
   },
   {
     "name": "Mettler Toledo",
     "symbol": "MTD",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$1398.46.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 2802033,
-    "totalShares": 2004
+    "marketCap": 280203,
+    "totalShares": 200
   },
   {
     "name": "MGM Resorts",
     "symbol": "MGM",
     "description": "Constituyente del S&P 500. Sector: Casinos & Gaming. Precio referencial: US$43.46.",
     "sector": "Casinos & Gaming",
-    "marketCap": 1111929,
-    "totalShares": 25585
+    "marketCap": 111193,
+    "totalShares": 2559
   },
   {
     "name": "Microchip Technology",
     "symbol": "MCHP",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$74.05.",
     "sector": "Semiconductors",
-    "marketCap": 4020980,
-    "totalShares": 54301
+    "marketCap": 402098,
+    "totalShares": 5430
   },
   {
     "name": "Micron Technology",
@@ -2577,552 +2577,552 @@ export const companies: SeedCompany[] = [
     "symbol": "MSFT",
     "description": "Constituyente del S&P 500. Sector: Systems Software. Precio referencial: US$496.37.",
     "sector": "Systems Software",
-    "marketCap": 368581804,
-    "totalShares": 742555
+    "marketCap": 36858180,
+    "totalShares": 74255
   },
   {
     "name": "Mid-America Apartment Communities",
     "symbol": "MAA",
     "description": "Constituyente del S&P 500. Sector: Multi-Family Residential REITs. Precio referencial: US$131.50.",
     "sector": "Multi-Family Residential REITs",
-    "marketCap": 1564374,
-    "totalShares": 11896
+    "marketCap": 156437,
+    "totalShares": 1190
   },
   {
     "name": "Moderna",
     "symbol": "MRNA",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$149.66.",
     "sector": "Biotechnology",
-    "marketCap": 5974965,
-    "totalShares": 39924
+    "marketCap": 597496,
+    "totalShares": 3992
   },
   {
     "name": "Mohawk Industries",
     "symbol": "MHK",
     "description": "Constituyente del S&P 500. Sector: Home Furnishings. Precio referencial: US$132.17.",
     "sector": "Home Furnishings",
-    "marketCap": 895295,
-    "totalShares": 6774
+    "marketCap": 100000,
+    "totalShares": 757
   },
   {
     "name": "Molina Healthcare",
     "symbol": "MOH",
     "description": "Constituyente del S&P 500. Sector: Managed Health Care. Precio referencial: US$202.43.",
     "sector": "Managed Health Care",
-    "marketCap": 1056685,
-    "totalShares": 5220
+    "marketCap": 105668,
+    "totalShares": 522
   },
   {
     "name": "Molson Coors Beverage Company",
     "symbol": "TAP",
     "description": "Constituyente del S&P 500. Sector: Brewers. Precio referencial: US$42.09.",
     "sector": "Brewers",
-    "marketCap": 784785,
-    "totalShares": 18645
+    "marketCap": 100000,
+    "totalShares": 2376
   },
   {
     "name": "Mondelez International",
     "symbol": "MDLZ",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$63.01.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 8042017,
-    "totalShares": 127631
+    "marketCap": 804202,
+    "totalShares": 12763
   },
   {
     "name": "Monolithic Power Systems",
     "symbol": "MPWR",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$1303.88.",
     "sector": "Semiconductors",
-    "marketCap": 6407657,
-    "totalShares": 4914
+    "marketCap": 640766,
+    "totalShares": 491
   },
   {
     "name": "Monster Beverage",
     "symbol": "MNST",
     "description": "Constituyente del S&P 500. Sector: Soft Drinks & Non-alcoholic Beverages. Precio referencial: US$47.81.",
     "sector": "Soft Drinks & Non-alcoholic Beverages",
-    "marketCap": 9366227,
-    "totalShares": 195905
+    "marketCap": 936623,
+    "totalShares": 19591
   },
   {
     "name": "Moody's Corporation",
     "symbol": "MCO",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$514.55.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 8911027,
-    "totalShares": 17318
+    "marketCap": 891103,
+    "totalShares": 1732
   },
   {
     "name": "Morgan Stanley",
     "symbol": "MS",
     "description": "Constituyente del S&P 500. Sector: Investment Banking & Brokerage. Precio referencial: US$214.08.",
     "sector": "Investment Banking & Brokerage",
-    "marketCap": 33622684,
-    "totalShares": 157057
+    "marketCap": 3362268,
+    "totalShares": 15706
   },
   {
     "name": "Mosaic Company (The)",
     "symbol": "MOS",
     "description": "Constituyente del S&P 500. Sector: Fertilizers & Agricultural Chemicals. Precio referencial: US$24.16.",
     "sector": "Fertilizers & Agricultural Chemicals",
-    "marketCap": 768036,
-    "totalShares": 31790
+    "marketCap": 100000,
+    "totalShares": 4139
   },
   {
     "name": "Motorola Solutions",
     "symbol": "MSI",
     "description": "Constituyente del S&P 500. Sector: Communications Equipment. Precio referencial: US$487.28.",
     "sector": "Communications Equipment",
-    "marketCap": 8064182,
-    "totalShares": 16549
+    "marketCap": 806418,
+    "totalShares": 1655
   },
   {
     "name": "MSCI",
     "symbol": "MSCI",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$564.22.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 4101879,
-    "totalShares": 7270
+    "marketCap": 410188,
+    "totalShares": 727
   },
   {
     "name": "Nasdaq, Inc.",
     "symbol": "NDAQ",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$99.47.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 5560148,
-    "totalShares": 55898
+    "marketCap": 556015,
+    "totalShares": 5590
   },
   {
     "name": "NetApp",
     "symbol": "NTAP",
     "description": "Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$193.85.",
     "sector": "Technology Hardware, Storage & Peripherals",
-    "marketCap": 3804001,
-    "totalShares": 19623
+    "marketCap": 380400,
+    "totalShares": 1962
   },
   {
     "name": "Netflix",
     "symbol": "NFLX",
     "description": "Constituyente del S&P 500. Sector: Movies & Entertainment. Precio referencial: US$81.46.",
     "sector": "Movies & Entertainment",
-    "marketCap": 33919451,
-    "totalShares": 416394
+    "marketCap": 3391945,
+    "totalShares": 41639
   },
   {
     "name": "Newmont",
     "symbol": "NEM",
     "description": "Constituyente del S&P 500. Sector: Gold. Precio referencial: US$131.60.",
     "sector": "Gold",
-    "marketCap": 13866592,
-    "totalShares": 105369
+    "marketCap": 1386659,
+    "totalShares": 10537
   },
   {
     "name": "News Corp (Class A)",
     "symbol": "NWSA",
     "description": "Constituyente del S&P 500. Sector: Publishing. Precio referencial: US$30.96.",
     "sector": "Publishing",
-    "marketCap": 1663273,
-    "totalShares": 53723
+    "marketCap": 166327,
+    "totalShares": 5372
   },
   {
     "name": "News Corp (Class B)",
     "symbol": "NWS",
     "description": "Constituyente del S&P 500. Sector: Publishing. Precio referencial: US$35.24.",
     "sector": "Publishing",
-    "marketCap": 1893209,
-    "totalShares": 53723
+    "marketCap": 189321,
+    "totalShares": 5372
   },
   {
     "name": "NextEra Energy",
     "symbol": "NEE",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$84.22.",
     "sector": "Multi-Utilities",
-    "marketCap": 17568109,
-    "totalShares": 208598
+    "marketCap": 1756811,
+    "totalShares": 20860
   },
   {
     "name": "Nike, Inc.",
     "symbol": "NKE",
     "description": "Constituyente del S&P 500. Sector: Apparel, Accessories & Luxury Goods. Precio referencial: US$38.59.",
     "sector": "Apparel, Accessories & Luxury Goods",
-    "marketCap": 5724822,
-    "totalShares": 148350
+    "marketCap": 572482,
+    "totalShares": 14835
   },
   {
     "name": "NiSource",
     "symbol": "NI",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$41.13.",
     "sector": "Multi-Utilities",
-    "marketCap": 1972431,
-    "totalShares": 47956
+    "marketCap": 197243,
+    "totalShares": 4796
   },
   {
     "name": "Nordson Corporation",
     "symbol": "NDSN",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$334.58.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 1863589,
-    "totalShares": 5570
+    "marketCap": 186359,
+    "totalShares": 557
   },
   {
     "name": "Norfolk Southern Railway",
     "symbol": "NSC",
     "description": "Constituyente del S&P 500. Sector: Rail Transportation. Precio referencial: US$352.68.",
     "sector": "Rail Transportation",
-    "marketCap": 7921488,
-    "totalShares": 22461
+    "marketCap": 792149,
+    "totalShares": 2246
   },
   {
     "name": "Northern Trust",
     "symbol": "NTRS",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$187.66.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 3433346,
-    "totalShares": 18296
+    "marketCap": 343335,
+    "totalShares": 1830
   },
   {
     "name": "Northrop Grumman",
     "symbol": "NOC",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$549.95.",
     "sector": "Aerospace & Defense",
-    "marketCap": 7812756,
-    "totalShares": 14206
+    "marketCap": 781276,
+    "totalShares": 1421
   },
   {
     "name": "Norwegian Cruise Line Holdings",
     "symbol": "NCLH",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$17.09.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 784752,
-    "totalShares": 45919
+    "marketCap": 100000,
+    "totalShares": 5851
   },
   {
     "name": "NRG Energy",
     "symbol": "NRG",
     "description": "Constituyente del S&P 500. Sector: Independent Power Producers & Energy Traders. Precio referencial: US$116.14.",
     "sector": "Independent Power Producers & Energy Traders",
-    "marketCap": 2441385,
-    "totalShares": 21021
+    "marketCap": 244138,
+    "totalShares": 2102
   },
   {
     "name": "Nucor",
     "symbol": "NUE",
     "description": "Constituyente del S&P 500. Sector: Steel. Precio referencial: US$252.80.",
     "sector": "Steel",
-    "marketCap": 5735417,
-    "totalShares": 22688
+    "marketCap": 573542,
+    "totalShares": 2269
   },
   {
     "name": "Nvidia",
     "symbol": "NVDA",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$209.66.",
     "sector": "Semiconductors",
-    "marketCap": 507817492,
-    "totalShares": 2422100
+    "marketCap": 50781749,
+    "totalShares": 242210
   },
   {
     "name": "NVR, Inc.",
     "symbol": "NVR",
     "description": "Constituyente del S&P 500. Sector: Homebuilding. Precio referencial: US$6368.12.",
     "sector": "Homebuilding",
-    "marketCap": 1705480,
-    "totalShares": 268
+    "marketCap": 170548,
+    "totalShares": 27
   },
   {
     "name": "NXP Semiconductors",
     "symbol": "NXPI",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$223.15.",
     "sector": "Semiconductors",
-    "marketCap": 5627043,
-    "totalShares": 25216
+    "marketCap": 562704,
+    "totalShares": 2522
   },
   {
     "name": "O'Reilly Auto Parts",
     "symbol": "ORLY",
     "description": "Constituyente del S&P 500. Sector: Automotive Retail. Precio referencial: US$89.55.",
     "sector": "Automotive Retail",
-    "marketCap": 7244244,
-    "totalShares": 80896
+    "marketCap": 724424,
+    "totalShares": 8090
   },
   {
     "name": "Occidental Petroleum",
     "symbol": "OXY",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Exploration & Production. Precio referencial: US$58.62.",
     "sector": "Oil & Gas Exploration & Production",
-    "marketCap": 5859874,
-    "totalShares": 99964
+    "marketCap": 585987,
+    "totalShares": 9996
   },
   {
     "name": "Old Dominion",
     "symbol": "ODFL",
     "description": "Constituyente del S&P 500. Sector: Cargo Ground Transportation. Precio referencial: US$199.43.",
     "sector": "Cargo Ground Transportation",
-    "marketCap": 4147511,
-    "totalShares": 20797
+    "marketCap": 414751,
+    "totalShares": 2080
   },
   {
     "name": "Omnicom Group",
     "symbol": "OMC",
     "description": "Constituyente del S&P 500. Sector: Advertising. Precio referencial: US$87.89.",
     "sector": "Advertising",
-    "marketCap": 2411227,
-    "totalShares": 27435
+    "marketCap": 241123,
+    "totalShares": 2743
   },
   {
     "name": "ON Semiconductor",
     "symbol": "ON",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$73.22.",
     "sector": "Semiconductors",
-    "marketCap": 2850591,
-    "totalShares": 38932
+    "marketCap": 285059,
+    "totalShares": 3893
   },
   {
     "name": "ONEOK",
     "symbol": "OKE",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Storage & Transportation. Precio referencial: US$94.90.",
     "sector": "Oil & Gas Storage & Transportation",
-    "marketCap": 5982208,
-    "totalShares": 63037
+    "marketCap": 598221,
+    "totalShares": 6304
   },
   {
     "name": "Oracle Corporation",
     "symbol": "ORCL",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$148.87.",
     "sector": "Application Software",
-    "marketCap": 42881571,
-    "totalShares": 288047
+    "marketCap": 4288157,
+    "totalShares": 28805
   },
   {
     "name": "Otis Worldwide",
     "symbol": "OTIS",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$72.36.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 2754523,
-    "totalShares": 38067
+    "marketCap": 275452,
+    "totalShares": 3807
   },
   {
     "name": "Paccar",
     "symbol": "PCAR",
     "description": "Constituyente del S&P 500. Sector: Construction Machinery & Heavy Transportation Equipment. Precio referencial: US$129.23.",
     "sector": "Construction Machinery & Heavy Transportation Equipment",
-    "marketCap": 6802214,
-    "totalShares": 52636
+    "marketCap": 680221,
+    "totalShares": 5264
   },
   {
     "name": "Packaging Corporation of America",
     "symbol": "PKG",
     "description": "Constituyente del S&P 500. Sector: Paper & Plastic Packaging Products & Materials. Precio referencial: US$246.68.",
     "sector": "Paper & Plastic Packaging Products & Materials",
-    "marketCap": 2197877,
-    "totalShares": 8910
+    "marketCap": 219788,
+    "totalShares": 891
   },
   {
     "name": "Palantir Technologies",
     "symbol": "PLTR",
     "description": "Constituyente del S&P 500. Sector: Internet Services & Infrastructure. Precio referencial: US$177.50.",
     "sector": "Internet Services & Infrastructure",
-    "marketCap": 42654286,
-    "totalShares": 240306
+    "marketCap": 4265429,
+    "totalShares": 24031
   },
   {
     "name": "Palo Alto Networks",
     "symbol": "PANW",
     "description": "Constituyente del S&P 500. Sector: Systems Software. Precio referencial: US$339.31.",
     "sector": "Systems Software",
-    "marketCap": 27653764,
-    "totalShares": 81500
+    "marketCap": 2765376,
+    "totalShares": 8150
   },
   {
     "name": "Paramount Global",
     "symbol": "PARA",
     "description": "Constituyente del S&P 500. Sector: Movies & Entertainment. Precio referencial: US$1.18.",
     "sector": "Movies & Entertainment",
-    "marketCap": 419,
-    "totalShares": 355
+    "marketCap": 100000,
+    "totalShares": 84746
   },
   {
     "name": "Parker Hannifin",
     "symbol": "PH",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$1039.49.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 13102508,
-    "totalShares": 12605
+    "marketCap": 1310251,
+    "totalShares": 1260
   },
   {
     "name": "Paychex",
     "symbol": "PAYX",
     "description": "Constituyente del S&P 500. Sector: Human Resource & Employment Services. Precio referencial: US$124.88.",
     "sector": "Human Resource & Employment Services",
-    "marketCap": 4441767,
-    "totalShares": 35568
+    "marketCap": 444177,
+    "totalShares": 3557
   },
   {
     "name": "Paycom",
     "symbol": "PAYC",
     "description": "Constituyente del S&P 500. Sector: Human Resource & Employment Services. Precio referencial: US$232.31.",
     "sector": "Human Resource & Employment Services",
-    "marketCap": 1047059,
-    "totalShares": 4507
+    "marketCap": 104706,
+    "totalShares": 451
   },
   {
     "name": "PayPal",
     "symbol": "PYPL",
     "description": "Constituyente del S&P 500. Sector: Transaction & Payment Processing Services. Precio referencial: US$61.81.",
     "sector": "Transaction & Payment Processing Services",
-    "marketCap": 5287604,
-    "totalShares": 85546
+    "marketCap": 528760,
+    "totalShares": 8555
   },
   {
     "name": "Pentair",
     "symbol": "PNR",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$62.86.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 1003246,
-    "totalShares": 15960
+    "marketCap": 100325,
+    "totalShares": 1596
   },
   {
     "name": "PepsiCo",
     "symbol": "PEP",
     "description": "Constituyente del S&P 500. Sector: Soft Drinks & Non-alcoholic Beverages. Precio referencial: US$142.19.",
     "sector": "Soft Drinks & Non-alcoholic Beverages",
-    "marketCap": 19423155,
-    "totalShares": 136600
+    "marketCap": 1942315,
+    "totalShares": 13660
   },
   {
     "name": "Pfizer",
     "symbol": "PFE",
     "description": "Constituyente del S&P 500. Sector: Pharmaceuticals. Precio referencial: US$28.30.",
     "sector": "Pharmaceuticals",
-    "marketCap": 16130076,
-    "totalShares": 569967
+    "marketCap": 1613008,
+    "totalShares": 56997
   },
   {
     "name": "PG&E Corporation",
     "symbol": "PCG",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$18.22.",
     "sector": "Multi-Utilities",
-    "marketCap": 4012712,
-    "totalShares": 220237
+    "marketCap": 401271,
+    "totalShares": 22024
   },
   {
     "name": "Philip Morris International",
     "symbol": "PM",
     "description": "Constituyente del S&P 500. Sector: Tobacco. Precio referencial: US$194.10.",
     "sector": "Tobacco",
-    "marketCap": 30252686,
-    "totalShares": 155861
+    "marketCap": 3025269,
+    "totalShares": 15586
   },
   {
     "name": "Phillips 66",
     "symbol": "PSX",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Refining & Marketing. Precio referencial: US$242.23.",
     "sector": "Oil & Gas Refining & Marketing",
-    "marketCap": 9711849,
-    "totalShares": 40094
+    "marketCap": 971185,
+    "totalShares": 4009
   },
   {
     "name": "Pinnacle West",
     "symbol": "PNW",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$98.69.",
     "sector": "Multi-Utilities",
-    "marketCap": 1196095,
-    "totalShares": 12120
+    "marketCap": 119610,
+    "totalShares": 1212
   },
   {
     "name": "PNC Financial Services",
     "symbol": "PNC",
     "description": "Constituyente del S&P 500. Sector: Diversified Banks. Precio referencial: US$244.67.",
     "sector": "Diversified Banks",
-    "marketCap": 9760955,
-    "totalShares": 39894
+    "marketCap": 976095,
+    "totalShares": 3989
   },
   {
     "name": "Pool Corporation",
     "symbol": "POOL",
     "description": "Constituyente del S&P 500. Sector: Distributors. Precio referencial: US$188.38.",
     "sector": "Distributors",
-    "marketCap": 684587,
-    "totalShares": 3634
+    "marketCap": 100000,
+    "totalShares": 531
   },
   {
     "name": "PPG Industries",
     "symbol": "PPG",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$114.42.",
     "sector": "Specialty Chemicals",
-    "marketCap": 2543557,
-    "totalShares": 22230
+    "marketCap": 254356,
+    "totalShares": 2223
   },
   {
     "name": "PPL Corporation",
     "symbol": "PPL",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$35.02.",
     "sector": "Electric Utilities",
-    "marketCap": 2635412,
-    "totalShares": 75254
+    "marketCap": 263541,
+    "totalShares": 7525
   },
   {
     "name": "Principal Financial Group",
     "symbol": "PFG",
     "description": "Constituyente del S&P 500. Sector: Life & Health Insurance. Precio referencial: US$112.21.",
     "sector": "Life & Health Insurance",
-    "marketCap": 2402468,
-    "totalShares": 21410
+    "marketCap": 240247,
+    "totalShares": 2141
   },
   {
     "name": "Procter & Gamble",
     "symbol": "PG",
     "description": "Constituyente del S&P 500. Sector: Personal Care Products. Precio referencial: US$145.00.",
     "sector": "Personal Care Products",
-    "marketCap": 33704280,
-    "totalShares": 232443
+    "marketCap": 3370428,
+    "totalShares": 23244
   },
   {
     "name": "Progressive Corporation",
     "symbol": "PGR",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$222.51.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 12930056,
-    "totalShares": 58110
+    "marketCap": 1293006,
+    "totalShares": 5811
   },
   {
     "name": "Prologis",
     "symbol": "PLD",
     "description": "Constituyente del S&P 500. Sector: Industrial REITs. Precio referencial: US$142.59.",
     "sector": "Industrial REITs",
-    "marketCap": 13861051,
-    "totalShares": 97209
+    "marketCap": 1386105,
+    "totalShares": 9721
   },
   {
     "name": "Prudential Financial",
     "symbol": "PRU",
     "description": "Constituyente del S&P 500. Sector: Life & Health Insurance. Precio referencial: US$120.24.",
     "sector": "Life & Health Insurance",
-    "marketCap": 4148280,
-    "totalShares": 34500
+    "marketCap": 414828,
+    "totalShares": 3450
   },
   {
     "name": "PTC Inc.",
     "symbol": "PTC",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$151.61.",
     "sector": "Application Software",
-    "marketCap": 1645063,
-    "totalShares": 10851
+    "marketCap": 164506,
+    "totalShares": 1085
   },
   {
     "name": "Public Service Enterprise Group",
     "symbol": "PEG",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$74.03.",
     "sector": "Electric Utilities",
-    "marketCap": 3689803,
-    "totalShares": 49842
+    "marketCap": 368980,
+    "totalShares": 4984
   },
   {
     "name": "Public Storage",
     "symbol": "PSA",
     "description": "Constituyente del S&P 500. Sector: Self-Storage REITs. Precio referencial: US$317.37.",
     "sector": "Self-Storage REITs",
-    "marketCap": 5926749,
-    "totalShares": 18675
+    "marketCap": 592675,
+    "totalShares": 1867
   },
   {
     "name": "PulteGroup",
@@ -3137,160 +3137,160 @@ export const companies: SeedCompany[] = [
     "symbol": "QRVO",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$95.14.",
     "sector": "Semiconductors",
-    "marketCap": 839297,
-    "totalShares": 8822
+    "marketCap": 100000,
+    "totalShares": 1051
   },
   {
     "name": "Qualcomm",
     "symbol": "QCOM",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$163.72.",
     "sector": "Semiconductors",
-    "marketCap": 17486286,
-    "totalShares": 106806
+    "marketCap": 1748629,
+    "totalShares": 10681
   },
   {
     "name": "Quanta Services",
     "symbol": "PWR",
     "description": "Constituyente del S&P 500. Sector: Construction & Engineering. Precio referencial: US$616.73.",
     "sector": "Construction & Engineering",
-    "marketCap": 9272127,
-    "totalShares": 15034
+    "marketCap": 927213,
+    "totalShares": 1503
   },
   {
     "name": "Quest Diagnostics",
     "symbol": "DGX",
     "description": "Constituyente del S&P 500. Sector: Health Care Services. Precio referencial: US$245.00.",
     "sector": "Health Care Services",
-    "marketCap": 2704147,
-    "totalShares": 11037
+    "marketCap": 270415,
+    "totalShares": 1104
   },
   {
     "name": "Ralph Lauren Corporation",
     "symbol": "RL",
     "description": "Constituyente del S&P 500. Sector: Apparel, Accessories & Luxury Goods. Precio referencial: US$362.32.",
     "sector": "Apparel, Accessories & Luxury Goods",
-    "marketCap": 2158784,
-    "totalShares": 5958
+    "marketCap": 215878,
+    "totalShares": 596
   },
   {
     "name": "Raymond James Financial",
     "symbol": "RJF",
     "description": "Constituyente del S&P 500. Sector: Investment Banking & Brokerage. Precio referencial: US$176.69.",
     "sector": "Investment Banking & Brokerage",
-    "marketCap": 3394215,
-    "totalShares": 19210
+    "marketCap": 339421,
+    "totalShares": 1921
   },
   {
     "name": "Realty Income",
     "symbol": "O",
     "description": "Constituyente del S&P 500. Sector: Retail REITs. Precio referencial: US$62.26.",
     "sector": "Retail REITs",
-    "marketCap": 5891154,
-    "totalShares": 94622
+    "marketCap": 589115,
+    "totalShares": 9462
   },
   {
     "name": "Regency Centers",
     "symbol": "REG",
     "description": "Constituyente del S&P 500. Sector: Retail REITs. Precio referencial: US$76.38.",
     "sector": "Retail REITs",
-    "marketCap": 1427991,
-    "totalShares": 18696
+    "marketCap": 142799,
+    "totalShares": 1870
   },
   {
     "name": "Regeneron Pharmaceuticals",
     "symbol": "REGN",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$814.79.",
     "sector": "Biotechnology",
-    "marketCap": 8388669,
-    "totalShares": 10295
+    "marketCap": 838867,
+    "totalShares": 1030
   },
   {
     "name": "Regions Financial Corporation",
     "symbol": "RF",
     "description": "Constituyente del S&P 500. Sector: Regional Banks. Precio referencial: US$30.70.",
     "sector": "Regional Banks",
-    "marketCap": 2615424,
-    "totalShares": 85193
+    "marketCap": 261542,
+    "totalShares": 8519
   },
   {
     "name": "Republic Services",
     "symbol": "RSG",
     "description": "Constituyente del S&P 500. Sector: Environmental & Facilities Services. Precio referencial: US$222.18.",
     "sector": "Environmental & Facilities Services",
-    "marketCap": 6803440,
-    "totalShares": 30621
+    "marketCap": 680344,
+    "totalShares": 3062
   },
   {
     "name": "ResMed",
     "symbol": "RMD",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$235.69.",
     "sector": "Health Care Equipment",
-    "marketCap": 3399883,
-    "totalShares": 14425
+    "marketCap": 339988,
+    "totalShares": 1443
   },
   {
     "name": "Revvity",
     "symbol": "RVTY",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$126.35.",
     "sector": "Health Care Equipment",
-    "marketCap": 1409894,
-    "totalShares": 11159
+    "marketCap": 140989,
+    "totalShares": 1116
   },
   {
     "name": "Rockwell Automation",
     "symbol": "ROK",
     "description": "Constituyente del S&P 500. Sector: Electrical Components & Equipment. Precio referencial: US$431.75.",
     "sector": "Electrical Components & Equipment",
-    "marketCap": 4804253,
-    "totalShares": 11127
+    "marketCap": 480425,
+    "totalShares": 1113
   },
   {
     "name": "Rollins, Inc.",
     "symbol": "ROL",
     "description": "Constituyente del S&P 500. Sector: Environmental & Facilities Services. Precio referencial: US$36.70.",
     "sector": "Environmental & Facilities Services",
-    "marketCap": 1765804,
-    "totalShares": 48115
+    "marketCap": 176580,
+    "totalShares": 4811
   },
   {
     "name": "Roper Technologies",
     "symbol": "ROP",
     "description": "Constituyente del S&P 500. Sector: Electronic Equipment & Instruments. Precio referencial: US$413.28.",
     "sector": "Electronic Equipment & Instruments",
-    "marketCap": 4087375,
-    "totalShares": 9890
+    "marketCap": 408738,
+    "totalShares": 989
   },
   {
     "name": "Ross Stores",
     "symbol": "ROST",
     "description": "Constituyente del S&P 500. Sector: Apparel Retail. Precio referencial: US$236.27.",
     "sector": "Apparel Retail",
-    "marketCap": 7579095,
-    "totalShares": 32078
+    "marketCap": 757910,
+    "totalShares": 3208
   },
   {
     "name": "Royal Caribbean Group",
     "symbol": "RCL",
     "description": "Constituyente del S&P 500. Sector: Hotels, Resorts & Cruise Lines. Precio referencial: US$290.00.",
     "sector": "Hotels, Resorts & Cruise Lines",
-    "marketCap": 7756110,
-    "totalShares": 26745
+    "marketCap": 775611,
+    "totalShares": 2675
   },
   {
     "name": "RTX Corporation",
     "symbol": "RTX",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$211.99.",
     "sector": "Aerospace & Defense",
-    "marketCap": 28571124,
-    "totalShares": 134776
+    "marketCap": 2857112,
+    "totalShares": 13478
   },
   {
     "name": "S&P Global",
     "symbol": "SPGI",
     "description": "Constituyente del S&P 500. Sector: Financial Exchanges & Data. Precio referencial: US$436.49.",
     "sector": "Financial Exchanges & Data",
-    "marketCap": 12867725,
-    "totalShares": 29480
+    "marketCap": 1286772,
+    "totalShares": 2948
   },
   {
     "name": "Salesforce",
@@ -3305,568 +3305,568 @@ export const companies: SeedCompany[] = [
     "symbol": "SBAC",
     "description": "Constituyente del S&P 500. Sector: Telecom Tower REITs. Precio referencial: US$185.98.",
     "sector": "Telecom Tower REITs",
-    "marketCap": 1973027,
-    "totalShares": 10609
+    "marketCap": 197303,
+    "totalShares": 1061
   },
   {
     "name": "Schlumberger",
     "symbol": "SLB",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Equipment & Services. Precio referencial: US$53.60.",
     "sector": "Oil & Gas Equipment & Services",
-    "marketCap": 7955008,
-    "totalShares": 148414
+    "marketCap": 795501,
+    "totalShares": 14841
   },
   {
     "name": "Seagate Technology",
     "symbol": "STX",
     "description": "Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$846.37.",
     "sector": "Technology Hardware, Storage & Peripherals",
-    "marketCap": 19182512,
-    "totalShares": 22664
+    "marketCap": 1918251,
+    "totalShares": 2266
   },
   {
     "name": "Sempra",
     "symbol": "SRE",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$85.28.",
     "sector": "Multi-Utilities",
-    "marketCap": 5576462,
-    "totalShares": 65390
+    "marketCap": 557646,
+    "totalShares": 6539
   },
   {
     "name": "ServiceNow",
     "symbol": "NOW",
     "description": "Constituyente del S&P 500. Sector: Systems Software. Precio referencial: US$125.80.",
     "sector": "Systems Software",
-    "marketCap": 13005985,
-    "totalShares": 103386
+    "marketCap": 1300598,
+    "totalShares": 10339
   },
   {
     "name": "Sherwin-Williams",
     "symbol": "SHW",
     "description": "Constituyente del S&P 500. Sector: Specialty Chemicals. Precio referencial: US$348.66.",
     "sector": "Specialty Chemicals",
-    "marketCap": 8464006,
-    "totalShares": 24276
+    "marketCap": 846401,
+    "totalShares": 2428
   },
   {
     "name": "Simon Property Group",
     "symbol": "SPG",
     "description": "Constituyente del S&P 500. Sector: Retail REITs. Precio referencial: US$217.11.",
     "sector": "Retail REITs",
-    "marketCap": 8242006,
-    "totalShares": 37962
+    "marketCap": 824201,
+    "totalShares": 3796
   },
   {
     "name": "Skyworks Solutions",
     "symbol": "SWKS",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$66.62.",
     "sector": "Semiconductors",
-    "marketCap": 1002450,
-    "totalShares": 15047
+    "marketCap": 100245,
+    "totalShares": 1505
   },
   {
     "name": "Smurfit WestRock",
     "symbol": "SW",
     "description": "Constituyente del S&P 500. Sector: Paper & Plastic Packaging Products & Materials. Precio referencial: US$49.56.",
     "sector": "Paper & Plastic Packaging Products & Materials",
-    "marketCap": 2599536,
-    "totalShares": 52452
+    "marketCap": 259954,
+    "totalShares": 5245
   },
   {
     "name": "Snap-on",
     "symbol": "SNA",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$397.48.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 2056050,
-    "totalShares": 5173
+    "marketCap": 205605,
+    "totalShares": 517
   },
   {
     "name": "Solventum",
     "symbol": "SOLV",
     "description": "Constituyente del S&P 500. Sector: Health Care Technology. Precio referencial: US$91.53.",
     "sector": "Health Care Technology",
-    "marketCap": 1558058,
-    "totalShares": 17022
+    "marketCap": 155806,
+    "totalShares": 1702
   },
   {
     "name": "Southern Company",
     "symbol": "SO",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$89.76.",
     "sector": "Electric Utilities",
-    "marketCap": 10325659,
-    "totalShares": 115036
+    "marketCap": 1032566,
+    "totalShares": 11504
   },
   {
     "name": "Southwest Airlines",
     "symbol": "LUV",
     "description": "Constituyente del S&P 500. Sector: Passenger Airlines. Precio referencial: US$40.67.",
     "sector": "Passenger Airlines",
-    "marketCap": 1989610,
-    "totalShares": 48921
+    "marketCap": 198961,
+    "totalShares": 4892
   },
   {
     "name": "Stanley Black & Decker",
     "symbol": "SWK",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$99.76.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 1506542,
-    "totalShares": 15102
+    "marketCap": 150654,
+    "totalShares": 1510
   },
   {
     "name": "Starbucks",
     "symbol": "SBUX",
     "description": "Constituyente del S&P 500. Sector: Restaurants. Precio referencial: US$108.49.",
     "sector": "Restaurants",
-    "marketCap": 12367860,
-    "totalShares": 114000
+    "marketCap": 1236786,
+    "totalShares": 11400
   },
   {
     "name": "State Street Corporation",
     "symbol": "STT",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$193.62.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 5318775,
-    "totalShares": 27470
+    "marketCap": 531878,
+    "totalShares": 2747
   },
   {
     "name": "Steel Dynamics",
     "symbol": "STLD",
     "description": "Constituyente del S&P 500. Sector: Steel. Precio referencial: US$235.90.",
     "sector": "Steel",
-    "marketCap": 3381110,
-    "totalShares": 14333
+    "marketCap": 338111,
+    "totalShares": 1433
   },
   {
     "name": "Steris",
     "symbol": "STE",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$236.77.",
     "sector": "Health Care Equipment",
-    "marketCap": 2308510,
-    "totalShares": 9750
+    "marketCap": 230851,
+    "totalShares": 975
   },
   {
     "name": "Stryker Corporation",
     "symbol": "SYK",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$329.67.",
     "sector": "Health Care Equipment",
-    "marketCap": 12645253,
-    "totalShares": 38357
+    "marketCap": 1264525,
+    "totalShares": 3836
   },
   {
     "name": "Supermicro",
     "symbol": "SMCI",
     "description": "Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$37.39.",
     "sector": "Technology Hardware, Storage & Peripherals",
-    "marketCap": 2418658,
-    "totalShares": 64687
+    "marketCap": 241866,
+    "totalShares": 6469
   },
   {
     "name": "Synchrony Financial",
     "symbol": "SYF",
     "description": "Constituyente del S&P 500. Sector: Consumer Finance. Precio referencial: US$79.78.",
     "sector": "Consumer Finance",
-    "marketCap": 2595809,
-    "totalShares": 32537
+    "marketCap": 259581,
+    "totalShares": 3254
   },
   {
     "name": "Synopsys",
     "symbol": "SNPS",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$410.00.",
     "sector": "Application Software",
-    "marketCap": 7850652,
-    "totalShares": 19148
+    "marketCap": 785065,
+    "totalShares": 1915
   },
   {
     "name": "Sysco",
     "symbol": "SYY",
     "description": "Constituyente del S&P 500. Sector: Food Distributors. Precio referencial: US$83.27.",
     "sector": "Food Distributors",
-    "marketCap": 3989432,
-    "totalShares": 47910
+    "marketCap": 398943,
+    "totalShares": 4791
   },
   {
     "name": "T-Mobile US",
     "symbol": "TMUS",
     "description": "Constituyente del S&P 500. Sector: Wireless Telecommunication Services. Precio referencial: US$179.61.",
     "sector": "Wireless Telecommunication Services",
-    "marketCap": 19266255,
-    "totalShares": 107267
+    "marketCap": 1926626,
+    "totalShares": 10727
   },
   {
     "name": "T. Rowe Price",
     "symbol": "TROW",
     "description": "Constituyente del S&P 500. Sector: Asset Management & Custody Banks. Precio referencial: US$112.55.",
     "sector": "Asset Management & Custody Banks",
-    "marketCap": 2400870,
-    "totalShares": 21332
+    "marketCap": 240087,
+    "totalShares": 2133
   },
   {
     "name": "Take-Two Interactive",
     "symbol": "TTWO",
     "description": "Constituyente del S&P 500. Sector: Interactive Home Entertainment. Precio referencial: US$233.45.",
     "sector": "Interactive Home Entertainment",
-    "marketCap": 4365058,
-    "totalShares": 18698
+    "marketCap": 436506,
+    "totalShares": 1870
   },
   {
     "name": "Tapestry, Inc.",
     "symbol": "TPR",
     "description": "Constituyente del S&P 500. Sector: Apparel, Accessories & Luxury Goods. Precio referencial: US$130.25.",
     "sector": "Apparel, Accessories & Luxury Goods",
-    "marketCap": 2597077,
-    "totalShares": 19939
+    "marketCap": 259708,
+    "totalShares": 1994
   },
   {
     "name": "Targa Resources",
     "symbol": "TRGP",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Storage & Transportation. Precio referencial: US$294.03.",
     "sector": "Oil & Gas Storage & Transportation",
-    "marketCap": 6304915,
-    "totalShares": 21443
+    "marketCap": 630492,
+    "totalShares": 2144
   },
   {
     "name": "Target Corporation",
     "symbol": "TGT",
     "description": "Constituyente del S&P 500. Sector: Consumer Staples Merchandise Retail. Precio referencial: US$164.04.",
     "sector": "Consumer Staples Merchandise Retail",
-    "marketCap": 7452197,
-    "totalShares": 45429
+    "marketCap": 745220,
+    "totalShares": 4543
   },
   {
     "name": "TE Connectivity",
     "symbol": "TEL",
     "description": "Constituyente del S&P 500. Sector: Electronic Manufacturing Services. Precio referencial: US$205.03.",
     "sector": "Electronic Manufacturing Services",
-    "marketCap": 5935890,
-    "totalShares": 28951
+    "marketCap": 593589,
+    "totalShares": 2895
   },
   {
     "name": "Teledyne Technologies",
     "symbol": "TDY",
     "description": "Constituyente del S&P 500. Sector: Electronic Equipment & Instruments. Precio referencial: US$633.56.",
     "sector": "Electronic Equipment & Instruments",
-    "marketCap": 2936910,
-    "totalShares": 4636
+    "marketCap": 293691,
+    "totalShares": 464
   },
   {
     "name": "Teleflex",
     "symbol": "TFX",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$138.74.",
     "sector": "Health Care Equipment",
-    "marketCap": 587875,
-    "totalShares": 4237
+    "marketCap": 100000,
+    "totalShares": 721
   },
   {
     "name": "Teradyne",
     "symbol": "TER",
     "description": "Constituyente del S&P 500. Sector: Semiconductor Materials & Equipment. Precio referencial: US$363.10.",
     "sector": "Semiconductor Materials & Equipment",
-    "marketCap": 5676733,
-    "totalShares": 15634
+    "marketCap": 567673,
+    "totalShares": 1563
   },
   {
     "name": "Tesla, Inc.",
     "symbol": "TSLA",
     "description": "Constituyente del S&P 500. Sector: Automobile Manufacturers. Precio referencial: US$345.82.",
     "sector": "Automobile Manufacturers",
-    "marketCap": 136583250,
-    "totalShares": 394955
+    "marketCap": 13658325,
+    "totalShares": 39495
   },
   {
     "name": "Texas Instruments",
     "symbol": "TXN",
     "description": "Constituyente del S&P 500. Sector: Semiconductors. Precio referencial: US$261.77.",
     "sector": "Semiconductors",
-    "marketCap": 23906083,
-    "totalShares": 91325
+    "marketCap": 2390608,
+    "totalShares": 9132
   },
   {
     "name": "Textron",
     "symbol": "TXT",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$83.31.",
     "sector": "Aerospace & Defense",
-    "marketCap": 1432823,
-    "totalShares": 17199
+    "marketCap": 143282,
+    "totalShares": 1720
   },
   {
     "name": "Thermo Fisher Scientific",
     "symbol": "TMO",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$633.71.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 23431256,
-    "totalShares": 36975
+    "marketCap": 2343126,
+    "totalShares": 3697
   },
   {
     "name": "TJX Companies",
     "symbol": "TJX",
     "description": "Constituyente del S&P 500. Sector: Apparel Retail. Precio referencial: US$136.83.",
     "sector": "Apparel Retail",
-    "marketCap": 15115670,
-    "totalShares": 110470
+    "marketCap": 1511567,
+    "totalShares": 11047
   },
   {
     "name": "Tractor Supply",
     "symbol": "TSCO",
     "description": "Constituyente del S&P 500. Sector: Other Specialty Retail. Precio referencial: US$35.01.",
     "sector": "Other Specialty Retail",
-    "marketCap": 1824161,
-    "totalShares": 52104
+    "marketCap": 182416,
+    "totalShares": 5210
   },
   {
     "name": "Trane Technologies",
     "symbol": "TT",
     "description": "Constituyente del S&P 500. Sector: Building Products. Precio referencial: US$463.40.",
     "sector": "Building Products",
-    "marketCap": 10195875,
-    "totalShares": 22002
+    "marketCap": 1019587,
+    "totalShares": 2200
   },
   {
     "name": "TransDigm Group",
     "symbol": "TDG",
     "description": "Constituyente del S&P 500. Sector: Aerospace & Defense. Precio referencial: US$1207.06.",
     "sector": "Aerospace & Defense",
-    "marketCap": 6672208,
-    "totalShares": 5528
+    "marketCap": 667221,
+    "totalShares": 553
   },
   {
     "name": "Travelers Companies (The)",
     "symbol": "TRV",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$371.15.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 7741262,
-    "totalShares": 20858
+    "marketCap": 774126,
+    "totalShares": 2086
   },
   {
     "name": "Trimble Inc.",
     "symbol": "TRMB",
     "description": "Constituyente del S&P 500. Sector: Electronic Equipment & Instruments. Precio referencial: US$59.68.",
     "sector": "Electronic Equipment & Instruments",
-    "marketCap": 1391617,
-    "totalShares": 23318
+    "marketCap": 139162,
+    "totalShares": 2332
   },
   {
     "name": "Truist Financial",
     "symbol": "TFC",
     "description": "Constituyente del S&P 500. Sector: Diversified Banks. Precio referencial: US$50.67.",
     "sector": "Diversified Banks",
-    "marketCap": 6189980,
-    "totalShares": 122163
+    "marketCap": 618998,
+    "totalShares": 12216
   },
   {
     "name": "Tyler Technologies",
     "symbol": "TYL",
     "description": "Constituyente del S&P 500. Sector: Application Software. Precio referencial: US$352.65.",
     "sector": "Application Software",
-    "marketCap": 1444182,
-    "totalShares": 4095
+    "marketCap": 144418,
+    "totalShares": 410
   },
   {
     "name": "Tyson Foods",
     "symbol": "TSN",
     "description": "Constituyente del S&P 500. Sector: Packaged Foods & Meats. Precio referencial: US$56.55.",
     "sector": "Packaged Foods & Meats",
-    "marketCap": 1989437,
-    "totalShares": 35180
+    "marketCap": 198944,
+    "totalShares": 3518
   },
   {
     "name": "U.S. Bancorp",
     "symbol": "USB",
     "description": "Constituyente del S&P 500. Sector: Diversified Banks. Precio referencial: US$62.80.",
     "sector": "Diversified Banks",
-    "marketCap": 9784563,
-    "totalShares": 155805
+    "marketCap": 978456,
+    "totalShares": 15581
   },
   {
     "name": "Uber",
     "symbol": "UBER",
     "description": "Constituyente del S&P 500. Sector: Passenger Ground Transportation. Precio referencial: US$78.49.",
     "sector": "Passenger Ground Transportation",
-    "marketCap": 16032054,
-    "totalShares": 204256
+    "marketCap": 1603205,
+    "totalShares": 20426
   },
   {
     "name": "UDR, Inc.",
     "symbol": "UDR",
     "description": "Constituyente del S&P 500. Sector: Multi-Family Residential REITs. Precio referencial: US$37.93.",
     "sector": "Multi-Family Residential REITs",
-    "marketCap": 1393413,
-    "totalShares": 36736
+    "marketCap": 139341,
+    "totalShares": 3674
   },
   {
     "name": "Ulta Beauty",
     "symbol": "ULTA",
     "description": "Constituyente del S&P 500. Sector: Other Specialty Retail. Precio referencial: US$543.19.",
     "sector": "Other Specialty Retail",
-    "marketCap": 2335136,
-    "totalShares": 4299
+    "marketCap": 233514,
+    "totalShares": 430
   },
   {
     "name": "Union Pacific Corporation",
     "symbol": "UNP",
     "description": "Constituyente del S&P 500. Sector: Rail Transportation. Precio referencial: US$310.62.",
     "sector": "Rail Transportation",
-    "marketCap": 18453173,
-    "totalShares": 59408
+    "marketCap": 1845317,
+    "totalShares": 5941
   },
   {
     "name": "United Airlines Holdings",
     "symbol": "UAL",
     "description": "Constituyente del S&P 500. Sector: Passenger Airlines. Precio referencial: US$114.83.",
     "sector": "Passenger Airlines",
-    "marketCap": 3727034,
-    "totalShares": 32457
+    "marketCap": 372703,
+    "totalShares": 3246
   },
   {
     "name": "United Parcel Service",
     "symbol": "UPS",
     "description": "Constituyente del S&P 500. Sector: Air Freight & Logistics. Precio referencial: US$105.65.",
     "sector": "Air Freight & Logistics",
-    "marketCap": 8988507,
-    "totalShares": 85078
+    "marketCap": 898851,
+    "totalShares": 8508
   },
   {
     "name": "United Rentals",
     "symbol": "URI",
     "description": "Constituyente del S&P 500. Sector: Trading Companies & Distributors. Precio referencial: US$1057.66.",
     "sector": "Trading Companies & Distributors",
-    "marketCap": 6583139,
-    "totalShares": 6224
+    "marketCap": 658314,
+    "totalShares": 622
   },
   {
     "name": "UnitedHealth Group",
     "symbol": "UNH",
     "description": "Constituyente del S&P 500. Sector: Managed Health Care. Precio referencial: US$401.01.",
     "sector": "Managed Health Care",
-    "marketCap": 35994452,
-    "totalShares": 89759
+    "marketCap": 3599445,
+    "totalShares": 8976
   },
   {
     "name": "Universal Health Services",
     "symbol": "UHS",
     "description": "Constituyente del S&P 500. Sector: Health Care Facilities. Precio referencial: US$178.69.",
     "sector": "Health Care Facilities",
-    "marketCap": 1053137,
-    "totalShares": 5894
+    "marketCap": 105314,
+    "totalShares": 589
   },
   {
     "name": "Valero Energy",
     "symbol": "VLO",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Refining & Marketing. Precio referencial: US$348.03.",
     "sector": "Oil & Gas Refining & Marketing",
-    "marketCap": 10020739,
-    "totalShares": 28793
+    "marketCap": 1002074,
+    "totalShares": 2879
   },
   {
     "name": "Ventas",
     "symbol": "VTR",
     "description": "Constituyente del S&P 500. Sector: Health Care REITs. Precio referencial: US$93.50.",
     "sector": "Health Care REITs",
-    "marketCap": 4796049,
-    "totalShares": 51295
+    "marketCap": 479605,
+    "totalShares": 5129
   },
   {
     "name": "Veralto",
     "symbol": "VLTO",
     "description": "Constituyente del S&P 500. Sector: Environmental & Facilities Services. Precio referencial: US$98.69.",
     "sector": "Environmental & Facilities Services",
-    "marketCap": 2405997,
-    "totalShares": 24379
+    "marketCap": 240600,
+    "totalShares": 2438
   },
   {
     "name": "Verisign",
     "symbol": "VRSN",
     "description": "Constituyente del S&P 500. Sector: Internet Services & Infrastructure. Precio referencial: US$292.99.",
     "sector": "Internet Services & Infrastructure",
-    "marketCap": 2648629,
-    "totalShares": 9040
+    "marketCap": 264863,
+    "totalShares": 904
   },
   {
     "name": "Verisk Analytics",
     "symbol": "VRSK",
     "description": "Constituyente del S&P 500. Sector: Research & Consulting Services. Precio referencial: US$187.87.",
     "sector": "Research & Consulting Services",
-    "marketCap": 2445241,
-    "totalShares": 13016
+    "marketCap": 244524,
+    "totalShares": 1302
   },
   {
     "name": "Verizon",
     "symbol": "VZ",
     "description": "Constituyente del S&P 500. Sector: Integrated Telecommunication Services. Precio referencial: US$50.19.",
     "sector": "Integrated Telecommunication Services",
-    "marketCap": 20852816,
-    "totalShares": 415478
+    "marketCap": 2085282,
+    "totalShares": 41548
   },
   {
     "name": "Vertex Pharmaceuticals",
     "symbol": "VRTX",
     "description": "Constituyente del S&P 500. Sector: Biotechnology. Precio referencial: US$547.29.",
     "sector": "Biotechnology",
-    "marketCap": 13871663,
-    "totalShares": 25346
+    "marketCap": 1387166,
+    "totalShares": 2535
   },
   {
     "name": "Viatris",
     "symbol": "VTRS",
     "description": "Constituyente del S&P 500. Sector: Pharmaceuticals. Precio referencial: US$16.85.",
     "sector": "Pharmaceuticals",
-    "marketCap": 1935376,
-    "totalShares": 114859
+    "marketCap": 193538,
+    "totalShares": 11486
   },
   {
     "name": "Vici Properties",
     "symbol": "VICI",
     "description": "Constituyente del S&P 500. Sector: Hotel & Resort REITs. Precio referencial: US$26.00.",
     "sector": "Hotel & Resort REITs",
-    "marketCap": 2862802,
-    "totalShares": 110108
+    "marketCap": 286280,
+    "totalShares": 11011
   },
   {
     "name": "Visa Inc.",
     "symbol": "V",
     "description": "Constituyente del S&P 500. Sector: Transaction & Payment Processing Services. Precio referencial: US$383.90.",
     "sector": "Transaction & Payment Processing Services",
-    "marketCap": 71675943,
-    "totalShares": 186705
+    "marketCap": 7167594,
+    "totalShares": 18670
   },
   {
     "name": "Vistra Corp.",
     "symbol": "VST",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$140.03.",
     "sector": "Electric Utilities",
-    "marketCap": 4699899,
-    "totalShares": 33564
+    "marketCap": 469990,
+    "totalShares": 3356
   },
   {
     "name": "Vulcan Materials Company",
     "symbol": "VMC",
     "description": "Constituyente del S&P 500. Sector: Construction Materials. Precio referencial: US$273.74.",
     "sector": "Construction Materials",
-    "marketCap": 3547088,
-    "totalShares": 12958
+    "marketCap": 354709,
+    "totalShares": 1296
   },
   {
     "name": "W. R. Berkley Corporation",
     "symbol": "WRB",
     "description": "Constituyente del S&P 500. Sector: Property & Casualty Insurance. Precio referencial: US$68.67.",
     "sector": "Property & Casualty Insurance",
-    "marketCap": 2549219,
-    "totalShares": 37123
+    "marketCap": 254922,
+    "totalShares": 3712
   },
   {
     "name": "W. W. Grainger",
     "symbol": "GWW",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$1335.39.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 6289813,
-    "totalShares": 4710
+    "marketCap": 628981,
+    "totalShares": 471
   },
   {
     "name": "Wabtec",
     "symbol": "WAB",
     "description": "Constituyente del S&P 500. Sector: Construction Machinery & Heavy Transportation Equipment. Precio referencial: US$300.54.",
     "sector": "Construction Machinery & Heavy Transportation Equipment",
-    "marketCap": 5076447,
-    "totalShares": 16891
+    "marketCap": 507645,
+    "totalShares": 1689
   },
   {
     "name": "Walgreens Boots Alliance",
@@ -3881,160 +3881,160 @@ export const companies: SeedCompany[] = [
     "symbol": "WMT",
     "description": "Constituyente del S&P 500. Sector: Consumer Staples Merchandise Retail. Precio referencial: US$104.34.",
     "sector": "Consumer Staples Merchandise Retail",
-    "marketCap": 83034590,
-    "totalShares": 795808
+    "marketCap": 8303459,
+    "totalShares": 79581
   },
   {
     "name": "Walt Disney Company (The)",
     "symbol": "DIS",
     "description": "Constituyente del S&P 500. Sector: Movies & Entertainment. Precio referencial: US$109.63.",
     "sector": "Movies & Entertainment",
-    "marketCap": 18929667,
-    "totalShares": 172669
+    "marketCap": 1892967,
+    "totalShares": 17267
   },
   {
     "name": "Warner Bros. Discovery",
     "symbol": "WBD",
     "description": "Constituyente del S&P 500. Sector: Broadcasting. Precio referencial: US$28.75.",
     "sector": "Broadcasting",
-    "marketCap": 7208018,
-    "totalShares": 250714
+    "marketCap": 720802,
+    "totalShares": 25071
   },
   {
     "name": "Waste Management",
     "symbol": "WM",
     "description": "Constituyente del S&P 500. Sector: Environmental & Facilities Services. Precio referencial: US$221.24.",
     "sector": "Environmental & Facilities Services",
-    "marketCap": 8843299,
-    "totalShares": 39972
+    "marketCap": 884330,
+    "totalShares": 3997
   },
   {
     "name": "Waters Corporation",
     "symbol": "WAT",
     "description": "Constituyente del S&P 500. Sector: Life Sciences Tools & Services. Precio referencial: US$414.17.",
     "sector": "Life Sciences Tools & Services",
-    "marketCap": 4066564,
-    "totalShares": 9819
+    "marketCap": 406656,
+    "totalShares": 982
   },
   {
     "name": "WEC Energy Group",
     "symbol": "WEC",
     "description": "Constituyente del S&P 500. Sector: Electric Utilities. Precio referencial: US$107.52.",
     "sector": "Electric Utilities",
-    "marketCap": 3503532,
-    "totalShares": 32585
+    "marketCap": 350353,
+    "totalShares": 3258
   },
   {
     "name": "Wells Fargo",
     "symbol": "WFC",
     "description": "Constituyente del S&P 500. Sector: Diversified Banks. Precio referencial: US$85.23.",
     "sector": "Diversified Banks",
-    "marketCap": 25773546,
-    "totalShares": 302400
+    "marketCap": 2577355,
+    "totalShares": 30240
   },
   {
     "name": "Welltower",
     "symbol": "WELL",
     "description": "Constituyente del S&P 500. Sector: Health Care REITs. Precio referencial: US$241.56.",
     "sector": "Health Care REITs",
-    "marketCap": 17406137,
-    "totalShares": 72057
+    "marketCap": 1740614,
+    "totalShares": 7206
   },
   {
     "name": "West Pharmaceutical Services",
     "symbol": "WST",
     "description": "Constituyente del S&P 500. Sector: Health Care Supplies. Precio referencial: US$349.92.",
     "sector": "Health Care Supplies",
-    "marketCap": 2462589,
-    "totalShares": 7038
+    "marketCap": 246259,
+    "totalShares": 704
   },
   {
     "name": "Western Digital",
     "symbol": "WDC",
     "description": "Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$468.88.",
     "sector": "Technology Hardware, Storage & Peripherals",
-    "marketCap": 16905044,
-    "totalShares": 36054
+    "marketCap": 1690504,
+    "totalShares": 3605
   },
   {
     "name": "Weyerhaeuser",
     "symbol": "WY",
     "description": "Constituyente del S&P 500. Sector: Timber REITs. Precio referencial: US$24.08.",
     "sector": "Timber REITs",
-    "marketCap": 1735532,
-    "totalShares": 72074
+    "marketCap": 173553,
+    "totalShares": 7207
   },
   {
     "name": "Williams Companies",
     "symbol": "WMB",
     "description": "Constituyente del S&P 500. Sector: Oil & Gas Storage & Transportation. Precio referencial: US$74.41.",
     "sector": "Oil & Gas Storage & Transportation",
-    "marketCap": 9101590,
-    "totalShares": 122317
+    "marketCap": 910159,
+    "totalShares": 12232
   },
   {
     "name": "Willis Towers Watson",
     "symbol": "WTW",
     "description": "Constituyente del S&P 500. Sector: Insurance Brokers. Precio referencial: US$343.12.",
     "sector": "Insurance Brokers",
-    "marketCap": 3186622,
-    "totalShares": 9287
+    "marketCap": 318662,
+    "totalShares": 929
   },
   {
     "name": "Wynn Resorts",
     "symbol": "WYNN",
     "description": "Constituyente del S&P 500. Sector: Casinos & Gaming. Precio referencial: US$97.17.",
     "sector": "Casinos & Gaming",
-    "marketCap": 1000597,
-    "totalShares": 10297
+    "marketCap": 100060,
+    "totalShares": 1030
   },
   {
     "name": "Xcel Energy",
     "symbol": "XEL",
     "description": "Constituyente del S&P 500. Sector: Multi-Utilities. Precio referencial: US$77.68.",
     "sector": "Multi-Utilities",
-    "marketCap": 4852159,
-    "totalShares": 62463
+    "marketCap": 485216,
+    "totalShares": 6246
   },
   {
     "name": "Xylem Inc.",
     "symbol": "XYL",
     "description": "Constituyente del S&P 500. Sector: Industrial Machinery & Supplies & Components. Precio referencial: US$113.42.",
     "sector": "Industrial Machinery & Supplies & Components",
-    "marketCap": 2648207,
-    "totalShares": 23349
+    "marketCap": 264821,
+    "totalShares": 2335
   },
   {
     "name": "Yum! Brands",
     "symbol": "YUM",
     "description": "Constituyente del S&P 500. Sector: Restaurants. Precio referencial: US$154.41.",
     "sector": "Restaurants",
-    "marketCap": 4213866,
-    "totalShares": 27290
+    "marketCap": 421387,
+    "totalShares": 2729
   },
   {
     "name": "Zebra Technologies",
     "symbol": "ZBRA",
     "description": "Constituyente del S&P 500. Sector: Electronic Equipment & Instruments. Precio referencial: US$359.84.",
     "sector": "Electronic Equipment & Instruments",
-    "marketCap": 1702427,
-    "totalShares": 4731
+    "marketCap": 170243,
+    "totalShares": 473
   },
   {
     "name": "Zimmer Biomet",
     "symbol": "ZBH",
     "description": "Constituyente del S&P 500. Sector: Health Care Equipment. Precio referencial: US$101.38.",
     "sector": "Health Care Equipment",
-    "marketCap": 1933699,
-    "totalShares": 19074
+    "marketCap": 193370,
+    "totalShares": 1907
   },
   {
     "name": "Zoetis",
     "symbol": "ZTS",
     "description": "Constituyente del S&P 500. Sector: Pharmaceuticals. Precio referencial: US$77.52.",
     "sector": "Pharmaceuticals",
-    "marketCap": 3203309,
-    "totalShares": 41322
+    "marketCap": 320331,
+    "totalShares": 4132
   }
 ];
 

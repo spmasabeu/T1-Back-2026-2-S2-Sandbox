@@ -1,4 +1,4 @@
-import { Company } from "../models";
+import { Company } from '../models';
 
 interface SeedCompany {
   name: string;

@@ -1,7 +1,7 @@
 # Fase 3: Empresas y seed inicial
 
 ## Objetivo
-Crear el modelo de empresas, endpoints de lectura y seed inicial de empresas publicas.
+Crear el modelo de empresas, endpoints de lectura y seed inicial de empresas publicas del S&P 500.
 
 ## Modelo
 
@@ -47,6 +47,8 @@ Crear empresas publicas iniciales con:
 - `isPublic = true`
 - `creatorId = null`
 - `availableShares = totalShares`
+- 503 constituyentes del S&P 500.
+- `marketCap` escalado para mantener el juego accesible.
 
 El seed no debe borrar empresas creadas por usuarios. Usar `bulkCreate` con `updateOnDuplicate` o buscar por `symbol` y crear solo si no existe.
 
@@ -57,8 +59,8 @@ El seed no debe borrar empresas creadas por usuarios. Usar `bulkCreate` con `upd
 - `src/seeders/seedCompanies.ts`
 
 ## Lineamientos
-- Mantener 10 a 20 empresas iniciales, no mas.
-- Usar empresas ficticias o claramente educativas para evitar ruido legal/marca.
+- Mantener un unico seed fuente en `src/seeders/seedCompanies.ts`.
+- Usar datos publicos del S&P 500 con valores escalados para el juego.
 - Validaciones minimas:
   - `name`, `symbol`, `description`, `sector` no vacios
   - `marketCap > 0`

@@ -52,6 +52,8 @@ npm run start
 
 En Render puedes usar el Blueprint `render.yaml`. Detalle: `docs/deploy-render.md`.
 
+El seed inicial carga 503 constituyentes del S&P 500. `marketCap` usa datos financieros escalados para calzar con el schema actual y `totalShares` conserva un precio referencial cercano al dato fuente.
+
 ## Performance local
 
 Con la API corriendo:

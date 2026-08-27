@@ -22,9 +22,9 @@ Respuesta sugerida:
     {
       "id": "uuid",
       "username": "santiago",
-      "balance": 7500,
+      "balance": 97500,
       "portfolioValue": 3000,
-      "netWorth": 10500
+      "netWorth": 100500
     }
   ]
 }

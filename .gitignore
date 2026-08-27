@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+
+# Caches
+.cache/
+.turbo/
+.vite/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local databases and artifacts
+*.sqlite
+*.sqlite3
+tmp/
+temp/
+T1-Back-2026-1-S1/
+
+# Local Spec Kit pointer
+.specify/feature.json

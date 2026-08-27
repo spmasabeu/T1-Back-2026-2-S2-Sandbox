@@ -10,7 +10,7 @@ Implementacion queda OK para el MVP planificado. El backend actual cubre el road
 | --- | --- | --- |
 | Base TS/Express | `app`, `server`, `/api`, `/api-docs`, `/api/health` | OK |
 | Auth | login auto-registro, JWT, `/me`, password oculto | OK |
-| Empresas | modelo, seed 10-20 empresas, paginacion, `sharePrice` | OK |
+| Empresas | modelo, seed S&P 500, paginacion, `sharePrice` | OK |
 | Holdings/portfolio | holding unico por usuario/empresa, patrimonio calculado | OK |
 | Operaciones | crear, publicar, comprar, vender, donar con transacciones | OK |
 | Rankings | usuarios por patrimonio, empresas por `marketCap` | OK |
@@ -23,7 +23,7 @@ Implementacion queda OK para el MVP planificado. El backend actual cubre el road
 - Mantiene `toSafeObject()` para no exponer password.
 - Cambia el dominio de artistas a empresas/holdings sin arrastrar endpoints viejos.
 - Omite cron/reset/historial de la version anterior. Esto calza con el roadmap 2026-2, que deja cron, historial, precios aleatorios y matching fuera del MVP.
-- Seed actual es mejor para este semestre: no borra data de usuarios y evita duplicar por simbolo.
+- Seed actual es mejor para este semestre: usa 503 empresas del S&P 500, no borra data de usuarios y evita duplicar por simbolo.
 
 ## Cambios Aplicados
 
@@ -33,8 +33,11 @@ Implementacion queda OK para el MVP planificado. El backend actual cubre el road
 - `scripts/load-test.ts`: prueba de carga local sin dependencias externas.
 - `src/controllers/authController.ts`: `JWT_SECRET` se valida antes de crear/leer usuario en login.
 - `src/middlewares/rateLimiter.ts`: limite in-memory por IP y por token Bearer.
-- `README.md`: agrega variables principales, `check:api` y comandos de produccion.
-- `task_plan.md` y `notes.md`: trazabilidad de auditoria.
+- `src/models/User.ts`: usuarios nuevos parten con `100000` de balance inicial.
+- `src/seeders/seedCompanies.ts`: seed unico con 503 empresas del S&P 500 y `marketCap` escalado para gameplay.
+- `tsconfig.json`: usa `module`/`moduleResolution` `Node16`/`node16`, sin warning `node10`.
+- `README.md`: agrega variables principales, `check:api`, comandos de produccion y economia inicial.
+- `docs/roadmap`: alineado con S&P 500 y balance inicial `100000`.
 
 ## Pruebas Ejecutadas
 
@@ -68,6 +71,8 @@ Datos finales de prueba real:
 ```
 
 Prueba de performance final sin rate limit:
+
+Medicion tomada antes de ampliar el seed a S&P 500. La suite actual valida conteo, unicidad y valores del seed; repetir `npm run perf` contra Render cuando el deploy este arriba.
 
 | Endpoint | Requests | Concurrency | Resultado | RPS | p95 |
 | --- | ---: | ---: | --- | ---: | ---: |

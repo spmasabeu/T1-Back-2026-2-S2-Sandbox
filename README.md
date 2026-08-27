@@ -1,6 +1,38 @@
 # T1 Back 2026-2
 
-Backend MVP en TypeScript, Express, Sequelize y PostgreSQL.
+Backend MVP en TypeScript, Express, Sequelize y PostgreSQL para una aplicacion de mercado financiero ficticio.
+
+## Concepto
+
+La tarea propone construir un frontend para un juego de inversion simple: cada usuario entra con un saldo inicial, puede crear empresas privadas, publicarlas en el mercado y operar acciones de empresas publicas. La API modela el backend de ese mercado: usuarios, empresas, holdings, compras, ventas, donaciones, portfolio y rankings.
+
+La tematica busca que el frontend no sea solo un CRUD. El flujo esperado es una experiencia tipo dashboard/marketplace donde el usuario puede revisar el mercado, filtrar empresas, ver precios, crear su propia empresa, abrir acciones al publico, invertir en otras empresas y revisar como cambia su patrimonio.
+
+## Experiencia Esperada En Frontend
+
+Un cliente deberia permitir:
+
+- Login/autoregistro y persistencia del token JWT.
+- Vista de mercado con busqueda, filtros, paginacion y detalle de empresa.
+- Creacion de una empresa privada usando saldo del usuario.
+- Publicacion de una empresa propia, definiendo cuantas acciones quedan disponibles.
+- Compra y venta de acciones de empresas publicas.
+- Donaciones a empresas publicas para aumentar su `marketCap`.
+- Vista de portfolio con saldo, holdings, valor de cartera y patrimonio total.
+- Rankings de usuarios por patrimonio y empresas por valor de mercado.
+- Manejo visual de errores como saldo insuficiente, acciones insuficientes, token invalido, datos invalidos y rate limit.
+
+## Reglas Del Juego
+
+- El login tambien registra usuarios nuevos si el `username` no existe.
+- Los usuarios nuevos parten con `100000` de balance inicial.
+- Las empresas creadas por usuarios nacen privadas.
+- Para operar una empresa en el mercado, su creador debe publicarla.
+- El precio por accion se calcula como `Math.floor(marketCap / totalShares)`.
+- Comprar acciones descuenta saldo y crea o actualiza un holding.
+- Vender acciones devuelve saldo y reduce el holding.
+- Donar aumenta el `marketCap` de la empresa y reduce el saldo del usuario.
+- El seed carga empresas iniciales del S&P 500 como mercado base.
 
 ## Docs
 
@@ -52,8 +84,6 @@ npm run start
 ```
 
 En Render puedes usar el Blueprint `render.yaml`. Detalle: `docs/deploy-render.md`.
-
-Usuarios nuevos parten con `100000` de balance inicial. El seed carga 503 constituyentes del S&P 500; `marketCap` usa datos financieros escalados para calzar con el schema actual y mantener el juego accesible.
 
 ## Performance local
 

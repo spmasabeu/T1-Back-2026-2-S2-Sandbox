@@ -52,21 +52,21 @@ const options = {
           properties: {
             id: { type: 'string', format: 'uuid' },
             username: { type: 'string', example: 'santiago' },
-            balance: { type: 'integer', example: 10000 },
+            balance: { type: 'integer', example: 100000 },
           },
         },
         Company: {
           type: 'object',
           properties: {
             id: { type: 'string', format: 'uuid' },
-            name: { type: 'string', example: 'Andes Solar Labs' },
-            symbol: { type: 'string', example: 'ASL' },
-            description: { type: 'string', example: 'Empresa educativa del sector Energia.' },
-            sector: { type: 'string', example: 'Energia' },
+            name: { type: 'string', example: 'Apple Inc.' },
+            symbol: { type: 'string', example: 'AAPL' },
+            description: { type: 'string', example: 'Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$313.45.' },
+            sector: { type: 'string', example: 'Technology Hardware, Storage & Peripherals' },
             logoUrl: { type: 'string', nullable: true },
-            marketCap: { type: 'integer', example: 900000000 },
-            totalShares: { type: 'integer', example: 900000 },
-            availableShares: { type: 'integer', example: 900000 },
+            marketCap: { type: 'integer', example: 45745460 },
+            totalShares: { type: 'integer', example: 145942 },
+            availableShares: { type: 'integer', example: 145942 },
             isPublic: { type: 'boolean', example: true },
             creatorId: { type: 'string', format: 'uuid', nullable: true },
             sharePrice: { type: 'integer', example: 1000 },
@@ -111,7 +111,7 @@ const options = {
             company: { $ref: '#/components/schemas/Company' },
             shares: { type: 'integer', example: 5 },
             totalPrice: { type: 'integer', example: 5000 },
-            balance: { type: 'integer', example: 5000 },
+            balance: { type: 'integer', example: 95000 },
           },
         },
         PaginatedCompanies: {
@@ -126,7 +126,7 @@ const options = {
               properties: {
                 currentPage: { type: 'integer', example: 1 },
                 totalPages: { type: 'integer', example: 2 },
-                totalItems: { type: 'integer', example: 12 },
+                totalItems: { type: 'integer', example: 503 },
               },
             },
           },
@@ -150,13 +150,13 @@ const options = {
         Portfolio: {
           type: 'object',
           properties: {
-            balance: { type: 'integer', example: 10000 },
+            balance: { type: 'integer', example: 100000 },
             holdings: {
               type: 'array',
               items: { $ref: '#/components/schemas/PortfolioHolding' },
             },
             portfolioValue: { type: 'integer', example: 1000 },
-            netWorth: { type: 'integer', example: 11000 },
+            netWorth: { type: 'integer', example: 101000 },
           },
         },
         UserRankingItem: {
@@ -164,9 +164,9 @@ const options = {
           properties: {
             id: { type: 'string', format: 'uuid' },
             username: { type: 'string', example: 'santiago' },
-            balance: { type: 'integer', example: 7500 },
+            balance: { type: 'integer', example: 97500 },
             portfolioValue: { type: 'integer', example: 3000 },
-            netWorth: { type: 'integer', example: 10500 },
+            netWorth: { type: 'integer', example: 100500 },
           },
         },
         UserRankings: {

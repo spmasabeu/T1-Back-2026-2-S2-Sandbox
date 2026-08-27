@@ -23,7 +23,7 @@ Retorna:
 
 ```json
 {
-  "balance": 10000,
+  "balance": 100000,
   "holdings": [
     {
       "company": {
@@ -37,7 +37,7 @@ Retorna:
     }
   ],
   "portfolioValue": 1000,
-  "netWorth": 11000
+  "netWorth": 101000
 }
 ```
 

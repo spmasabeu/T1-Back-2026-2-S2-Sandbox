@@ -1,11 +1,11 @@
 import app from './app';
+import { sequelize } from './models';
 import { seedCompanies } from './seeders/seedCompanies';
 
 const PORT = Number(process.env.PORT || 3000);
 
 async function startServer() {
   try {
-    const { sequelize } = await import('./models');
     await sequelize.authenticate();
     console.log('✅ Conexión con PostgreSQL establecida.');
 

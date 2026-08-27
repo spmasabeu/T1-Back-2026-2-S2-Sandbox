@@ -13,6 +13,10 @@ app.set('trust proxy', 1);
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (_req, res) => {
+  res.redirect('/api-docs');
+});
+
 app.use(
   '/api-docs',
   swaggerUi.serve,

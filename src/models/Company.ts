@@ -1,5 +1,12 @@
 import { DataTypes, Model, Optional, Sequelize } from 'sequelize';
 
+export const COMPANY_VALUE_MIN = 1000;
+export const COMPANY_VALUE_MAX = 5000;
+
+export function randomCompanyValue(): number {
+  return COMPANY_VALUE_MIN + Math.floor(Math.random() * (COMPANY_VALUE_MAX - COMPANY_VALUE_MIN + 1));
+}
+
 export interface CompanyAttributes {
   id: string;
   name: string;
@@ -8,8 +15,6 @@ export interface CompanyAttributes {
   sector: string;
   logoUrl?: string | null;
   marketCap: number;
-  totalShares: number;
-  availableShares: number;
   isPublic: boolean;
   creatorId?: string | null;
 }
@@ -24,8 +29,6 @@ export class Company extends Model<CompanyAttributes, CompanyCreationAttributes>
   declare sector: string;
   declare logoUrl: string | null;
   declare marketCap: number;
-  declare totalShares: number;
-  declare availableShares: number;
   declare isPublic: boolean;
   declare creatorId: string | null;
 
@@ -38,11 +41,8 @@ export class Company extends Model<CompanyAttributes, CompanyCreationAttributes>
       sector: this.sector,
       logoUrl: this.logoUrl,
       marketCap: this.marketCap,
-      totalShares: this.totalShares,
-      availableShares: this.availableShares,
       isPublic: this.isPublic,
       creatorId: this.creatorId,
-      sharePrice: Math.floor(this.marketCap / this.totalShares),
     };
   }
 
@@ -86,23 +86,6 @@ export class Company extends Model<CompanyAttributes, CompanyCreationAttributes>
           type: DataTypes.INTEGER,
           allowNull: false,
           validate: { min: 1 },
-        },
-        totalShares: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          validate: { min: 1 },
-        },
-        availableShares: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          validate: {
-            min: 0,
-            maxTotalShares(value: number) {
-              if (value > this.totalShares) {
-                throw new Error('availableShares no puede superar totalShares.');
-              }
-            },
-          },
         },
         isPublic: {
           type: DataTypes.BOOLEAN,

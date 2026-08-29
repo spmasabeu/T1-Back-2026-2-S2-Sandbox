@@ -1,20 +1,17 @@
-# Fase 2: Auth y modelo de usuario
+# Fase 2: Auth y usuarios
 
-## Objetivo
-Implementar autenticacion igual a la tarea anterior: login con auto-registro, JWT y usuario con saldo inicial.
+## Modelo `User`
 
-## Modelo
-
-### User
 - `id`: UUID
-- `username`: string unico, requerido
-- `password`: string requerido, hasheado
-- `balance`: integer requerido, default `100000`
+- `username`: string unico
+- `password`: string hasheado
+- `balance`: integer, default `10000`
 
 ## Endpoints
 
 ### `POST /api/login`
-Body:
+
+Login con auto-registro.
 
 ```json
 {
@@ -23,41 +20,27 @@ Body:
 }
 ```
 
-Comportamiento:
-- Si el usuario existe, valida password.
-- Si no existe, lo crea.
-- Retorna usuario sin password y token.
-
 ### `GET /api/me`
-Headers:
-
-```txt
-Authorization: Bearer <token>
-```
 
 Retorna usuario autenticado sin password.
 
-## Archivos esperados
-- `src/models/User.ts`
-- `src/models/index.ts`
-- `src/controllers/authController.ts`
-- `src/middlewares/authMiddleware.ts`
-- `src/routes/authRoutes.ts`
-- `src/routes/index.ts`
+### `PATCH /api/me`
 
-## Lineamientos
-- Copiar el patron de `toSafeObject()` de la tarea anterior.
-- El JWT debe incluir solo lo necesario: `id` y `username`.
-- Usar `JWT_SECRET` desde `.env`.
-- Fallar rapido con `400` si falta username/password.
-- Usar `401` para password incorrecta, token ausente, invalido o expirado.
+Actualiza `username` y/o `password`.
 
-## Validacion
-- Login crea usuario nuevo.
-- Login con mismo usuario y password correcto retorna token.
-- Login con password incorrecto retorna `401`.
-- `GET /api/me` funciona con token valido.
-- La respuesta nunca expone `password`.
+```json
+{
+  "username": "santi_dcc",
+  "password": "nueva-clave"
+}
+```
 
-## Resultado esperado
-Auth lista para proteger operaciones de mercado.
+### `DELETE /api/me`
+
+Elimina la cuenta autenticada. Tambien elimina sus holdings y deja sus empresas creadas sin `creatorId`.
+
+## Validaciones
+
+- `username` y `password` son requeridos en login.
+- JWT incluye solo `id` y `username`.
+- Las respuestas nunca incluyen password.

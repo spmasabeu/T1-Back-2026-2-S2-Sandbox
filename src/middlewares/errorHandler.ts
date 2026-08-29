@@ -2,7 +2,10 @@ import { ErrorRequestHandler } from 'express';
 import { DatabaseError, ValidationError } from 'sequelize';
 
 const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
-  console.error('Error capturado:', err);
+  const status = (err as { status?: number }).status || 500;
+  if (status >= 500) {
+    console.error('Error capturado:', err);
+  }
 
   if (err instanceof ValidationError) {
     const messages = err.errors.map((e) => e.message);
@@ -18,7 +21,6 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
     });
   }
 
-  const status = (err as { status?: number }).status || 500;
   const message = err.message || 'Error interno del servidor.';
   return res.status(status).json({ error: message });
 };

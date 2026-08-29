@@ -1,6 +1,6 @@
 import { RequestHandler, Response } from 'express';
 import { Op, Transaction, WhereOptions } from 'sequelize';
-import { Company, CompanyAttributes } from '../models/Company';
+import { Company, CompanyAttributes, randomCompanyValue } from '../models/Company';
 import { Holding, sequelize, User } from '../models';
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -12,6 +12,14 @@ function positiveInt(value: unknown): number | null {
 
 function cleanText(value: unknown): string | null {
   return typeof value === 'string' && value.trim() ? value.trim() : null;
+}
+
+function optionalText(value: unknown): string | null | undefined {
+  return value === undefined ? undefined : typeof value === 'string' && value.trim() ? value.trim() : null;
+}
+
+function booleanInput(value: unknown): boolean | null {
+  return typeof value === 'boolean' ? value : null;
 }
 
 function httpError(status: number, message: string): Error & { status: number } {
@@ -36,10 +44,6 @@ async function findCompany(id: string, transaction: Transaction): Promise<Compan
     throw httpError(404, 'Empresa no encontrada.');
   }
   return company;
-}
-
-function sharePrice(company: Company): number {
-  return Math.floor(company.marketCap / company.totalShares);
 }
 
 export const getCompanies: RequestHandler = async (req, res, next) => {
@@ -105,11 +109,10 @@ export const createCompany: RequestHandler = async (req, res, next) => {
     const symbol = cleanText(req.body.symbol);
     const description = cleanText(req.body.description);
     const sector = cleanText(req.body.sector);
-    const initialCapital = positiveInt(req.body.initialCapital);
-    const totalShares = positiveInt(req.body.totalShares);
     const logoUrl = typeof req.body.logoUrl === 'string' && req.body.logoUrl.trim() ? req.body.logoUrl.trim() : null;
+    const isPublic = req.body.isPublic === undefined ? false : booleanInput(req.body.isPublic);
 
-    if (!name || !symbol || !description || !sector || !initialCapital || !totalShares) {
+    if (!name || !symbol || !description || !sector || isPublic === null) {
       return res.status(422).json({ error: 'Datos inválidos.' });
     }
 
@@ -118,12 +121,6 @@ export const createCompany: RequestHandler = async (req, res, next) => {
       if (!user) {
         throw httpError(401, 'Token inválido.');
       }
-      if (user.balance < initialCapital) {
-        throw httpError(400, 'Saldo insuficiente.');
-      }
-
-      user.balance -= initialCapital;
-      await user.save({ transaction });
 
       const company = await Company.create(
         {
@@ -132,17 +129,14 @@ export const createCompany: RequestHandler = async (req, res, next) => {
           description,
           sector,
           logoUrl,
-          marketCap: initialCapital,
-          totalShares,
-          availableShares: 0,
-          isPublic: false,
+          marketCap: randomCompanyValue(),
+          isPublic,
           creatorId: user.id,
         },
         { transaction }
       );
-      const holding = await Holding.create({ userId: user.id, companyId: company.id, shares: totalShares }, { transaction });
 
-      return { company, holding, balance: user.balance };
+      return { company, balance: user.balance };
     });
 
     return res.status(201).json(result);
@@ -164,33 +158,10 @@ export const publishCompany: RequestHandler = async (req, res, next) => {
         throw httpError(422, 'La empresa ya es pública.');
       }
 
-      const sharesToOpen =
-        req.body.sharesToOpen === undefined ? Math.max(1, Math.floor(company.totalShares * 0.49)) : positiveInt(req.body.sharesToOpen);
-      if (!sharesToOpen || sharesToOpen > company.totalShares) {
-        throw httpError(422, 'Datos inválidos.');
-      }
-
-      const holding = await Holding.findOne({
-        where: { userId: requester.id, companyId: company.id },
-        transaction,
-        lock: transaction.LOCK.UPDATE,
-      });
-      if (!holding || holding.shares < sharesToOpen) {
-        throw httpError(400, 'Acciones insuficientes.');
-      }
-
-      holding.shares -= sharesToOpen;
-      if (holding.shares === 0) {
-        await holding.destroy({ transaction });
-      } else {
-        await holding.save({ transaction });
-      }
-
-      company.availableShares += sharesToOpen;
       company.isPublic = true;
       await company.save({ transaction });
 
-      return { company, openedShares: sharesToOpen };
+      return { company };
     });
 
     return res.json(result);
@@ -199,52 +170,94 @@ export const publishCompany: RequestHandler = async (req, res, next) => {
   }
 };
 
-export const buyShares: RequestHandler = async (req, res, next) => {
+export const updateCompany: RequestHandler = async (req, res, next) => {
   try {
     const requester = authUser(res);
-    const shares = positiveInt(req.body.shares);
-    if (!shares) {
+    const name = optionalText(req.body.name);
+    const symbol = optionalText(req.body.symbol);
+    const description = optionalText(req.body.description);
+    const sector = optionalText(req.body.sector);
+    const logoUrl = req.body.logoUrl === null ? null : optionalText(req.body.logoUrl);
+    const isPublic = req.body.isPublic === undefined ? undefined : booleanInput(req.body.isPublic);
+
+    if ([name, symbol, description, sector, logoUrl].some((value) => value === null) || isPublic === null) {
       return res.status(422).json({ error: 'Datos inválidos.' });
     }
+
+    const result = await sequelize.transaction(async (transaction) => {
+      const company = await findCompany(String(req.params.id), transaction);
+      if (company.creatorId !== requester.id) {
+        throw httpError(403, 'Usuario no autorizado.');
+      }
+
+      if (name !== undefined) company.name = name;
+      if (symbol !== undefined) company.symbol = symbol;
+      if (description !== undefined) company.description = description;
+      if (sector !== undefined) company.sector = sector;
+      if (logoUrl !== undefined) company.logoUrl = logoUrl;
+      if (isPublic !== undefined) company.isPublic = isPublic;
+
+      await company.save({ transaction });
+      return { company };
+    });
+
+    return res.json(result);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const deleteCompany: RequestHandler = async (req, res, next) => {
+  try {
+    const requester = authUser(res);
+
+    await sequelize.transaction(async (transaction) => {
+      const company = await findCompany(String(req.params.id), transaction);
+      if (company.creatorId !== requester.id) {
+        throw httpError(403, 'Usuario no autorizado.');
+      }
+
+      await Holding.destroy({ where: { companyId: company.id }, transaction });
+      await company.destroy({ transaction });
+    });
+
+    return res.status(204).send();
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const buyCompany: RequestHandler = async (req, res, next) => {
+  try {
+    const requester = authUser(res);
 
     const result = await sequelize.transaction(async (transaction) => {
       const company = await findCompany(String(req.params.id), transaction);
       if (!company.isPublic) {
         throw httpError(403, 'Empresa no pública.');
       }
-      if (shares > company.availableShares) {
-        throw httpError(400, 'Acciones insuficientes.');
-      }
-
       const user = await User.findByPk(requester.id, { transaction, lock: transaction.LOCK.UPDATE });
       if (!user) {
         throw httpError(401, 'Token inválido.');
       }
 
-      const price = shares * sharePrice(company);
-      if (user.balance < price) {
+      const holding = await Holding.findOne({
+        where: { userId: user.id, companyId: company.id },
+        transaction,
+        lock: transaction.LOCK.UPDATE,
+      });
+      if (holding) {
+        throw httpError(400, 'Empresa ya comprada.');
+      }
+      if (user.balance < company.marketCap) {
         throw httpError(400, 'Saldo insuficiente.');
       }
 
-      const holding = await Holding.findOne({
-        where: { userId: user.id, companyId: company.id },
-        transaction,
-        lock: transaction.LOCK.UPDATE,
-      });
-
-      user.balance -= price;
-      company.availableShares -= shares;
+      user.balance -= company.marketCap;
       await user.save({ transaction });
-      await company.save({ transaction });
+      await Holding.create({ userId: user.id, companyId: company.id }, { transaction });
 
-      if (holding) {
-        holding.shares += shares;
-        await holding.save({ transaction });
-      } else {
-        await Holding.create({ userId: user.id, companyId: company.id, shares }, { transaction });
-      }
-
-      return { company, shares, totalPrice: price, balance: user.balance };
+      return { company, totalPrice: company.marketCap, balance: user.balance };
     });
 
     return res.json(result);
@@ -253,23 +266,12 @@ export const buyShares: RequestHandler = async (req, res, next) => {
   }
 };
 
-export const sellShares: RequestHandler = async (req, res, next) => {
+export const sellCompany: RequestHandler = async (req, res, next) => {
   try {
     const requester = authUser(res);
-    const shares = positiveInt(req.body.shares);
-    if (!shares) {
-      return res.status(422).json({ error: 'Datos inválidos.' });
-    }
 
     const result = await sequelize.transaction(async (transaction) => {
       const company = await findCompany(String(req.params.id), transaction);
-      if (!company.isPublic) {
-        throw httpError(403, 'Empresa no pública.');
-      }
-      if (company.availableShares + shares > company.totalShares) {
-        throw httpError(400, 'Acciones insuficientes.');
-      }
-
       const user = await User.findByPk(requester.id, { transaction, lock: transaction.LOCK.UPDATE });
       if (!user) {
         throw httpError(401, 'Token inválido.');
@@ -280,24 +282,15 @@ export const sellShares: RequestHandler = async (req, res, next) => {
         transaction,
         lock: transaction.LOCK.UPDATE,
       });
-      if (!holding || holding.shares < shares) {
-        throw httpError(400, 'Acciones insuficientes.');
+      if (!holding) {
+        throw httpError(400, 'Empresa no comprada.');
       }
 
-      const price = shares * sharePrice(company);
-      user.balance += price;
-      company.availableShares += shares;
-      holding.shares -= shares;
-
+      user.balance += company.marketCap;
       await user.save({ transaction });
-      await company.save({ transaction });
-      if (holding.shares === 0) {
-        await holding.destroy({ transaction });
-      } else {
-        await holding.save({ transaction });
-      }
+      await holding.destroy({ transaction });
 
-      return { company, shares, totalPrice: price, balance: user.balance };
+      return { company, totalPrice: company.marketCap, balance: user.balance };
     });
 
     return res.json(result);

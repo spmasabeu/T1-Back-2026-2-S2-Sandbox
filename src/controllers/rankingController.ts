@@ -2,8 +2,7 @@ import { RequestHandler } from 'express';
 import { Company, Holding, User } from '../models';
 
 interface RankingHoldingInput {
-  shares: number;
-  company: { marketCap: number; totalShares: number };
+  company: { marketCap: number };
 }
 
 interface RankingUserInput {
@@ -13,17 +12,10 @@ interface RankingUserInput {
   holdings?: RankingHoldingInput[];
 }
 
-export function sharePrice(company: { marketCap: number; totalShares: number }): number {
-  return Math.floor(company.marketCap / company.totalShares);
-}
-
 export function rankUsersByNetWorth(users: RankingUserInput[]) {
   return users
     .map((user) => {
-      const portfolioValue = (user.holdings || []).reduce(
-        (total, holding) => total + holding.shares * sharePrice(holding.company),
-        0
-      );
+      const portfolioValue = (user.holdings || []).reduce((total, holding) => total + holding.company.marketCap, 0);
 
       return {
         id: user.id,
@@ -56,7 +48,6 @@ export const getUserRankings: RequestHandler = async (_req, res, next) => {
         username: user.username,
         balance: user.balance,
         holdings: ((user.get('holdings') || []) as Holding[]).map((holding) => ({
-          shares: holding.shares,
           company: holding.company as Company,
         })),
       }))
@@ -81,7 +72,6 @@ export const getCompanyRankings: RequestHandler = async (_req, res, next) => {
         name: company.name,
         symbol: company.symbol,
         marketCap: company.marketCap,
-        sharePrice: sharePrice(company),
       })),
     });
   } catch (error) {

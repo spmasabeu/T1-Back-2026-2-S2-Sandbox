@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import { DataTypes, Model, Optional, Sequelize } from 'sequelize';
 
 const SALT_ROUNDS = 10;
-export const INITIAL_BALANCE = 100000;
+export const INITIAL_BALANCE = 10000;
 
 export interface UserAttributes {
   id: string;

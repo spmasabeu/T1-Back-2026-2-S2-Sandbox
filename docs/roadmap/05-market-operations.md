@@ -1,14 +1,8 @@
 # Fase 5: Operaciones de mercado
 
-## Objetivo
-Implementar las acciones principales del MVP: crear empresa privada, publicar empresa, comprar, vender y donar.
+## `POST /api/companies`
 
-## Endpoints
-
-### `POST /api/companies`
-Crea empresa privada.
-
-Body:
+Crea una empresa publica o privada.
 
 ```json
 {
@@ -17,79 +11,69 @@ Body:
   "description": "Empresa ficticia de robots educativos.",
   "sector": "Tecnologia",
   "logoUrl": "https://example.com/logo.png",
-  "initialCapital": 5000,
-  "totalShares": 100
+  "isPublic": false
 }
 ```
 
 Reglas:
-- Requiere auth.
-- `initialCapital` se descuenta del balance.
-- `marketCap = initialCapital`.
-- `isPublic = false`.
-- `availableShares = 0`.
-- Creador recibe `totalShares` en holding.
 
-### `POST /api/companies/:id/publish`
-Hace publica una empresa privada.
+- `isPublic` default `false`.
+- `marketCap` lo asigna el backend entre `1000` y `5000`.
+- Crear empresa no descuenta balance.
 
-Body opcional:
+## `PATCH /api/companies/:id`
 
-```json
-{
-  "sharesToOpen": 49
-}
-```
+Edita empresa propia.
+
+Campos editables:
+
+- `name`
+- `symbol`
+- `description`
+- `sector`
+- `logoUrl`
+- `isPublic`
+
+## `DELETE /api/companies/:id`
+
+Elimina empresa propia y sus holdings asociados.
+
+## `POST /api/companies/:id/publish`
+
+Publica empresa privada propia.
 
 Reglas:
+
 - Solo creador puede publicar.
-- Si no viene `sharesToOpen`, abrir 49% al mercado.
-- Restar esas acciones del holding del creador.
-- Sumar esas acciones a `availableShares`.
-- Marcar `isPublic = true`.
+- Falla si ya es publica.
 
-### `POST /api/companies/:id/buy`
-Compra acciones disponibles.
+## `POST /api/companies/:id/buy`
 
-Body:
-
-```json
-{
-  "shares": 5
-}
-```
+Compra una empresa publica.
 
 Reglas:
+
+- Requiere auth.
 - Solo empresas publicas.
-- `shares > 0`.
-- `shares <= availableShares`.
-- Usuario debe tener saldo suficiente.
-- Precio total: `shares * sharePrice`.
-- Descontar saldo, subir holding, bajar `availableShares`.
-- Comprar no cambia `marketCap`.
+- Falla si el usuario ya la tiene.
+- Falla si el balance es menor al `marketCap`.
+- Descuenta `marketCap` del balance.
+- Crea un `Holding`.
 
-### `POST /api/companies/:id/sell`
-Vende acciones al mercado.
+## `POST /api/companies/:id/sell`
 
-Body:
-
-```json
-{
-  "shares": 5
-}
-```
+Vende una empresa del portfolio.
 
 Reglas:
-- Solo empresas publicas.
-- Usuario debe tener acciones suficientes.
-- Precio total: `shares * sharePrice`.
-- Subir saldo, bajar holding, subir `availableShares`.
-- Vender no cambia `marketCap`.
 
-### `POST /api/companies/:id/donate`
+- Requiere auth.
+- Falla si el usuario no tiene la empresa.
+- Elimina el `Holding`.
+- Suma `marketCap` al balance.
+
+## `POST /api/companies/:id/donate`
+
 Dona a una empresa publica.
-
-Body:
 
 ```json
 {
@@ -98,37 +82,10 @@ Body:
 ```
 
 Reglas:
+
+- Requiere auth.
 - Solo empresas publicas.
-- `amount > 0`.
-- Usuario debe tener saldo suficiente.
-- Descontar saldo.
-- `marketCap += amount`.
-- No entregar acciones.
-
-## Transacciones
-Usar `sequelize.transaction()` en todas las operaciones que toquen mas de una tabla:
-- crear empresa privada
-- publicar
-- comprar
-- vender
-- donar
-
-## Lineamientos
-- Usar locks donde sea simple hacerlo, como en la tarea anterior.
-- Mantener errores claros:
-  - `404` empresa no existe
-  - `403` usuario no autorizado
-  - `400` saldo/acciones insuficientes
-  - `422` datos invalidos
-- No permitir vender mas acciones de las que existen.
-- No permitir publicar dos veces.
-
-## Validacion
-- Crear empresa privada descuenta saldo y crea holding.
-- Publicar empresa abre acciones al mercado.
-- Comprar baja saldo y `availableShares`.
-- Vender sube saldo y `availableShares`.
-- Donar sube `marketCap` y sube `sharePrice` calculado.
-
-## Resultado esperado
-Loop completo de juego funcionando sin precio aleatorio ni historial.
+- `amount` debe ser entero positivo.
+- Falla si no hay saldo.
+- `user.balance -= amount`.
+- `company.marketCap += amount`.

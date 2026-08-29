@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getMe, login } from '../controllers/authController';
+import { deleteMe, getMe, login, updateMe } from '../controllers/authController';
 import authMiddleware from '../middlewares/authMiddleware';
 
 const router = Router();
@@ -63,5 +63,51 @@ router.post('/login', login);
  *               $ref: '#/components/schemas/Error'
  */
 router.get('/me', authMiddleware, getMe);
+
+/**
+ * @openapi
+ * /me:
+ *   patch:
+ *     summary: Actualizar usuario autenticado
+ *     tags:
+ *       - Auth
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/UpdateUserInput'
+ *     responses:
+ *       200:
+ *         description: Usuario actualizado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       401:
+ *         description: Token ausente, inválido o expirado
+ *       422:
+ *         description: Datos inválidos
+ */
+router.patch('/me', authMiddleware, updateMe);
+
+/**
+ * @openapi
+ * /me:
+ *   delete:
+ *     summary: Eliminar usuario autenticado
+ *     tags:
+ *       - Auth
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       204:
+ *         description: Usuario eliminado
+ *       401:
+ *         description: Token ausente, inválido o expirado
+ */
+router.delete('/me', authMiddleware, deleteMe);
 
 export default router;

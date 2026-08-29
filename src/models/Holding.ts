@@ -5,7 +5,6 @@ export interface HoldingAttributes {
   id: string;
   userId: string;
   companyId: string;
-  shares: number;
 }
 
 type HoldingCreationAttributes = Optional<HoldingAttributes, 'id'>;
@@ -14,7 +13,6 @@ export class Holding extends Model<HoldingAttributes, HoldingCreationAttributes>
   declare id: string;
   declare userId: string;
   declare companyId: string;
-  declare shares: number;
   declare company?: Company;
 
   static initModel(sequelize: Sequelize): typeof Holding {
@@ -40,11 +38,6 @@ export class Holding extends Model<HoldingAttributes, HoldingCreationAttributes>
             model: 'Companies',
             key: 'id',
           },
-        },
-        shares: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          validate: { min: 1 },
         },
       },
       {

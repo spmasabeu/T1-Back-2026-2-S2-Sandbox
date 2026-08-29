@@ -15,25 +15,22 @@ export const getPortfolio: RequestHandler = async (_req, res, next) => {
 
     const items = holdings.map((holding) => {
       const company = holding.company as Company;
-      const sharePrice = Math.floor(company.marketCap / company.totalShares);
-      const value = holding.shares * sharePrice;
 
       return {
         company: {
           id: company.id,
           name: company.name,
           symbol: company.symbol,
-          sharePrice,
+          marketCap: company.marketCap,
         },
-        shares: holding.shares,
-        value,
+        value: company.marketCap,
       };
     });
-    const portfolioValue = items.reduce((total, holding) => total + holding.value, 0);
+    const portfolioValue = items.reduce((total, item) => total + item.value, 0);
 
     return res.json({
       balance: user.balance,
-      holdings: items,
+      companies: items,
       portfolioValue,
       netWorth: user.balance + portfolioValue,
     });

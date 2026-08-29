@@ -10,9 +10,9 @@ const options = {
     openapi: '3.0.0',
     info: {
       title: 'DDCapital API',
-      version: '1.0.0',
+      version: '2.0.0',
       description:
-        'Backend base de DDCapital para el proyecto de la T1 2026-2. Todas las rutas de la API usan el prefijo /api; por ejemplo, /login se consume como /api/login. ERD: https://github.com/spmasabeu/T1-Back-2026-2-S2-Sandbox/blob/main/docs/erd.md',
+        'Backend base de DDCapital para la T1 2026-2. La API usa el prefijo /api; por ejemplo, /login se consume como /api/login. Los usuarios compran y venden empresas completas con un budget inicial de 10000.',
     },
     externalDocs: {
       description: 'ERD base de datos',
@@ -51,12 +51,19 @@ const options = {
             password: { type: 'string', example: '123456' },
           },
         },
+        UpdateUserInput: {
+          type: 'object',
+          properties: {
+            username: { type: 'string', example: 'santi_dcc' },
+            password: { type: 'string', example: 'nueva-clave' },
+          },
+        },
         User: {
           type: 'object',
           properties: {
             id: { type: 'string', format: 'uuid' },
             username: { type: 'string', example: 'santiago' },
-            balance: { type: 'integer', example: 100000 },
+            balance: { type: 'integer', example: 10000 },
           },
         },
         Company: {
@@ -65,41 +72,35 @@ const options = {
             id: { type: 'string', format: 'uuid' },
             name: { type: 'string', example: 'Apple Inc.' },
             symbol: { type: 'string', example: 'AAPL' },
-            description: { type: 'string', example: 'Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals. Precio referencial: US$313.45.' },
+            description: { type: 'string', example: 'Constituyente del S&P 500. Sector: Technology Hardware, Storage & Peripherals.' },
             sector: { type: 'string', example: 'Technology Hardware, Storage & Peripherals' },
             logoUrl: { type: 'string', nullable: true },
-            marketCap: { type: 'integer', example: 45745460 },
-            totalShares: { type: 'integer', example: 145942 },
-            availableShares: { type: 'integer', example: 145942 },
+            marketCap: { type: 'integer', example: 3200 },
             isPublic: { type: 'boolean', example: true },
             creatorId: { type: 'string', format: 'uuid', nullable: true },
-            sharePrice: { type: 'integer', example: 1000 },
           },
         },
         CreateCompanyInput: {
           type: 'object',
-          required: ['name', 'symbol', 'description', 'sector', 'initialCapital', 'totalShares'],
+          required: ['name', 'symbol', 'description', 'sector'],
           properties: {
             name: { type: 'string', example: 'DCC Robotics' },
             symbol: { type: 'string', example: 'DCCR' },
             description: { type: 'string', example: 'Empresa ficticia de robots educativos.' },
             sector: { type: 'string', example: 'Tecnologia' },
             logoUrl: { type: 'string', nullable: true, example: 'https://example.com/logo.png' },
-            initialCapital: { type: 'integer', example: 5000 },
-            totalShares: { type: 'integer', example: 100 },
+            isPublic: { type: 'boolean', example: false },
           },
         },
-        PublishCompanyInput: {
+        UpdateCompanyInput: {
           type: 'object',
           properties: {
-            sharesToOpen: { type: 'integer', example: 49 },
-          },
-        },
-        SharesInput: {
-          type: 'object',
-          required: ['shares'],
-          properties: {
-            shares: { type: 'integer', example: 5 },
+            name: { type: 'string', example: 'DCC Robotics Lab' },
+            symbol: { type: 'string', example: 'DCCL' },
+            description: { type: 'string', example: 'Empresa ficticia de robots educativos.' },
+            sector: { type: 'string', example: 'Tecnologia' },
+            logoUrl: { type: 'string', nullable: true, example: 'https://example.com/logo.png' },
+            isPublic: { type: 'boolean', example: true },
           },
         },
         DonateInput: {
@@ -109,13 +110,12 @@ const options = {
             amount: { type: 'integer', example: 1000 },
           },
         },
-        MarketOperationResponse: {
+        CompanyOperationResponse: {
           type: 'object',
           properties: {
             company: { $ref: '#/components/schemas/Company' },
-            shares: { type: 'integer', example: 5 },
-            totalPrice: { type: 'integer', example: 5000 },
-            balance: { type: 'integer', example: 95000 },
+            totalPrice: { type: 'integer', example: 3200 },
+            balance: { type: 'integer', example: 6800 },
           },
         },
         PaginatedCompanies: {
@@ -135,7 +135,7 @@ const options = {
             },
           },
         },
-        PortfolioHolding: {
+        PortfolioCompany: {
           type: 'object',
           properties: {
             company: {
@@ -144,23 +144,22 @@ const options = {
                 id: { type: 'string', format: 'uuid' },
                 name: { type: 'string', example: 'DCC Mining' },
                 symbol: { type: 'string', example: 'DCCM' },
-                sharePrice: { type: 'integer', example: 100 },
+                marketCap: { type: 'integer', example: 2400 },
               },
             },
-            shares: { type: 'integer', example: 10 },
-            value: { type: 'integer', example: 1000 },
+            value: { type: 'integer', example: 2400 },
           },
         },
         Portfolio: {
           type: 'object',
           properties: {
-            balance: { type: 'integer', example: 100000 },
-            holdings: {
+            balance: { type: 'integer', example: 7600 },
+            companies: {
               type: 'array',
-              items: { $ref: '#/components/schemas/PortfolioHolding' },
+              items: { $ref: '#/components/schemas/PortfolioCompany' },
             },
-            portfolioValue: { type: 'integer', example: 1000 },
-            netWorth: { type: 'integer', example: 101000 },
+            portfolioValue: { type: 'integer', example: 2400 },
+            netWorth: { type: 'integer', example: 10000 },
           },
         },
         UserRankingItem: {
@@ -168,9 +167,9 @@ const options = {
           properties: {
             id: { type: 'string', format: 'uuid' },
             username: { type: 'string', example: 'santiago' },
-            balance: { type: 'integer', example: 97500 },
-            portfolioValue: { type: 'integer', example: 3000 },
-            netWorth: { type: 'integer', example: 100500 },
+            balance: { type: 'integer', example: 7600 },
+            portfolioValue: { type: 'integer', example: 2400 },
+            netWorth: { type: 'integer', example: 10000 },
           },
         },
         UserRankings: {
@@ -188,8 +187,7 @@ const options = {
             id: { type: 'string', format: 'uuid' },
             name: { type: 'string', example: 'DCC Mining' },
             symbol: { type: 'string', example: 'DCCM' },
-            marketCap: { type: 'integer', example: 100000 },
-            sharePrice: { type: 'integer', example: 1000 },
+            marketCap: { type: 'integer', example: 5000 },
           },
         },
         CompanyRankings: {

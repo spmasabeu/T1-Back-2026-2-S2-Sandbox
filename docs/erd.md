@@ -21,8 +21,6 @@ erDiagram
     string sector
     string logoUrl
     int marketCap
-    int totalShares
-    int availableShares
     boolean isPublic
     uuid creatorId FK
   }
@@ -31,7 +29,6 @@ erDiagram
     uuid id PK
     uuid userId FK
     uuid companyId FK
-    int shares
   }
 ```
 
@@ -40,5 +37,5 @@ erDiagram
 - `User` crea cero o muchas `Company` mediante `Company.creatorId`.
 - `User` posee cero o muchos `Holding`.
 - `Company` tiene cero o muchos `Holding`.
-- `Holding` representa la cantidad de acciones de un usuario en una empresa.
+- `Holding` representa que un usuario tiene una empresa en su portfolio.
 - `Holding` tiene indice unico compuesto en `userId` + `companyId`.
